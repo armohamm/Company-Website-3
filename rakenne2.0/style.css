@@ -1,0 +1,155 @@
+/* Aloitus osa alkaa */
+
+ /* puhelimelle */
+@media only screen and (max-width: 450px) {
+  section.start-section {
+    min-height: 700px;
+    background-image: url("img/section-start.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    }
+    
+    div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
+    background: rgba(29, 186, 234, 0.185);
+    min-height: 700px;
+    }
+
+    div.start-text {
+    margin-top: 275px;
+    margin-bottom: 275px;
+    }
+
+    span.start {
+    font-size: 1.3em;
+    font-weight: 750;
+    color: #ea5e1d;
+    }
+}
+
+ /* tableteille */
+@media only screen and (min-width: 450px) {
+  section.start-section {
+    min-height: 700px;
+    background-image: url("img/section-start.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    }
+
+    div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
+    background: rgba(29, 186, 234, 0.185);
+    min-height: 700px;
+    }
+
+    div.start-text {
+    margin-top: 275px;
+    margin-bottom: 275px;
+    }
+
+    span.start {
+    font-size: 2em;
+    font-weight: 750;
+    color: #ea5e1d;
+    }
+}
+
+ /* tietokoneille */
+@media only screen and (min-width: 900px) {
+  section.start-section {
+    min-height: 700px;  
+    background-image: url("img/section-start.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    }
+
+    div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
+    background: rgba(29, 186, 234, 0.185);    
+    min-height: 700px;
+    }
+
+    div.start-text {
+    margin-top: 275px;    
+    margin-bottom: 275px;
+    }
+
+    span.start {
+    font-size: 2em;    
+    font-weight: 750;
+    color: #ea5e1d;
+    }
+}
+
+/* leveille näytöille */
+@media only screen and (min-width: 1920px) {
+  section.start-section {
+    min-height: 700px;  
+    background-image: url("img/section-start.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    }
+
+    div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
+    background: rgba(29, 186, 234, 0.185);    
+    min-height: 700px;
+    }
+
+    div.start-text {
+    margin-top: 275px;    
+    margin-bottom: 275px;
+    }
+
+    span.start {
+    font-size: 2em;    
+    font-weight: 750;
+    color: #ea5e1d;
+    }
+}
+
+/* Aloitus osa loppuu ja palvelut alkaa */
+
+section.services-section {
+    min-height: 600px;
+    background-color: rgb(214, 169, 169);
+}
+
+/* Palvelut loppuu ja referenssit alkaa */
+
+section.references-section {
+    min-height: 600px;
+    background-color: rgb(182, 169, 169);
+}
+
+/* Referenssit loppuu ja meistä alkaa */
+
+section.about-section {
+    min-height: 600px;
+    background-color: rgb(214, 169, 169);
+}
+
+/* Referenssit loppuu ja yhteystiedot loppuu */
+
+section.contact-section {
+    min-height: 600px;
+    background-color: rgb(182, 169, 169);
+}
+
+/* Yhteystiedot loppuu ja footer alkaa */
+
+section.footer-section {
+    min-height: 50px;
+    background-color: rgb(0, 0, 0);
+}
+
+div.copyright {
+  line-height: 4;
+  font-size: 0.8rem;
+  color: white;
+}
+
+a.admin-link:link, a.admin-link:visited, a.admin-link:hover, a.admin-link:active {
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer loppuu */
