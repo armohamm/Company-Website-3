@@ -60,6 +60,32 @@
     min-height: 700px;  
     background-image: url("img/section-start.jpg");
     background-repeat: no-repeat;
+    background-size: auto 100%;
+    }
+
+    div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
+    background: rgba(29, 186, 234, 0.185);    
+    min-height: 700px;
+    }
+
+    div.start-text {
+    margin-top: 275px;    
+    margin-bottom: 275px;
+    }
+
+    span.start {
+    font-size: 2em;    
+    font-weight: 750;
+    color: #ea5e1d;
+    }
+}
+
+/* leveille näytöille */
+@media only screen and (min-width: 1920px) {
+  section.start-section {
+    min-height: 700px;  
+    background-image: url("img/section-start.jpg");
+    background-repeat: no-repeat;
     background-size: 100%;
     }
 
@@ -78,7 +104,7 @@
     font-weight: 750;
     color: #ea5e1d;
     }
-}    
+}
 
 /* Aloitus osa loppuu ja palvelut alkaa */
 
