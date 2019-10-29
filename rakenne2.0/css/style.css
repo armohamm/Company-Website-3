@@ -1,6 +1,3 @@
-/* Aloitus osa alkaa */
-
-
 /* Yleinen */
 body {
   background: #fff;
@@ -92,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.5s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #header #logo h1 {
     font-size: 26px;
   }
@@ -174,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #nav-menu-container {
     display: none;
   }
@@ -246,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-15%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #mobile-nav-toggle {
     display: inline;
   }
@@ -337,11 +334,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
+/* Aloitus osa alkaa */
 
  /* puhelimelle */
 @media only screen and (max-width: 450px) {
   section.start-section {
-    min-height: 700px;
+    min-height: 900px;
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -350,12 +348,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
     background: rgba(29, 186, 234, 0.185);
-    min-height: 700px;
+    min-height: 900px;
     }
 
     div.start-text {
-    margin-top: 275px;
-    margin-bottom: 275px;
+    margin-top: 375px;
+    margin-bottom: 375px;
     }
 
     span.start {
@@ -368,7 +366,7 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* tableteille */
 @media only screen and (min-width: 450px) {
   section.start-section {
-    min-height: 700px;
+    min-height: 900px;
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -377,12 +375,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
     background: rgba(29, 186, 234, 0.185);
-    min-height: 700px;
+    min-height: 900px;
     }
 
     div.start-text {
-    margin-top: 275px;
-    margin-bottom: 275px;
+    margin-top: 375px;
+    margin-bottom: 375px;
     }
 
     span.start {
@@ -395,20 +393,20 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* tietokoneille */
 @media only screen and (min-width: 900px) {
   section.start-section {
-    min-height: 700px;  
+    min-height: 900px;  
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: auto 100%;
     }
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
     background: rgba(29, 186, 234, 0.185);    
-    min-height: 700px;
+    min-height: 900px;
     }
 
     div.start-text {
-    margin-top: 275px;    
-    margin-bottom: 275px;
+    margin-top: 375px;    
+    margin-bottom: 375px;
     }
 
     span.start {
@@ -419,20 +417,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 }    
 
 /* leveille näytöille */
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1890px) {
   section.start-section {
-    min-height: 700px;  
-    background-image: url("img/section-start.jpg");
+    min-height: 900px;  
+    background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     }
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
     background: rgba(29, 186, 234, 0.185);    
-    min-height: 700px;
+    min-height: 900px;
     }
     div.start-text {
-    margin-top: 275px;    
-    margin-bottom: 275px;
+    margin-top: 375px;    
+    margin-bottom: 375px;
     }
     span.start {
     font-size: 2em;    
@@ -443,30 +441,173 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Aloitus osa loppuu ja palvelut alkaa */
 
-section.services-section {
-    min-height: 600px;
-    background-color: rgb(214, 169, 169);
+ /* puhelimelle */
+@media only screen and (max-width: 450px) {
+  section.services-section {
+    min-height: 850px;
+    background-image: url("../img/section-services.jpg");
+    background-repeat: no-repeat;<
+    background-position: center;
+    background-size: auto 100%;
+  }
+}
+
+ /* tableteille */
+@media only screen and (min-width: 450px) {
+  section.services-section {
+    min-height: 850px;
+    background-image: url("../img/section-services.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+  }
+}
+
+ /* tietokoneille */
+@media only screen and (min-width: 900px) {
+  section.services-section {
+    min-height: 850px;  
+    background-image: url("../img/section-services.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}    
+
+/* leveille näytöille */
+@media only screen and (min-width: 1000px) {
+  section.services-section {
+    min-height: 850px;  
+    background-image: url("../img/section-services.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}
+
+/* leveille näytöille */
+@media only screen and (min-width: 1850px) {
+  section.services-section {
+    min-height: 850px;  
+    background-image: url("../img/section-services.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
 
 /* Palvelut loppuu ja referenssit alkaa */
 
-section.references-section {
-    min-height: 600px;
-    background-color: rgb(182, 169, 169);
+ /* puhelimelle */
+@media only screen and (max-width: 450px) {
+  section.references-section {
+    min-height: 850px;
+    background: #ea5e1d;
+  }
+}
+
+ /* tableteille */
+@media only screen and (min-width: 450px) {
+  section.references-section {
+    min-height: 850px;
+    background: #ea5e1d;
+  }
+}
+
+ /* tietokoneille */
+@media only screen and (min-width: 900px) {
+  section.references-section {
+    min-height: 850px;  
+    background: #ea5e1d;
+  }
+}    
+
+/* leveille näytöille */
+@media only screen and (min-width: 1473px) {
+  section.references-section {
+    min-height: 850px;  
+    background: #ea5e1d;
+  }
 }
 
 /* Referenssit loppuu ja meistä alkaa */
 
 section.about-section {
-    min-height: 600px;
+    min-height: 850px;
     background-color: rgb(214, 169, 169);
 }
 
-/* Referenssit loppuu ja yhteystiedot loppuu */
+ /* puhelimelle */
+@media only screen and (max-width: 450px) {
+  section.about-section {
+    min-height: 850px;
+    background-image: url("../img/section-about.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+  }
+}
 
-section.contact-section {
-    min-height: 600px;
-    background-color: rgb(182, 169, 169);
+ /* tableteille */
+@media only screen and (min-width: 450px) {
+  section.about-section {
+    min-height: 850px;
+    background-image: url("../img/section-about.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+  }
+}
+
+ /* tietokoneille */
+@media only screen and (min-width: 900px) {
+  section.about-section {
+    min-height: 850px;  
+    background-image: url("../img/section-about.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}    
+
+/* leveille näytöille */
+@media only screen and (min-width: 1290px) {
+  section.about-section {
+    min-height: 850px;  
+    background-image: url("../img/section-about.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+/* Referenssit loppuu ja yhteystiedot alkaa #2d5387 */
+
+ /* puhelimelle */
+@media only screen and (max-width: 450px) {
+  section.contact-section {
+    min-height: 450px;
+    background: #2d5387;
+  }
+}
+
+ /* tableteille */
+@media only screen and (min-width: 450px) {
+  section.contact-section {
+    min-height: 450px;
+    background: #2d5387;
+  }
+}
+
+ /* tietokoneille */
+@media only screen and (min-width: 900px) {
+  section.contact-section {
+    min-height: 450px;  
+    background: #2d5387;
+  }
+}    
+
+/* leveille näytöille */
+@media only screen and (min-width: 1473px) {
+  section.contact-section {
+    min-height: 450px;  
+    background: #2d5387;
+  }
 }
 
 /* Yhteystiedot loppuu ja footer alkaa */
