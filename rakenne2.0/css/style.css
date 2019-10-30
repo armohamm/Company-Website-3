@@ -3,6 +3,8 @@ body {
   background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;
+  position: relative;
+  height: 100%;
 }
 
 a {
@@ -95,23 +97,16 @@ h1, h2, h3, h4, h5, h6 {
   }
   #header #logo img {
     max-width: 150px;
+    -ms-transform: translateY(-25%);
+    transform: translateY(-25%);
   }
-  /*#header {
+  #header {
     height: 92px;
   }
-  #header #logo img {
-    -webkit-transition: none !important;
-    
-  }
-  #header.header-fixed {
-    height: 92px !important;
-    transition: none !important;
-    transform: none !important;
-  }
   #header.header-fixed #logo img {
-    -webkit-transform: none !important;
-    transform: none !important;
-  }*/
+  -webkit-transform: scale(0.8) translateY(-30%) !important;
+  transform: scale(0.8) translateY(-30%) !important;
+  }
 }
 
 #header.header-fixed {
