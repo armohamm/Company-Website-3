@@ -88,10 +88,10 @@ jQuery(document).ready(function ($) {
           scrollTop: target.offset().top - top_space
         }, 1500, 'easeInOutExpo');
 
-        if ($(this).parents('.nav-menu').length) {
-          $('.nav-menu .menu-active').removeClass('menu-active');
-          $(this).closest('li').addClass('menu-active');
-        }
+        // if ($(this).parents('.nav-menu').length) {
+        //   $('.nav-menu .menu-active').removeClass('menu-active');
+        //   $(this).closest('li').addClass('menu-active');
+        // }
 
         if ($('body').hasClass('mobile-nav-active')) {
           $('body').removeClass('mobile-nav-active');
