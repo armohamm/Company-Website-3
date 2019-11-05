@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Forms</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+         <!-- Css -->
+        <link rel="stylesheet" href="css/forms.css">
+        
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="content">
+                <h2>Tekstien muokkaus</h2>
+
+                <!-- Otsikon muokkaus -->
+                <h4>Otsikko</h4>
+                <textarea></textarea><br><br>
+
+                <!-- Keitä olemme -->
+                <h4>Keitä olemme</h4>
+                <textarea></textarea><br><br>
+
+                <!-- Otsikon muokkaus -->
+                <h4>Teksti</h4>
+                <textarea></textarea><br><br>
+
+                <input type="submit" value="Tallenna">
+            </div>
+
+            <!-- Salasanan vaihto -->
+            <div class="content"> 
+                <h2>Salasanan vaihto</h2>
+                <h4>Nykyinen salasana</h4>
+                <input type="password" name="password">
+                <h4>Uusi salasana</h4>
+                <input type="password" name="password">
+                <h4>Uusi salasana uudelleen</h4>
+                <input type="password" name="password"><br><br>
+
+                <input type="submit" value="Tallenna">
+            </div>
+
+            <!-- Referenssien otsikko -->
+            <div class="content"> 
+                <h2>Referenssien otsikko</h2>
+                <a href="add-reference-title.html" target="_blank">Lisää uusi otsikko</a>
+
+                <h4>Muokkaus ja poisto</h4>
+                <div class="list-container">
+                    <ul>
+                        <li>Otsikko 1 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Otsikko 2 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Otsikko 3 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Otsikko 4 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Referenssit -->
+            <div class="content">
+                <h2>Referenssien lisäys</h2>
+
+                <h4>Referenssi otsikko</h4>
+                <select>
+                    <option> </option>
+                    <option>Otsikko 1</option>
+                    <option>Otsikko 2</option>
+                    <option>Otsikko 3</option>
+                    <option>Otsikko 4</option>
+                </select>
+
+                <h4>Lisättävä referenssi</h4>
+                <input type="text" name="text"><br><br>
+
+                <input type="submit" value="Lisää">
+
+                <h2>Referenssien muokkaus ja poisto</h2>
+
+                <select>
+                    <option> </option>
+                    <option>Otsikko 1</option>
+                    <option>Otsikko 2</option>
+                    <option>Otsikko 3</option>
+                    <option>Otsikko 4</option>
+                </select>
+
+                <div class="list-container">
+                    <ul>
+                        <li>Referenssi 1 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Referenssi 2 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Referenssi 3 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Referenssi 4 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Palveluiden lisäys -->
+            <div class="content"> 
+                <h2>Palveluiden lisäys</h2>
+                <h4>Palvelu</h4>
+                <a href="add-service.html" target="_blank">Lisää uusi palvelu</a>
+
+                <h4>Muokkaus ja poisto</h4>
+                <div class="list-container">
+                    <ul>
+                        <li>Palvelu 1 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Palvelu 2 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Palvelu 3 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                        <li>Palvelu 4 <a href="#">Muokkaa</a><a href="#">Poista</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pääsivun kuvien vaihtaminen -->
+            <div class="content"> 
+                <h2>Pääsivun kuvien vaihtaminen</h2>
+                <h4>Kuva 1</h4>
+                <input type="file" name="file"><br>
+
+                <h4>Kuva 2</h4>
+                <input type="file" name="file"><br>
+
+                <h4>Kuva 3</h4>
+                <input type="file" name="file"><br><br>
+
+                <input type="submit" value="Tallenna">
+            </div>
+        </div>
+    </body>
+</html>
