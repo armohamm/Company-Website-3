@@ -468,7 +468,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }    
 
 /* leveille näytöille */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1350px) {
   section.services-section {
     min-height: 750px;  
     background: #ea5e1d;
@@ -505,7 +505,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }    
 
 /* leveille näytöille */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1350px) {
   section.references-section {
     min-height: 750px;  
     background: #ea5e1d;
@@ -548,7 +548,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* leveille näytöille */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1350px) {
   section.about-section {
     min-height: 750px;  
     background-image: url("../img/section-about.jpg");
@@ -585,7 +585,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }    
 
 /* leveille näytöille */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1350px) {
   section.contact-section {
     min-height: 450px;  
     background: #2d5387;
