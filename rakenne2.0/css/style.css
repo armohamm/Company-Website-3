@@ -2,7 +2,7 @@
 body {
   background: #fff;
   color: #666666;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   position: relative;
   height: 100%;
 }
@@ -21,14 +21,6 @@ p {
   padding: 0;
   margin: 0 0 30px 0;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-  padding: 0;
-}
-
 
 /* Takaisin ylös nappi */
 .back-to-top {
@@ -338,7 +330,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
     }
     
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
@@ -348,8 +341,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
     div.start-text {
     margin-top: 345px;
+    font-family: 'Roboto', sans-serif; 
     }
 
+ 
     span.start {
     font-size: 1.3em;
     font-weight: 750;
@@ -364,7 +359,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
     }
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
@@ -374,8 +370,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
     div.start-text {
     margin-top: 345px;
+    font-family: 'Roboto', sans-serif; 
     }
 
+ 
     span.start {
     font-size: 2em;
     font-weight: 750;
@@ -390,7 +388,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
     }
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
@@ -399,9 +398,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
     div.start-text {
-    margin-top: 345px;    
+    margin-top: 345px;
+    font-family: 'Roboto', sans-serif;     
     }
 
+ 
     span.start {
     font-size: 2em;    
     font-weight: 750;
@@ -416,18 +417,23 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
-    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
     }
+
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
     background: rgba(29, 186, 234, 0.185);    
     min-height: 800px;
     }
+
     div.start-text {
-    margin-top: 345px;    
+    margin-top: 345px;
+    font-family: 'Roboto', sans-serif;
     }
+
     span.start {
-    font-size: 2em;    
-    font-weight: 750;
+    font-size: 2.25em;    
+    font-weight: 900;
     color: #ea5e1d;
     }
   }
@@ -441,7 +447,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
 
@@ -452,7 +459,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
 
@@ -463,7 +471,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     background-repeat: no-repeat;
     background-attachment: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }    
 
@@ -474,7 +483,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     background-repeat: no-repeat;
     background-attachment: center;
-    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
 
@@ -521,7 +531,25 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-image: url("../img/section-about.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding-top: 75px;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-bottom: 75px;
+  }
+
+  div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 600px;
+    padding: 17.5px;
+  }
+
+  div.about-text {
+    color: #f4f4f4;
+    font-size: 1em;
+    font-weight: 600;
   }
 }
 
@@ -532,7 +560,25 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-image: url("../img/section-about.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-bottom: 100px;
+  }
+
+  div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 550px;
+    padding: 20px;
+  }
+
+  div.about-text {
+    color: #f4f4f4;
+    font-size: 1.25em;
+    font-weight: 600;
   }
 }
 
@@ -543,7 +589,25 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-image: url("../img/section-about.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
-    background-size: auto 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding-top: 150px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 150px;
+  }
+
+  div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 450px;
+    padding: 25px;
+  }
+
+  div.about-text {
+    color: #f4f4f4;
+    font-size: 1.6em;
+    font-weight: 600;
   }
 }
 
@@ -554,7 +618,25 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-image: url("../img/section-about.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
-    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    padding-top: 150px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 150px;
+  }
+
+  div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 450px;
+    padding: 25px;
+  }
+
+  div.about-text {
+    color: #f4f4f4;
+    font-size: 1.75em;
+    font-weight: 600;
   }
 }
 
