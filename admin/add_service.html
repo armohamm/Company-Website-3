@@ -17,6 +17,8 @@
 
   <!-- Custom styles for this template-->
   <link href="css/style.css" rel="stylesheet">
+  <link href="vendor/jquery-ui/jquery-ui.min.css">
+  <link href="css/sortable.css" rel="stylesheet">
 
 </head>
 
@@ -202,13 +204,13 @@
         <a href="add-service.html" target="_blank">Lisää uusi palvelu</a>
 
         <h1 class="h4 mb-4 text-gray-800;">Muokkaus ja poisto</h1>
-        <div class="list-container">
-            <ul>
-                <li>Palvelu 1 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-                <li>Palvelu 2 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-                <li>Palvelu 3 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-                <li>Palvelu 4 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-            </ul>
+        <div class="list-container" style="margin-top: 25px;">
+          <ul id="sortable">
+              <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Palvelu 1 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
+              <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Palvelu 2 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
+              <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Palvelu 3 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
+              <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Palvelu 4 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
+          </ul>
         </div>
         <button class="btn btn-success btn-icon-split" type="submit">
           <span class="icon text-white-50">
@@ -268,8 +270,45 @@
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
+  <!-- jQuery ui -->
+  <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+
   <!-- Custom scripts for all pages-->
   <script src="js/javascript.js"></script>
+
+  <!-- Custom infile javascript -->
+  <script>
+    $( function() {
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+        } );
+    </script>
+
+    <script type="text/javascript">
+    function saveOrder() {
+
+        var serviceorder = "";
+
+        $("#sortable li").each(function(i) {
+        if (serviceorder == '')
+            serviceorder = $(this).attr('service-id');
+        else
+            serviceorder += "," + $(this).attr('service-id');
+        });
+
+        // $.post('/saveorder.php', { order: articleorder })
+        // .success(function(data) {
+        //     alert('saved');
+        // })
+        // .error(function(data) { 
+        //     alert('Error: ' + data); 
+        // }); 
+
+        console.log(serviceorder);
+        
+    }
+    </script>
+
 
 </body>
 
