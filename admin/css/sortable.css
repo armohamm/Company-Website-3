@@ -1,0 +1,28 @@
+#sortable {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 40%;
+    margin-left: 0px;
+}
+
+#sortable li {
+    margin: 10px 0; 
+    padding: 10px 0;  
+    font-size: 20px; 
+    height: 40px;
+    text-align: center;
+}
+
+#sortable li span {
+    position: absolute; 
+    margin-left: -1.3em;
+}
+
+.ui-state-default {
+    border: 1px solid #c5c5c5;
+    font-weight: normal;
+    color:black;
+    
+}
+
