@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Adminsivusto - Pääsivun kuvien vaihtaminen</title>
+  <title>Adminsivusto - Palvelun otsikon lisäys</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -188,31 +188,41 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Pääsivun kuvien vaihtaminen</h1>
+          <h1 class="h3 mb-4 text-gray-800">Palvelun lisäys</h1>
+
+          <form class="" action="add-service.html" method="post">
+
+            <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">
+              Ensin kirjoitat palvelulle otsikon, esim. "Rakennussiivous" <br><br>
+              Sitten kirjoitat kuvauksen palvelulle, eli toisin sanoen pienen myyntipuheen. <br><br>
+              Sen jälkeen lisäät palvelulle taustakuvan, <br>mieluusti jonkun kivan liukuvärin jonka päällä tekstit näkyvät hyvin.
+              <br>Kuvan on oltava 1920x1080! <br> <span style="color: teal;"><b>Vinkki, hyviä kuvia löydät alta löytyvistä
+                  linkeistä</b></span>
+            </h1>
+          
+            <h1 class="h4 mb-4 text-gray-800">Otsikko</h1>
+            <input type="text" name="text">
+          
+            <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Kuvaus</h1>
+            <textarea></textarea>
+          
+            <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Taustakuva</h1>
+            <a class="h5" href="https://unsplash.com/">Ilmainen kuvapalvelu 1</a><br>
+            <a class="h5" href="https://pixabay.com/">Ilmainen kuvapalvelu 2</a><br>
+            <input type="file" name="file"><br><br>
+          
+            <button class="btn btn-success btn-icon-split" type="submit">
+              <span class="icon text-white-50">
+                <i class="fas fa-check"></i>
+              </span>
+              <span class="text">Tallenna</span>
+            </button>
+          
+          </form>
 
         </div>
         <!-- /.container-fluid -->
-<div style="margin-left: 25px">
-<form class="" action="main_page_photo_change.html" method="post">
-  <h2>Pääsivun kuvien vaihtaminen</h2>
-                <h1 class="h4 mb-4 text-gray-800">Kuva 1</h1>
-                <input type="file" name="file0"><br>
 
-                <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Kuva 2</h1>
-                <input type="file" name="file1"><br>
-
-                <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Kuva 3</h1>
-                <input type="file" name="file2"><br><br>
-
-  <button class="btn btn-success btn-icon-split" type="submit">
-    <span class="icon text-white-50">
-      <i class="fas fa-check"></i>
-    </span>
-    <span class="text">Tallenna</span>
-  </button>
-</form>
-
-</div>
       </div>
       <!-- End of Main Content -->
 

@@ -1,20 +1,20 @@
-#sortable {
+#sortable1, #sortable2, #sortable3, #sortable4, #sortable5, #sortable6, #sortable7, #sortable8, #sortable9 {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
-    width: 40%;
+    width: 300px;
     margin-left: 0px;
 }
 
-#sortable li {
+#sortable1 li, #sortable2 li, #sortable3 li, #sortable4 li, #sortable5 li, #sortable6 li, #sortable7 li, #sortable8 li, #sortable9 li {
     margin: 10px 0; 
     padding: 10px 0;  
     font-size: 20px; 
-    height: 40px;
+    height: 80px;
     text-align: center;
 }
 
-#sortable li span {
+#sortable1 li span, #sortable2 li span, #sortable3 li span, #sortable4 li span, #sortable5 li span, #sortable6 li span, #sortable7 li span, #sortable8 li span, #sortable9 li span {
     position: absolute; 
     margin-left: -1.3em;
 }
