@@ -192,62 +192,36 @@
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Referenssien lisäys</h1>
 
-          <form class="" action="add_reference.html" method="post">
+          <form class="" action="add-reference.html" method="post">
 
+              <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Valitse ensin minkä referenssi otsikon alle haluat referenssin lisätä <br>
+              sen jälkeen kirjoita alle referenssi kohteen esim. "Esimerkkilän lukio"</h1>
+    
+              <h1 class="h4 mb-4 text-gray-800;">Referenssi otsikko</h1>
+              <select name="title">
+                  <option value="0"></option>
+                  <option value="1">Otsikko 1</option>
+                  <option value="2">Otsikko 2</option>
+                  <option value="3">Otsikko 3</option>
+                  <option value="4">Otsikko 4</option>
+              </select>
+    
+              <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Lisättävä referenssi</h1>
+              <input type="text" name="text"><br><br>
+    
+              <button class="btn btn-success btn-icon-split" type="submit">
+                <span class="icon text-white-50">
+                  <i class="fas fa-check"></i>
+                </span>
+                <span class="text">Lisää</span>
+              </button>
+    
+            </form>
+          
         </div>
         <!-- /.container-fluid -->
 
-      <div style="margin-left: 25px;">
-
-        <h2>Referenssien lisäys</h2>
-
-        <h1 class="h4 mb-4 text-gray-800;">Referenssi otsikko</h1>
-        <select>
-            <option> </option>
-            <option>Otsikko 1</option>
-            <option>Otsikko 2</option>
-            <option>Otsikko 3</option>
-            <option>Otsikko 4</option>
-        </select>
-
-        <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Lisättävä referenssi</h1>
-        <input type="text" name="text"><br><br>
-
-        <button class="btn btn-success btn-icon-split" type="submit">
-          <span class="icon text-white-50">
-            <i class="fas fa-check"></i>
-          </span>
-          <span class="text">Lisää</span>
-        </button>
-
-        <h2 style="margin-top: 25px;">Referenssien muokkaus ja poisto</h2>
-
-        <select>
-            <option> </option>
-            <option>Otsikko 1</option>
-            <option>Otsikko 2</option>
-            <option>Otsikko 3</option>
-            <option>Otsikko 4</option>
-        </select>
-
-        <div class="list-container" style="margin-top: 25px;">
-            <ul id="sortable">
-                <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Referenssi 1 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-                <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Referenssi 2 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-                <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Referenssi 3 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-                <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Referenssi 4 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-            </ul>
-        </div>
-
-      <button class="btn btn-success btn-icon-split" type="submit">
-        <span class="icon text-white-50">
-          <i class="fas fa-check"></i>
-        </span>
-        <span class="text">Tallenna</span>
-      </button>
-      </form>
-    </div>
-    </div>
+      </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->

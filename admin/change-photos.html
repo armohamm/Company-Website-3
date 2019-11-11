@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Adminsivusto - Palvelun lisäys</title>
+  <title>Adminsivusto - Pääsivun kuvien vaihtaminen</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,8 +17,6 @@
 
   <!-- Custom styles for this template-->
   <link href="css/style.css" rel="stylesheet">
-  <link href="vendor/jquery-ui/jquery-ui.min.css">
-  <link href="css/sortable.css" rel="stylesheet">
 
 </head>
 
@@ -190,37 +188,27 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Palvelun lisäys</h1>
+          <h1 class="h3 mb-4 text-gray-800">Pääsivun kuvien vaihtaminen</h1>
+
+          <form class="" action="change-photos.html" method="post">
+            <h1 class="h4 mb-4 text-gray-800">Aloitus osion kuva</h1>
+            <input type="file" name="file0"><br>
+          
+            <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Meistä osion kuva</h1>
+            <input type="file" name="file1"><br><br>
+          
+            <button class="btn btn-success btn-icon-split" type="submit">
+              <span class="icon text-white-50">
+                <i class="fas fa-check"></i>
+              </span>
+              <span class="text">Tallenna</span>
+            </button>
+          </form>
 
         </div>
         <!-- /.container-fluid -->
 
-        <div style="margin-left: 25px;">
-
-        <form class="" action="add_service.html" method="post">
-
-        <h2>Palveluiden lisäys</h2>
-        <h1 class="h4 mb-4 text-gray-800;">Palvelu</h1>
-        <a href="add-service.html" target="_blank">Lisää uusi palvelu</a>
-
-        <h1 class="h4 mb-4 text-gray-800;">Muokkaus ja poisto</h1>
-        <div class="list-container" style="margin-top: 25px;">
-          <ul id="sortable">
-              <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Palvelu 1 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-              <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Palvelu 2 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-              <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Palvelu 3 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-              <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Palvelu 4 <a href="#">Muokkaa</a><a href="#"> Poista</a></li>
-          </ul>
-        </div>
-        <button class="btn btn-success btn-icon-split" type="submit">
-          <span class="icon text-white-50">
-            <i class="fas fa-check"></i>
-          </span>
-          <span class="text">Tallenna</span>
-        </button>
-      </form>
-    </div>
-  </div>
+      </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
@@ -270,45 +258,8 @@
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- jQuery ui -->
-  <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
-
   <!-- Custom scripts for all pages-->
   <script src="js/javascript.js"></script>
-
-  <!-- Custom infile javascript -->
-  <script>
-    $( function() {
-        $( "#sortable" ).sortable();
-        $( "#sortable" ).disableSelection();
-        } );
-    </script>
-
-    <script type="text/javascript">
-    function saveOrder() {
-
-        var serviceorder = "";
-
-        $("#sortable li").each(function(i) {
-        if (serviceorder == '')
-            serviceorder = $(this).attr('service-id');
-        else
-            serviceorder += "," + $(this).attr('service-id');
-        });
-
-        // $.post('/saveorder.php', { order: articleorder })
-        // .success(function(data) {
-        //     alert('saved');
-        // })
-        // .error(function(data) { 
-        //     alert('Error: ' + data); 
-        // }); 
-
-        console.log(serviceorder);
-        
-    }
-    </script>
-
 
 </body>
 
