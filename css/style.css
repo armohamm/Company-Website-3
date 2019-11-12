@@ -335,7 +335,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-size: cover;
     background-attachment: fixed;
     }
-    
+
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
     background: rgba(29, 186, 234, 0.185);
     min-height: 800px;
@@ -343,10 +343,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
     div.start-text {
     margin-top: 375px;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     }
 
- 
+
     span.start {
     font-size: 1.3em;
     font-weight: 750;
@@ -372,10 +372,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
     div.start-text {
     margin-top: 375px;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     }
 
- 
+
     span.start {
     font-size: 2em;
     font-weight: 750;
@@ -386,7 +386,7 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* tietokoneille */
 @media only screen and (min-width: 900px) {
   section.start-section {
-    min-height: 800px;  
+    min-height: 800px;
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
@@ -395,27 +395,27 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
-    background: rgba(29, 186, 234, 0.185);    
+    background: rgba(29, 186, 234, 0.185);
     min-height: 800px;
     }
 
     div.start-text {
     margin-top: 375px;
-    font-family: 'Roboto', sans-serif;     
+    font-family: 'Roboto', sans-serif;
     }
 
- 
+
     span.start {
-    font-size: 2em;    
+    font-size: 2em;
     font-weight: 750;
     color: #ea5e1d;
     }
-}    
+}
 
 /* leveille näytöille */
 @media only screen and (min-width: 1440px) {
   section.start-section {
-    min-height: 800px;  
+    min-height: 800px;
     background-image: url("../img/section-start.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
@@ -424,7 +424,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
-    background: rgba(29, 186, 234, 0.185);    
+    background: rgba(29, 186, 234, 0.185);
     min-height: 800px;
     }
 
@@ -434,7 +434,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
     span.start {
-    font-size: 2.25em;    
+    font-size: 2.25em;
     font-weight: 900;
     color: #ea5e1d;
     }
@@ -469,19 +469,19 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* tietokoneille */
 @media only screen and (min-width: 900px) {
   section.services-section {
-    min-height: 750px;  
+    min-height: 750px;
     background: #ea5e1d;
     background-repeat: no-repeat;
     background-attachment: center;
     background-size: cover;
     background-attachment: fixed;
   }
-}    
+}
 
 /* leveille näytöille */
 @media only screen and (min-width: 1350px) {
   section.services-section {
-    min-height: 750px;  
+    min-height: 750px;
     background: #ea5e1d;
     background-repeat: no-repeat;
     background-attachment: center;
@@ -511,15 +511,15 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* tietokoneille */
 @media only screen and (min-width: 900px) {
   section.references-section {
-    min-height: 750px;  
+    min-height: 750px;
     background: #ea5e1d;
   }
-}    
+}
 
 /* leveille näytöille */
 @media only screen and (min-width: 1350px) {
   section.references-section {
-    min-height: 750px;  
+    min-height: 750px;
     background: #ea5e1d;
   }
 }
@@ -587,7 +587,7 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* tietokoneille */
 @media only screen and (min-width: 900px) {
   section.about-section {
-    min-height: 750px;  
+    min-height: 750px;
     background-image: url("../img/section-about.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
@@ -616,7 +616,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* leveille näytöille */
 @media only screen and (min-width: 1350px) {
   section.about-section {
-    min-height: 750px;  
+    min-height: 750px;
     background-image: url("../img/section-about.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
@@ -663,17 +663,38 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* tietokoneille */
 @media only screen and (min-width: 900px) {
   section.contact-section {
-    min-height: 450px;  
+    min-height: 450px;
     background: #2d5387;
   }
-}    
+}
 
 /* leveille näytöille */
 @media only screen and (min-width: 1350px) {
   section.contact-section {
-    min-height: 450px;  
+    min-height: 450px;
     background: #2d5387;
   }
+}
+
+/* Yhteystieto alkaa */
+
+div.box {
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    padding: 90px;
+    text-align: center;
+    color: #f4f4f4;
+}
+
+div.information {
+  width: 100%;
+  height: 250px;
+  margin: auto;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #f4f4f4;
 }
 
 /* Yhteystiedot loppuu ja footer alkaa */
