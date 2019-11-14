@@ -10,8 +10,7 @@ class Reference extends Conn {
     public function getReferences() {
         $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
         FROM `reference_heading` 
-        ORDER BY `reference_heading`.`position`');
-        
+        ORDER BY `reference_heading`.`position`');   
         while ($row = $sql->fetch()) {
             $foo = array();
 
@@ -36,7 +35,6 @@ class Reference extends Conn {
             FROM `reference_heading` 
             INNER JOIN `references` ON `references`.`headingID` = `reference_heading`.`headingID` 
             WHERE `reference_heading`.`headingID` ='. $this->refHeadings[$i-1][0]);
-
             while ($row = $sql->fetch()) {
 
                 $text=$row['text'];
@@ -57,6 +55,61 @@ class Reference extends Conn {
     public function getRefHeading($arrayPos) {
         return $this->refHeadings[$arrayPos][1];
     }
+
+    public function addReferenceHeading(string $heading) {
+
+        $sql = $this->connect()->query('SELECT count(*) AS headings FROM ' . $this->headingsTable);
+        while ($row = $sql->fetch()) {
+            $headingsAmount = $row['headings'];
+        }
+
+        $pos = (int)$headingsAmount + 1;
+
+        $sql = "INSERT INTO " . $this->headingsTable . " (`headingID`, `position`, `heading`) 
+        VALUES (NULL, :position, :heading)";
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['position'=>$pos, 'heading'=>$heading]);
+
+        $return = 'Otsikko ' . $heading . ' on lisätty tietokantaan sijaintiin ' . $pos;
+
+        return $return;
+
+    }
+
+    public function changeHeadingPositions(array $positions) {
+
+        $count = count($positions);
+
+        $return = '';
+
+        for ($i=1; $i <= $count ; $i++) { 
+            $sql = 'UPDATE ' . $this->headingsTable . ' SET position = :pos WHERE headingID = :headingID';
+            $sql = $this->connect()->prepare($sql);
+            $sql->execute(['pos' => $i, 'headingID' => (int)$positions[$i-1]]);
+
+            $return = $return . ' Otsikon ' . $positions[$i-1] . ' sijainti on nyt ' . $i . '<br>';
+        }
+
+        return $return;
+
+    }
+
+    public function changeReferencePositions(array $positions) { //atm ei toimi
+
+        $count = count($positions);
+
+        $return = '';
+
+        for ($i = 1; $i <= $count; $i++) {
+            $sql = 'UPDATE ' . $this->refsTable . ' SET position = :pos WHERE refID = :refID';
+            $sql = $this->connect()->prepare($sql);
+            $sql->execute(['pos' => $i, 'refID' => (int)$positions[$i-1]]);
+
+            $return = $return . ' Referenssin ' . $positions[$i-1] . ' sijainti on nyt ' . $i . '<br>';
+        }
+
+        return $return;
+    }
     
 }
 
@@ -64,3 +117,12 @@ class Reference extends Conn {
 // $array = $objekti->getReferences();
 // $pos = $objekti->getRefHeading(3);
 // print_r($array[3][$pos]);
+
+// print_r($array);
+
+// $objekti = new Reference();
+// echo $objekti->addReferenceHeading('Kadut');
+
+// $objekti = new Reference();
+// echo $objekti->changeHeadingPositions($array);
+// echo $objekti->changeReferencePositions($array);
