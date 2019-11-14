@@ -13,10 +13,10 @@ class Password extends Conn {
         }
 
         if (md5($pass) == $password) {
-            return 'salasana on oikein';
+            return '1';
         }
         else {
-            return 'salasana on väärin';
+            return '0';
         }
     }
 
