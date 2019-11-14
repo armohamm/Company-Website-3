@@ -94,16 +94,16 @@ class Reference extends Conn {
 
     }
 
-    public function changeReferencePositions(array $positions) {
+    public function changeReferencePositions(array $positions) { //atm ei toimi
 
         $count = count($positions);
 
         $return = '';
 
         for ($i = 1; $i <= $count; $i++) {
-            $sql = 'UPDATE ' . $this->refsTable . ' SET position = :pos WHERE refID = :ref';
+            $sql = 'UPDATE ' . $this->refsTable . ' SET position = :pos WHERE refID = :refID';
             $sql = $this->connect()->prepare($sql);
-            $sql->execute(['pos' => $i, 'ref' => (int)$positions[$i-1]]);
+            $sql->execute(['pos' => $i, 'refID' => (int)$positions[$i-1]]);
 
             $return = $return . ' Referenssin ' . $positions[$i-1] . ' sijainti on nyt ' . $i . '<br>';
         }
@@ -112,8 +112,6 @@ class Reference extends Conn {
     }
     
 }
-
-// UPDATE `references` SET position = 1 WHERE refID = 17
 
 // $objekti = new Reference();
 // $array = $objekti->getReferences();
@@ -124,3 +122,7 @@ class Reference extends Conn {
 
 // $objekti = new Reference();
 // echo $objekti->addReferenceHeading('Kadut');
+
+// $objekti = new Reference();
+// echo $objekti->changeHeadingPositions($array);
+// echo $objekti->changeReferencePositions($array);
