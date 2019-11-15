@@ -2,8 +2,8 @@
 
 class Reference extends Conn {
     
-    private $headingsTable = "reference_heading";
-    private $refsTable = "references";
+    private $headingsTable = 'reference_heading';
+    private $refsTable = 'references';
     public $refHeadings = array();
     private $refs = array();
 
@@ -87,25 +87,27 @@ class Reference extends Conn {
             $sql = $this->connect()->prepare($sql);
             $sql->execute(['pos' => $i, 'headingID' => (int)$positions[$i-1]]);
 
-            $return = $return . ' Otsikon ' . $positions[$i-1] . ' sijainti on nyt ' . $i . '<br>';
+            $return = $return . ' Otsikon ' . $positions[$i-1] . ' sijainti on nyt ' . $i . '. ';
         }
 
         return $return;
 
     }
 
-    public function changeReferencePositions(array $positions) { //atm ei toimi
+    public function changeReferencePositions(array $positions) {
 
         $count = count($positions);
 
         $return = '';
 
         for ($i = 1; $i <= $count; $i++) {
-            $sql = 'UPDATE ' . $this->refsTable . ' SET position = :pos WHERE refID = :refID';
+
+            $sql = 'UPDATE `' . $this->refsTable . '` SET position = :pos WHERE refID = :refID';
             $sql = $this->connect()->prepare($sql);
             $sql->execute(['pos' => $i, 'refID' => (int)$positions[$i-1]]);
 
-            $return = $return . ' Referenssin ' . $positions[$i-1] . ' sijainti on nyt ' . $i . '<br>';
+            $return = $return . ' Referenssin ' . $positions[$i-1] . ' sijainti on nyt ' . $i . '. ';
+            
         }
 
         return $return;
@@ -123,6 +125,9 @@ class Reference extends Conn {
 // $objekti = new Reference();
 // echo $objekti->addReferenceHeading('Kadut');
 
-// $objekti = new Reference();
-// echo $objekti->changeHeadingPositions($array);
-// echo $objekti->changeReferencePositions($array);
+// $object = new Reference();
+// array0 = array(2,4,1,3);
+// echo $object->changeHeadingPositions($array0);
+
+// $array1 = array(4,2,5,1,3);
+// echo $object->changeReferencePositions($array1);

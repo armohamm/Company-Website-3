@@ -318,9 +318,9 @@
                     referencetitleorder += "," + $(this).attr('referencetitle-id');
             });
 
-            $.post('saveorder.php', { order: referencetitleorder })
+            $.post('includes/reference-heading-order.inc.php', { order: referencetitleorder })
                 .done(function (result) {
-                    alert('Referenssien järjestys on tallennettu \nTallennetut tiedot: ' + result + "\nKoodissa laskeminen alkaa nollasta, eli 0 = ensimmäinen");
+                    alert('Referenssien järjestys on tallennettu \nTallennetut tiedot: ' + result);
                 })
                 .fail(function (data) {
                     alert('Error: ' + data);
