@@ -39,11 +39,12 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Tervetuloa takaisin!</h1>
                   </div>
+                  <div id="message" class="h5 text-center" style="color: red;"></div>
                   <form class="user">
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                      <input type="password" class="form-control form-control-user" id="txt_pwd" placeholder="Password">
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <a id="but_submit" class="btn btn-primary btn-user btn-block">
                       Kirjaudu sisään
                     </a>
                     <a href="../index.html" class="btn btn-secondary btn-user btn-block">
@@ -72,6 +73,32 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/javascript.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#but_submit").click(function(){
+          var password = $("#txt_pwd").val().trim();
+
+          if( password != "" ){
+              $.ajax({
+                  url:'includes/password-check.inc.php',
+                  type:'post',
+                  data:{password:password},
+                  success:function(response){
+                      var msg = "";
+                      if(response == 1){
+                          window.location = "index.php";
+                      }else{
+                          msg = "Virheellinen salasana";
+                      }
+                      $("#message").html(msg);
+                  }
+              });
+            }
+        });
+    });
+  </script>
+
 
 </body>
 
