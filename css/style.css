@@ -323,6 +323,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
+/* Slidereiden css alkaa */
+.carousel-item {
+  min-height: 750px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Slidereiden css loppuu */
+
 /* Aloitus osa alkaa */
 
  /* puhelimelle */
@@ -451,6 +462,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
+    color: #f4f4f4;
   }
 }
 
@@ -463,6 +476,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
+    color: #f4f4f4;
   }
 }
 
@@ -475,6 +490,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: center;
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
+    color: #f4f4f4;
   }
 }
 
@@ -487,6 +504,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: center;
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
+    color: #f4f4f4;
   }
 }
 
@@ -497,6 +516,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.references-section {
     min-height: 750px;
     background: #ea5e1d;
+    color: #f4f4f4;
   }
 }
 
@@ -505,6 +525,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.references-section {
     min-height: 750px;
     background: #ea5e1d;
+    color: #f4f4f4;
   }
 }
 
@@ -513,6 +534,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.references-section {
     min-height: 750px;
     background: #ea5e1d;
+    color: #f4f4f4;
   }
 }
 
@@ -521,6 +543,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.references-section {
     min-height: 750px;
     background: #ea5e1d;
+    color: #f4f4f4;
   }
 }
 
@@ -650,55 +673,48 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 450px;
     background: #2d5387;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 1.15em;
+    padding: 50px;
   }
 }
 
  /* tableteille */
 @media only screen and (min-width: 450px) {
   section.contact-section {
-    min-height: 450px;
+    min-height: 200px;
     background: #2d5387;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 1.15em;
+    padding: 50px;
   }
 }
 
  /* tietokoneille */
 @media only screen and (min-width: 900px) {
   section.contact-section {
-    min-height: 450px;
+    min-height: 200px;
     background: #2d5387;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 1.15em;
+    padding: 50px;
   }
 }
 
 /* leveille näytöille */
 @media only screen and (min-width: 1350px) {
   section.contact-section {
-    min-height: 450px;
+    min-height: 200px;
     background: #2d5387;
-  }
-}
-
-/* Yhteystieto alkaa */
-
-div.box {
-    width: 100%;
-    height: 300px;
-    margin: auto;
-    padding: 90px;
     text-align: center;
     color: #f4f4f4;
+    font-size: 1.15em;
+    padding: 50px;
+  }
 }
-
-div.information {
-  width: 100%;
-  height: 250px;
-  margin: auto;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  color: #f4f4f4;
-}
-
-/* Yhteystiedot loppuu ja footer alkaa */
 
 section.footer-section {
     min-height: 50px;
