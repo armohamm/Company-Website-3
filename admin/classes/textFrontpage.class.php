@@ -25,9 +25,9 @@ class TextFrontpage extends Conn {
             
             $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE textID='.$this->textID);
             while ($row = $sql->fetch()) {
-                array_push($contents, $row["text"]);
-                array_push($contents, $row["subtext"]);
-                return utf8_encode($contents);
+                array_push($contents, utf8_encode($row["text"]));
+                array_push($contents, utf8_encode($row["subtext"]));
+                return $contents;
             }
         }
 
