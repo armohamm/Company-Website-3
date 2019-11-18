@@ -585,14 +585,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
     background: rgba(0, 0, 0, 0.7);
     min-height: 600px;
-    padding: 17.5px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
   }
 
-  div.about-text {
+  h1.about-heading {
+    font-size: 1.85em;
     color: #f4f4f4;
-    font-size: 1em;
-    font-weight: 600;
+    font-weight: 750;
+    text-align: center;
   }
+
+  p.about-text {
+    font-size: 1.35em;
+    color: #f4f4f4;
+    font-weight: 600;
+    margin: 20px;
+  }
+  
 }
 
  /* tableteille */
@@ -614,14 +626,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
     background: rgba(0, 0, 0, 0.7);
     min-height: 550px;
-    padding: 20px;
+    padding: 10%;
   }
 
-  div.about-text {
+  h1.about-heading {
+    font-size: 2.5em;
     color: #f4f4f4;
-    font-size: 1.25em;
-    font-weight: 600;
+    font-weight: 750;
+    text-align: center;
   }
+
+  p.about-text {
+    font-size: 1.75em;
+    color: #f4f4f4;
+    font-weight: 600;
+    margin: 30px;
+  }
+  
 }
 
  /* tietokoneille */
@@ -643,14 +664,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
     background: rgba(0, 0, 0, 0.7);
     min-height: 450px;
-    padding: 25px;
+    padding: 5%;
   }
 
-  div.about-text {
+  h1.about-heading {
+    font-size: 3.25em;
     color: #f4f4f4;
-    font-size: 1.6em;
-    font-weight: 600;
+    font-weight: 750;
+    text-align: center;
   }
+
+  p.about-text {
+    font-size: 2em;
+    color: #f4f4f4;
+    font-weight: 600;
+    margin: 40px;
+  }
+  
 }
 
 /* leveille näytöille */
@@ -664,7 +694,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: fixed;
     width: 100%;
     padding-top: 150px;
-
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 150px;
@@ -673,14 +702,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
     background: rgba(0, 0, 0, 0.7);
     min-height: 450px;
-    padding: 25px;
+    padding: 5%;
   }
 
-  div.about-text {
+  h1.about-heading {
+    font-size: 3.5em;
     color: #f4f4f4;
-    font-size: 1.75em;
-    font-weight: 600;
+    font-weight: 750;
+    text-align: center;
   }
+
+  p.about-text {
+    font-size: 2em;
+    color: #f4f4f4;
+    font-weight: 600;
+    margin: 45px;
+  }
+  
 }
 
 /* Referenssit loppuu ja yhteystiedot alkaa #2d5387 */
