@@ -36,14 +36,14 @@ class Password extends Conn {
                 $sql = $this->connect()->prepare($sql);
                 $sql->execute(['pass'=>$pass, 'adminID'=>$this->adminID]);
 
-                return utf8_encode('Salasana on vaihdettu');
+                return 2;
             }
             else {
-                return utf8_encode('Uudet salasanat eivät täsmää');
+                return 1;
             }
         }
         else {
-            return utf8_encode('Vanha salasana ei täsmää');
+            return 0;
         }
     }
 }

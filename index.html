@@ -309,6 +309,8 @@
               Puhelin: 050-557 8784 <br>
               Sähköposti: lissu@hamss.fi <br><br>
 
+            <a id="job-open" style="color: white;">Haemme työntekijöitä</a>
+
   </section>
   <!-- Yhteystiedot loppuu -->
 
@@ -365,13 +367,31 @@
   <script type="text/javascript">
     document.getElementById("hideAll").style.display = "block";
   </script>
-  
+
   <script type="text/javascript">
     $(window).load(function () {
       $.get("admin/includes/get-start-title.inc.php", function (data) {
         $("#start-text").html(data);
       });
-    }); 
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(window).load(function () {
+      $.get("admin/includes/get-job-open.inc.php", function (data) {
+        if (data != 0) {
+          $("#job-open").attr("href", data);
+          document.getElementById("job-open").style.display = "block";
+        }
+        else {
+
+        }
+      });
+    });
+  </script>
+  
+  <script type="text/javascript">
+
     $(window).load(function () { document.getElementById("hideAll").style.display = "none"; });
     $(window).load(function () { document.getElementById("header").style.display = "block"; });
   </script>
