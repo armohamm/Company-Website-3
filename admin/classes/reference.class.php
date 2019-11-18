@@ -56,7 +56,7 @@ class Reference extends Conn {
         return utf8_encode($this->refHeadings[$arrayPos][1]);
     }
 
-    public function addReferenceHeading(string $heading) {
+    public function addReferenceTitle(string $heading) {
 
         $sql = $this->connect()->query('SELECT count(*) AS headings FROM ' . $this->headingsTable);
         while ($row = $sql->fetch()) {
@@ -143,7 +143,7 @@ class Reference extends Conn {
 // print_r($array);
 
 // $objekti = new Reference();
-// echo $objekti->addReferenceHeading('Kadut');
+// echo $objekti->addReferenceTitle('Kadut');
 
 // $object = new Reference();
 // array0 = array(2,4,1,3);
