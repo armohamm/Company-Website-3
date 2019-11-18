@@ -35,8 +35,10 @@
 
 <body>
 
+  <div style="display: none" id="hideAll">&nbsp;</div>
+
   <!-- Navi alkaa -->
-  <header id="header">
+  <header id="header" style="display: none;">
       <div class="container">
           <div id="logo" class="pull-left">
               <a href="#start"><img src="img/logo1.png" alt="" title="" /></img></a>
@@ -61,7 +63,7 @@
               <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12 text-center">
                       <div class="start-text">
-                          <h1><span class="start">Pidämme asiat puhtaina</span></h1>
+                          <h1><span id="start-text" class="start"></span></h1>
                       </div>
                   </div>
               </div>
@@ -358,6 +360,20 @@
 
     // always overwrite window.name, in case users try to set it manually
     window.name = "result"
+  </script>
+
+  <script type="text/javascript">
+    document.getElementById("hideAll").style.display = "block";
+  </script>
+  
+  <script type="text/javascript">
+    $(window).load(function () {
+      $.get("admin/includes/get-start-title.inc.php", function (data) {
+        $("#start-text").html(data);
+      });
+    }); 
+    $(window).load(function () { document.getElementById("hideAll").style.display = "none"; });
+    $(window).load(function () { document.getElementById("header").style.display = "block"; });
   </script>
 
 

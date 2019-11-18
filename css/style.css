@@ -1,4 +1,16 @@
 /* Yleinen */
+
+#hideAll {
+  position: fixed;
+  left: 0px; 
+  right: 0px; 
+  top: 0px; 
+  bottom: 0px; 
+  background-color: white;
+  z-index: 99; /* Higher than anything else in the document */
+
+}
+
 body {
   background: #fff;
   color: #666666;
@@ -331,6 +343,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+}
+
+.carousel-item h1{
+  font-size: 4.5rem;
 }
 /* Slidereiden css loppuu */
 

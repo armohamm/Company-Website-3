@@ -1,3 +1,9 @@
+<?php
+
+    require_once "includes/reference-title-orderlist.inc.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -203,26 +209,7 @@
                 
                     <div class="list-container" style="margin-top: 25px;">
                         <ul id="sortable1">
-                            <li referencetitle-id="1" class="bg-gray-100 border-bottom-info ui-state-default">Referenssiotsikko 1 <br> 
-                                <a href="edit-reference-title.php?type=edit&id=1" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                                <a href="edit-reference-title.php?type=delete&id=1" style="color: red;"> Poista</a>
-                            </li>
-
-                            <li referencetitle-id="2" class="bg-gray-100 border-bottom-info ui-state-default">Referenssiotsikko 2 <br> 
-                                <a href="edit-reference-title.html" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                                <a href="#" style="color: red;"> Poista</a>
-                            </li>
-
-                            <li referencetitle-id="3" class="bg-gray-100 border-bottom-info ui-state-default">Referenssiotsikko 3 <br> 
-                                <a href="edit-reference-title.html" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                                <a href="#" style="color: red;"> Poista</a>
-                            </li>
-
-                            <li referencetitle-id="4" class="bg-gray-100 border-bottom-info ui-state-default">Referenssiotsikko 4 <br> 
-                                <a href="edit-reference-title.html" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                                <a href="#" style="color: red;"> Poista</a>
-                            </li>
-
+                            <?php makeList(); ?>
                         </ul>
                     </div>
                     
@@ -300,34 +287,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/javascript.js"></script>
 
-    <script>
-        $(function () {
-            $("#sortable1").sortable();
-            $("#sortable1").disableSelection();
-        });
-    </script>
-
-    <script type="text/javascript">
-        function saveOrder() {
-            var referencetitleorder = "";
-
-            $("#sortable1 li").each(function (i) {
-                if (referencetitleorder == '')
-                    referencetitleorder = $(this).attr('referencetitle-id');
-                else
-                    referencetitleorder += "," + $(this).attr('referencetitle-id');
-            });
-
-            $.post('includes/reference-heading-order.inc.php', { order: referencetitleorder })
-                .done(function (result) {
-                    alert('Referenssien järjestys on tallennettu \nTallennetut tiedot: ' + result);
-                })
-                .fail(function (data) {
-                    alert('Error: ' + data);
-                });
-
-        }
-    </script>
+    <?php makeJS(); ?>
 
 </body>
 

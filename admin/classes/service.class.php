@@ -16,7 +16,7 @@ class Service extends Conn {
             $serviceText=$row['text'];
 
             array_push($foo, $serviceHeading);
-            array_push($foo, $serviceText);
+            array_push($foo, utf8_encode($serviceText));
 
             array_push($this->service, $foo);
 
@@ -42,7 +42,7 @@ class Service extends Conn {
 
         $return = 'Palvelu ' . $heading . ' ja sen selitys ' . $text . ' on lisätty tietokantaan sijaintiin ' . $pos;
 
-        return $return;
+        return utf8_encode($return);
 
     }
 
@@ -60,7 +60,7 @@ class Service extends Conn {
             $return = $return . ' Otsikon ' . $positions[$i - 1] . ' sijainti on nyt ' . $i . '<br>';
         }
 
-        return $return;
+        return utf8_encode($return);
 
     }
     

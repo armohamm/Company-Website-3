@@ -2,7 +2,7 @@
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
-    width: 300px;
+    width: 385px;
     margin-left: 0px;
 }
 
@@ -10,7 +10,7 @@
     margin: 10px 0; 
     padding: 10px 0;  
     font-size: 20px; 
-    height: 80px;
+    min-height: 45px;
     text-align: center;
 }
 
