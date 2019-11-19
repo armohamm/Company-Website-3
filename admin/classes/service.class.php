@@ -87,6 +87,29 @@ class Service extends Conn {
         }
         return $serviceID;
     }
+
+    public function getServiceToArray() {
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
+        FROM `service` 
+        ORDER BY `service`.`position`');
+        
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $serviceID=$row['serviceID'];
+            $heading=$row['heading'];
+
+            array_push($foo, $serviceID);
+            array_push($foo, utf8_encode($heading));
+
+            array_push($this->service, $foo);
+
+            unset($foo);
+        }
+
+        return $this->service;
+
+    }
     
 }
 // Käytetään getServices();
