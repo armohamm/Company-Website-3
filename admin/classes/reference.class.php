@@ -132,6 +132,17 @@ class Reference extends Conn {
         }
         return $this->refHeadings;
     }
+
+    public function getLastHeadingID()
+    {
+        $sql = $this->connect()->query('SELECT * FROM `reference_heading` ORDER BY `position` DESC LIMIT 1');   
+        while ($row = $sql->fetch()) {
+
+            $headingID=$row['headingID'];
+
+        }
+        return $headingID;
+    }
     
 }
 
