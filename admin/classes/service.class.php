@@ -63,6 +63,20 @@ class Service extends Conn {
         return utf8_encode($return);
 
     }
+
+    public function editService(string $id, string $heading, string $text) {
+
+        $text = utf8_decode($text);
+        $heading = utf8_decode($heading);
+
+        $sql = 'UPDATE '.$this->serviceTable.' SET heading = :heading, text = :text WHERE serviceID = :serviceID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['heading'=>$heading, 'text'=>$text, 'serviceID'=>$id]);
+
+        $return = "Uusi palvelun otsikko on ".$heading." ja uusi selitys on ".$text;
+        return utf8_decode($return);
+
+    }
     
 }
 // Käytetään getServices();

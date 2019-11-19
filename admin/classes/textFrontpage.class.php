@@ -63,5 +63,3 @@ class TextFrontpage extends Conn {
         }
     }
 }
-
-// Hämeen Siivous ja & Saneeraus on tamperelainen yritys, johon meidän asiakkaamme ovat luottaneet jo vuodesta 1994. Yrityksemme tarjoaa palveluitansa yrityksille ja myös yksityishenkilöille.

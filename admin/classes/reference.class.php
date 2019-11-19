@@ -143,6 +143,19 @@ class Reference extends Conn {
         }
         return $headingID;
     }
+
+    public function editReferenceHeading(string $id, string $heading) {
+
+        $heading = utf8_decode($heading);
+
+        $sql = 'UPDATE '.$this->headingsTable.' SET heading = :heading WHERE headingID = :headingID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['heading'=>$heading, 'text'=>$text, 'headingID'=>$id]);
+
+        $return = "Uusi referenssi otsikko on ".$heading;
+        return utf8_decode($return);
+
+    }
     
 }
 
