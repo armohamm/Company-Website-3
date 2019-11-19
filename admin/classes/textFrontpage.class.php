@@ -32,4 +32,36 @@ class TextFrontpage extends Conn {
         }
 
     }
+
+    public function editTextFrontpage(string $type, string $text) {
+
+        $text = utf8_decode($text);
+
+        if ($type == "title") {
+            
+            $this->textID = 1;
+
+            $sql = 'UPDATE '.$this->table.' SET text = :text WHERE textID = :textID';
+            $sql = $this->connect()->prepare($sql);
+            $sql->execute(['text'=>$text, 'textID'=>$this->textID]);
+
+            $return = "Uusi sivun otsikko on ". $text;
+            return utf8_decode($return);
+
+        }
+        elseif ($type == "about") {
+
+            $this->textID = 2;
+
+            $sql = 'UPDATE '.$this->table.' SET subtext = :text WHERE textID = :textID';
+            $sql = $this->connect()->prepare($sql);
+            $sql->execute(['text'=>$text, 'textID'=>$this->textID]);
+
+            $return = "Uusi keitä olemme teksti on ". $text;
+            return utf8_decode($return);
+        
+        }
+    }
 }
+
+// Hämeen Siivous ja & Saneeraus on tamperelainen yritys, johon meidän asiakkaamme ovat luottaneet jo vuodesta 1994. Yrityksemme tarjoaa palveluitansa yrityksille ja myös yksityishenkilöille.

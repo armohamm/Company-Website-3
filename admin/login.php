@@ -1,3 +1,9 @@
+<?php
+
+require_once "includes/session.inc.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,13 +87,13 @@
 
           if( password != "" ){
               $.ajax({
-                  url:'includes/password-check.inc.php',
+                  url:'includes/login.inc.php',
                   type:'post',
                   data:{password:password},
                   success:function(response){
                       var msg = "";
                       if(response == 1){
-                          window.location = "index.html";
+                          window.location = "index.php";
                       }else{
                           msg = "Virheellinen salasana";
                       }
