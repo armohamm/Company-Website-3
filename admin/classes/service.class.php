@@ -77,6 +77,16 @@ class Service extends Conn {
         return utf8_decode($return);
 
     }
+
+    public function getLastServiceID() {
+        $sql = $this->connect()->query('SELECT * FROM `service` ORDER BY `position` DESC LIMIT 1');   
+        while ($row = $sql->fetch()) {
+
+            $serviceID=$row['serviceID'];
+
+        }
+        return $serviceID;
+    }
     
 }
 // Käytetään getServices();

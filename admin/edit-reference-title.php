@@ -1,6 +1,11 @@
+
 <?php
 
-require_once "includes/session.inc.php";
+if(isset($_GET['id'])) {
+
+    $id = $_GET['id'];
+
+}
 
 ?>
 
@@ -15,7 +20,7 @@ require_once "includes/session.inc.php";
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Adminsivusto - Palvelun otsikon lisäys</title>
+  <title>Adminsivusto - Referenssi otsikon muokkaus</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,36 +50,36 @@ require_once "includes/session.inc.php";
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Palvelun lisäys</h1>
+          <h1 class="h3 mb-4 text-gray-800">Referenssi otsikon muokkaus</h1>
 
-          <form class="" action="includes/add-service.inc.php" method="post" enctype="multipart/form-data">
+          <form class="" action="includes/edit-reference-title.inc.php" method="post" enctype="multipart/form-data">
 
-            <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">
-              Ensin kirjoitat palvelulle otsikon, esim. "Rakennussiivous" <br><br>
-              Sitten kirjoitat kuvauksen palvelulle, eli toisin sanoen pienen myyntipuheen. <br><br>
-              Sen jälkeen lisäät palvelulle taustakuvan, <br>mieluusti jonkun kivan liukuvärin jonka päällä tekstit näkyvät hyvin.
-              <br>Kuvan on oltava 1920x1080! <br> <span style="color: teal;"><b>Vinkki, hyviä kuvia löydät alta löytyvistä
-                  linkeistä</b></span>
-            </h1>
-          
-            <h1 class="h4 mb-4 text-gray-800">Otsikko</h1>
-            <input type="text" name="text">
-          
-            <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Kuvaus</h1>
-            <textarea name="desc"></textarea>
-          
-            <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Taustakuva</h1>
+            <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Otsikko</h1>
+            <input type="text" name="text1">
+
+            <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Taustakuva</h1>
             <a class="h5" href="https://unsplash.com/">Ilmainen kuvapalvelu 1</a><br>
             <a class="h5" href="https://pixabay.com/">Ilmainen kuvapalvelu 2</a><br>
-            <input type="file" name="file"><br><br>
-          
-            <button class="btn btn-success btn-icon-split" type="submit">
+            <input type="file" name="file0">
+
+            <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Kuva 1</h1>
+            <input type="file" name="file1">
+
+            <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Kuva 2</h1>
+            <input type="file" name="file2">
+
+            <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Kuva 3</h1>
+            <input type="file" name="file3"><br>
+
+            <input type="hidden" name="id" value=" <?php $id ?> ">
+
+            <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">
               <span class="icon text-white-50">
                 <i class="fas fa-check"></i>
               </span>
-              <span class="text">Tallenna</span>
+              <span class="text">Muokkaa otsikkoa</span>
             </button>
-          
+
           </form>
 
         </div>

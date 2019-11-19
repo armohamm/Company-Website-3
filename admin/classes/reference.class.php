@@ -133,8 +133,7 @@ class Reference extends Conn {
         return $this->refHeadings;
     }
 
-    public function getLastHeadingID()
-    {
+    public function getLastHeadingID() {
         $sql = $this->connect()->query('SELECT * FROM `reference_heading` ORDER BY `position` DESC LIMIT 1');   
         while ($row = $sql->fetch()) {
 
@@ -150,7 +149,7 @@ class Reference extends Conn {
 
         $sql = 'UPDATE '.$this->headingsTable.' SET heading = :heading WHERE headingID = :headingID';
         $sql = $this->connect()->prepare($sql);
-        $sql->execute(['heading'=>$heading, 'text'=>$text, 'headingID'=>$id]);
+        $sql->execute(['heading'=>$heading, 'headingID'=>$id]);
 
         $return = "Uusi referenssi otsikko on ".$heading;
         return utf8_decode($return);

@@ -205,7 +205,7 @@
 
                     <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Vaihda järjestystä vetämällä otsikoita!<br>Tehtyäsi muutokset paina "Tallenna järjestys" nappia!</h1>
                     
-                    <a href="add-reference-title.html" class="h5" target="">Lisää uusi referenssiotsikko</a>
+                    <a href="add-reference-title.php" class="h5" target="">Lisää uusi referenssiotsikko</a>
                 
                     <div class="list-container" style="margin-top: 25px;">
                         <ul id="sortable1">
