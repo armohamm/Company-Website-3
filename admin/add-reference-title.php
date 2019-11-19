@@ -1,6 +1,6 @@
 <?php
 
-require_once "includes/session.inc.php";
+// require_once "includes/session.inc.php";
 
 ?>
 
@@ -47,7 +47,7 @@ require_once "includes/session.inc.php";
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Referenssi otsikon lisäys</h1>
 
-          <form class="" action="add-reference-title.html" method="post" enctype="multipart/form-data">
+          <form class="" action="includes/add-reference-title.inc.php" method="post" enctype="multipart/form-data">
 
             <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">
               Ensin kirjoitat referenssi otsikon, esim. "Koulut" <br><br>
@@ -71,6 +71,8 @@ require_once "includes/session.inc.php";
 
             <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Kuva 3</h1>
             <input type="file" name="file3"><br>
+
+            <input type="hidden" name="id" value="1">
 
             <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">
               <span class="icon text-white-50">
