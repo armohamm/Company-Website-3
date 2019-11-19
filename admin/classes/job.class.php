@@ -28,11 +28,19 @@ class Job extends Conn {
         return $bool;
     }
 
-    public function changeStatus() {
-        
+    public function changeStatus(int $bool) {
+        $sql = 'UPDATE '.$this->table.' SET showOnFrontPage = :bool WHERE jobID = :jobID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['bool'=>$bool, 'jobID'=>1]);
+
+        return "Vaihdettu";
     }
 
-    public function changeLink() {
-        
+    public function changeLink(string $link) {
+        $sql = 'UPDATE '.$this->table.' SET jobLink = :link WHERE jobID = :jobID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['link'=>$link, 'jobID'=>1]);
+
+        return "Vaihdettu";
     }
 }

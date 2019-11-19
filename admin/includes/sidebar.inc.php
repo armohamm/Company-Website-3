@@ -24,39 +24,56 @@
   
       <!-- Heading -->
       <div class="sidebar-heading">
-        Interface
+        Referenssit ja Palvelut
       </div>
   
-      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- Nav Item - Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
           aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
+          <span>Lisäys</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <h6 class="collapse-header">Lisäyslinkit</h6>
+            <a class="collapse-item" href="add-reference-title.php">Referenssiotsikon lisäys</a>
+            <a class="collapse-item" href="add-service.php">Palvelun lisäys</a>
           </div>
         </div>
       </li>
   
-      <!-- Nav Item - Utilities Collapse Menu -->
+      <!-- Nav Item - Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-          aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+          aria-expanded="true" aria-controls="collapseThree">
+          <i class="fas fa-fw fa-sort-numeric-down"></i>
+          <span>Järjestely ja muokkaus</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
+            <h6 class="collapse-header">Järjestykset</h6>
+            <a class="collapse-item" href="reference-titles.php">Referenssiotsikoiden <br> järjestys</a>
+            <a class="collapse-item" href="reference-contents.php">Referenssien järjestys</a>
+            <a class="collapse-item" href="services.php">Palveluiden järjestys</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour"
+          aria-expanded="true" aria-controls="collapseFour">
+          <i class="fas fa-fw fa-edit"></i>
+          <span>Muokkaus</span>
+        </a>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Muokkaukset</h6>
+            <a class="collapse-item" href="text-edit.php">Etusivun tekstien <br> muokkaus</a>
+            <a class="collapse-item" href="change-photos.php">Etusivun kuvien <br> muokkaus</a>
+            <a class="collapse-item" href="#">Työnhaun muokkaus</a>
+            <a class="collapse-item" href="change-password.php">Salasanan vaihto</a>
           </div>
         </div>
       </li>
@@ -73,32 +90,22 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
+          <span>Apusivut</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.php">Login</a>
-            <div class="collapse-divider"></div>
-            <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.php">404 Page</a>
-            <a class="collapse-item" href="blank.php">Blank Page</a>
+            <h6 class="collapse-header">Käyttöohjeet:</h6>
+            <a class="collapse-item" href="help.php?title=addService">Palveluiden lisäys</a>
+            <a class="collapse-item" href="help.php?title=addRefTitle">Referenssi otsikon lisäys</a>
+            <a class="collapse-item" href="help.php?title=addReference">Referenssin lisäys</a>
+            <a class="collapse-item" href="help.php?title=deleteInfo">Tietojen poisto</a>
+            <a class="collapse-item" href="help.php?title=editImg">Kuvien muokkaus</a>
+            <!-- <div class="collapse-divider"></div> -->
+            <!-- <h6 class="collapse-header">Other Pages:</h6>
+            <a class="collapse-item" href="404.php">404 Sivu</a>
+            <a class="collapse-item" href="blank.php">Tyhjä Page</a> -->
           </div>
         </div>
-      </li>
-  
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Kaaviot</span></a>
-      </li>
-  
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Taulukot</span></a>
       </li>
   
       <!-- Divider -->

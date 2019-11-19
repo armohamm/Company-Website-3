@@ -71,7 +71,7 @@ if(isset($_GET['id'])) {
             <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Kuva 3</h1>
             <input type="file" name="file3"><br>
 
-            <input type="hidden" name="id" value=" <?php $id ?> ">
+            <input type="hidden" name="id" value="<?=$id?>">
 
             <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">
               <span class="icon text-white-50">
