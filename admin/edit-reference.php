@@ -6,8 +6,6 @@ if(!isset($_GET['id'])) {
     
 } else {
 
-  if($_GET['type'] === "edit") {
-
     $id = $_GET['id'];
 
     ?>
@@ -57,7 +55,7 @@ if(!isset($_GET['id'])) {
 
               <form class="" action="includes/edit-reference.inc.php" method="post" enctype="multipart/form-data">
 
-              <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Lisättävä referenssi</h1>
+              <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Muokkaa referenssi</h1>
                   <input type="text" name="text"><br><br>
 
                 <input type="hidden" name="id" value="<?=$id?>">
@@ -132,11 +130,5 @@ if(!isset($_GET['id'])) {
     </html>
 
 <?php
-   } else {
-
-    $id = $_GET['id'];
-
-    //wip
-
-  }
 }
+

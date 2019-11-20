@@ -183,6 +183,15 @@ class Reference extends Conn {
 
         $return = 1;
     }
+
+    public function deleteReference($id) {
+
+        $sql = 'DELETE FROM '.$this->refsTable.' WHERE refID = :refID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['refID'=>$id]);
+
+        $return = 1;
+    }
     
 }
 

@@ -53,8 +53,8 @@ function makeLists(array $array) {
 
                 <li id="'.$array[$i-1][0].'" reference-id="'.$array1[$i-1][$pos][$a-1][0].'" class="bg-gray-100 border-bottom-info ui-state-default">
                     '.$array1[$i-1][$pos][$a-1][1].' <br>
-                    <a href="edit-reference.php?type=edit&id='.$array1[$i-1][$pos][$a-1][0].'" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                    <a href="edit-reference.php?type=delete&id='.$array1[$i-1][$pos][$a-1][0].'" style="color: red;"> Poista</a>
+                    <a href="edit-reference.php?id='.$array1[$i-1][$pos][$a-1][0].'" style="color: rgb(230, 149, 0);">Muokkaa</a>
+                    <a href="includes/delete-reference.inc.php?id='.$array1[$i-1][$pos][$a-1][0].'" style="color: red;"> Poista</a>
                 </li>
 
                 ';

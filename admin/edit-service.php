@@ -6,8 +6,6 @@ if(!isset($_GET['id'])) {
 
 } else {
 
-  if($_GET['type'] === "edit") {
-
     $id = $_GET['id'];
 
     ?>
@@ -140,13 +138,7 @@ if(!isset($_GET['id'])) {
     </html>
   
 <?php
-   } else {
-
-    $id = $_GET['id'];
-
-    //wip
-
-  }
+   
 }
 
 
