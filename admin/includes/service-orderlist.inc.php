@@ -44,7 +44,8 @@ function makeJS() {
 
             $.post("saveorder.php", { order: serviceorder })
                 .done(function (result) {
-                    alert("Palveluiden järjestys on tallennettu \nTallennetut tiedot: " + result + "\nKoodissa laskeminen alkaa nollasta, eli 0 = ensimmäinen");
+                    if(alert("Palveluiden järjestys on tallennettu \nTallennetut tiedot: " + result)){}
+                    else window.location.reload(true);
                 })
                 .fail(function (data) {
                     alert("Error: " + data);

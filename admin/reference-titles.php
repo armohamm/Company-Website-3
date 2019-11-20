@@ -1,5 +1,6 @@
 <?php
 
+    require_once "includes/session.inc.php";
     require_once "includes/reference-title-orderlist.inc.php";
     require_once "includes/session.inc.php";
 

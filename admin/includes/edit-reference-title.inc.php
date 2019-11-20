@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-include 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php';
 
 $id = $_POST['id'];
 $title = $_POST['text'];

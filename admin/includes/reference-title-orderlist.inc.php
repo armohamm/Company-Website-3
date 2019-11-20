@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-include 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php';
 
 function makeList() {
 
@@ -45,7 +45,7 @@ function makeJS() {
 
             $.post("includes/reference-heading-order.inc.php", { order: referencetitleorder })
                 .done(function (result) {
-                    if(alert("Referenssien järjestys on tallennettu \nTallennetut tiedot: " + result)){}
+                    if(alert("Referenssi otsikoiden järjestys on tallennettu \nTallennetut tiedot: " + result)){}
                     else window.location.reload(true); 
                 })
                 .fail(function (data) {

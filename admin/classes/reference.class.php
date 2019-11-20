@@ -18,7 +18,7 @@ class Reference extends Conn {
             $heading=$row['heading'];
 
             array_push($foo, (int)$headingID);
-            array_push($foo, utf8_encode($heading));
+            array_push($foo, $heading);
 
             array_push($this->refHeadings, $foo);
 
@@ -29,23 +29,29 @@ class Reference extends Conn {
 
         for ($i=1; $i <= $headingsAmount; $i++) { 
 
-            $foo = array();
+            $foo1 = array();
 
-            $sql = $this->connect()->query('SELECT `references`.`text` 
+            $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
             FROM `reference_heading` 
             INNER JOIN `references` ON `references`.`headingID` = `reference_heading`.`headingID` 
             WHERE `reference_heading`.`headingID` ='. $this->refHeadings[$i-1][0]);
             while ($row = $sql->fetch()) {
 
+                $id=$row['refID'];
                 $text=$row['text'];
 
-                array_push($foo, utf8_encode($text));
+                $foo0 = array();
+                array_push($foo0, (int)$id);
+                array_push($foo0, utf8_encode($text));
 
+                array_push($foo1, $foo0);
+                unset($foo0);
             }
 
-            array_push($this->refs, [$this->refHeadings[$i-1][1] => $foo]);
+            array_push($this->refs, [$this->refHeadings[$i-1][1] => $foo1]);
 
-            unset($foo);
+            
+            unset($foo1);
         }
 
         return $this->refs;
