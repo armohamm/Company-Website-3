@@ -155,6 +155,28 @@ class Reference extends Conn {
         return utf8_decode($return);
 
     }
+
+    public function editReference(string $id, string $text) {
+
+        $text = utf8_decode($text);
+
+        $sql = 'UPDATE '.$this->refsTable.' SET text = :text WHERE refID = :refID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['text'=>$text, 'refID'=>$id]);
+
+        $return = "Uusi referenssi on ".$text;
+        return utf8_decode($return);
+
+    }
+
+    public function deleteReferenceHeading($id) {
+
+        $sql = 'DELETE FROM '.$this->headingsTable.' WHERE headingID = :headingID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['headingID'=>$id]);
+
+        $return = 1;
+    }
     
 }
 
