@@ -57,7 +57,7 @@
                         Muista tallentaa muutokset heti tehtyäsi ne!
                     </h1>
 
-                    <a href="add-reference.html" class="h5" target="">Lisää uusi referenssi</a>
+                    <a href="add-reference.php" class="h5" target="">Lisää uusi referenssi</a>
 
                     <br><br>
                     
