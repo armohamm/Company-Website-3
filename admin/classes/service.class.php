@@ -16,7 +16,7 @@ class Service extends Conn {
             $serviceText=$row['text'];
 
             array_push($foo, $serviceHeading);
-            array_push($foo, $serviceText);
+            array_push($foo, utf8_encode($serviceText));
 
             array_push($this->service, $foo);
 
@@ -42,7 +42,7 @@ class Service extends Conn {
 
         $return = 'Palvelu ' . $heading . ' ja sen selitys ' . $text . ' on lisätty tietokantaan sijaintiin ' . $pos;
 
-        return $return;
+        return utf8_encode($return);
 
     }
 
@@ -60,7 +60,54 @@ class Service extends Conn {
             $return = $return . ' Otsikon ' . $positions[$i - 1] . ' sijainti on nyt ' . $i . '<br>';
         }
 
-        return $return;
+        return utf8_encode($return);
+
+    }
+
+    public function editService(string $id, string $heading, string $text) {
+
+        $text = utf8_decode($text);
+        $heading = utf8_decode($heading);
+
+        $sql = 'UPDATE '.$this->serviceTable.' SET heading = :heading, text = :text WHERE serviceID = :serviceID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['heading'=>$heading, 'text'=>$text, 'serviceID'=>$id]);
+
+        $return = "Uusi palvelun otsikko on ".$heading." ja uusi selitys on ".$text;
+        return utf8_decode($return);
+
+    }
+
+    public function getLastServiceID() {
+        $sql = $this->connect()->query('SELECT * FROM `service` ORDER BY `position` DESC LIMIT 1');   
+        while ($row = $sql->fetch()) {
+
+            $serviceID=$row['serviceID'];
+
+        }
+        return $serviceID;
+    }
+
+    public function getServiceToArray() {
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
+        FROM `service` 
+        ORDER BY `service`.`position`');
+        
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $serviceID=$row['serviceID'];
+            $heading=$row['heading'];
+
+            array_push($foo, $serviceID);
+            array_push($foo, utf8_encode($heading));
+
+            array_push($this->service, $foo);
+
+            unset($foo);
+        }
+
+        return $this->service;
 
     }
     

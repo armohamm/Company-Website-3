@@ -1,3 +1,9 @@
+<?php
+
+    require_once "includes/reference-title-orderlist.inc.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -195,50 +201,25 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Palvelut</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Referenssiotsikot</h1>
 
-                    <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Vaihda järjestystä vetämällä
-                        otsikoita!<br>Tehtyäsi muutokset paina "Tallenna järjestys" nappia!<br>
-                    Jos haluat muokata palveluiden sisältöä paina <span style="color: rgb(230, 149, 0);">muokkaa</span> nappia</h1>
-
-                    <a href="add-service.html" class="h5" target="">Lisää uusi palvelu</a>
-
+                    <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Vaihda järjestystä vetämällä otsikoita!<br>Tehtyäsi muutokset paina "Tallenna järjestys" nappia!</h1>
+                    
+                    <a href="add-reference-title.php" class="h5" target="">Lisää uusi referenssiotsikko</a>
+                
                     <div class="list-container" style="margin-top: 25px;">
                         <ul id="sortable1">
-                            <li service-id="1" class="bg-gray-100 border-bottom-info ui-state-default">
-                                Referenssiotsikko 1 <br>
-                                <a href="edit-service.html" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                                <a href="#" style="color: red;"> Poista</a>
-                            </li>
-
-                            <li service-id="2" class="bg-gray-100 border-bottom-info ui-state-default">
-                                Referenssiotsikko 2 <br>
-                                <a href="edit-service.html" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                                <a href="#" style="color: red;"> Poista</a>
-                            </li>
-
-                            <li service-id="3" class="bg-gray-100 border-bottom-info ui-state-default">
-                                Referenssiotsikko 3 <br>
-                                <a href="edit-service.html" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                                <a href="#" style="color: red;"> Poista</a>
-                            </li>
-
-                            <li service-id="4" class="bg-gray-100 border-bottom-info ui-state-default">
-                                Referenssiotsikko 4 <br>
-                                <a href="edit-service.html" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                                <a href="#" style="color: red;"> Poista</a>
-                            </li>
-
+                            <?php makeList(); ?>
                         </ul>
                     </div>
-
+                    
                     <button class="btn btn-success btn-icon-split" onclick="saveOrder();">
                         <span class="icon text-white-50">
                             <i class="fas fa-check"></i>
                         </span>
                         <span class="text">Tallenna järjestys</span>
                     </button>
-
+                    
                     <button class="btn btn-danger btn-icon-split" onclick="location.reload();">
                         <span class="icon text-white-50">
                             <i class="fas fa-trash"></i>
@@ -306,34 +287,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/javascript.js"></script>
 
-    <script>
-        $(function () {
-            $("#sortable1").sortable();
-            $("#sortable1").disableSelection();
-        });
-    </script>
-
-    <script type="text/javascript">
-        function saveOrder() {
-            var serviceorder = "";
-
-            $("#sortable1 li").each(function (i) {
-                if (serviceorder == '')
-                    serviceorder = $(this).attr('service-id');
-                else
-                    serviceorder += "," + $(this).attr('service-id');
-            });
-
-            $.post('saveorder.php', { order: serviceorder })
-                .done(function (result) {
-                    alert('Palveluiden järjestys on tallennettu \nTallennetut tiedot: ' + result + "\nKoodissa laskeminen alkaa nollasta, eli 0 = ensimmäinen");
-                })
-                .fail(function (data) {
-                    alert('Error: ' + data);
-                });
-
-        }
-    </script>
+    <?php makeJS(); ?>
 
 </body>
 

@@ -20,6 +20,31 @@ class Password extends Conn {
         }
     }
 
+    function checkSessionPassword(string $pass) {
+
+        $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE adminID='.$this->adminID);
+        while ($row = $sql->fetch()) {
+            $password = $row['password'];
+        }
+
+        if ($pass == $password) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    function getPassword() {
+
+        $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE adminID='.$this->adminID);
+        while ($row = $sql->fetch()) {
+            $password = $row['password'];
+        }
+
+        return $password;
+    }
+
     function changePassword(string $pass0, string $pass1, string $pass2) {
 
         $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE adminID='.$this->adminID);
@@ -36,14 +61,14 @@ class Password extends Conn {
                 $sql = $this->connect()->prepare($sql);
                 $sql->execute(['pass'=>$pass, 'adminID'=>$this->adminID]);
 
-                return "Salasana on vaihdettu";
+                return 2;
             }
             else {
-                return 'Uudet salasanat eivät täsmää';
+                return 1;
             }
         }
         else {
-            return 'Vanha salasana ei täsmää';
+            return 0;
         }
     }
 }

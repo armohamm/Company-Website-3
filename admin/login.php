@@ -1,3 +1,9 @@
+<?php
+
+require_once "includes/session.inc.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,7 +87,7 @@
 
           if( password != "" ){
               $.ajax({
-                  url:'includes/password-check.inc.php',
+                  url:'includes/login.inc.php',
                   type:'post',
                   data:{password:password},
                   success:function(response){
