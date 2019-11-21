@@ -38,6 +38,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Lisäyslinkit</h6>
             <a class="collapse-item" href="add-reference-title.php">Referenssiotsikon lisäys</a>
+            <a class="collapse-item" href="add-reference.php">Referenssin lisäys</a>
             <a class="collapse-item" href="add-service.php">Palvelun lisäys</a>
           </div>
         </div>

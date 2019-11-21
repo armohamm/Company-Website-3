@@ -18,7 +18,7 @@ class Reference extends Conn {
             $heading=$row['heading'];
 
             array_push($foo, (int)$headingID);
-            array_push($foo, utf8_encode($heading));
+            array_push($foo, $heading);
 
             array_push($this->refHeadings, $foo);
 
@@ -29,23 +29,29 @@ class Reference extends Conn {
 
         for ($i=1; $i <= $headingsAmount; $i++) { 
 
-            $foo = array();
+            $foo1 = array();
 
-            $sql = $this->connect()->query('SELECT `references`.`text` 
+            $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
             FROM `reference_heading` 
             INNER JOIN `references` ON `references`.`headingID` = `reference_heading`.`headingID` 
             WHERE `reference_heading`.`headingID` ='. $this->refHeadings[$i-1][0]);
             while ($row = $sql->fetch()) {
 
+                $id=$row['refID'];
                 $text=$row['text'];
 
-                array_push($foo, utf8_encode($text));
+                $foo0 = array();
+                array_push($foo0, (int)$id);
+                array_push($foo0, utf8_encode($text));
 
+                array_push($foo1, $foo0);
+                unset($foo0);
             }
 
-            array_push($this->refs, [$this->refHeadings[$i-1][1] => $foo]);
+            array_push($this->refs, [$this->refHeadings[$i-1][1] => $foo1]);
 
-            unset($foo);
+            
+            unset($foo1);
         }
 
         return $this->refs;
@@ -154,6 +160,37 @@ class Reference extends Conn {
         $return = "Uusi referenssi otsikko on ".$heading;
         return utf8_decode($return);
 
+    }
+
+    public function editReference(string $id, string $text) {
+
+        $text = utf8_decode($text);
+
+        $sql = 'UPDATE '.$this->refsTable.' SET text = :text WHERE refID = :refID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['text'=>$text, 'refID'=>$id]);
+
+        $return = "Uusi referenssi on ".$text;
+        return utf8_decode($return);
+
+    }
+
+    public function deleteReferenceHeading($id) {
+
+        $sql = 'DELETE FROM '.$this->headingsTable.' WHERE headingID = :headingID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['headingID'=>$id]);
+
+        $return = 1;
+    }
+
+    public function deleteReference($id) {
+
+        $sql = 'DELETE FROM '.$this->refsTable.' WHERE refID = :refID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['refID'=>$id]);
+
+        $return = 1;
     }
     
 }

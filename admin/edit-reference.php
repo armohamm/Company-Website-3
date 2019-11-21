@@ -2,8 +2,8 @@
 
 if(!isset($_GET['id'])) {
 
-    header("Location: http://localhost/top/hamss/admin/services.php");
-
+    header("Location: http://localhost/top/hamss/admin/reference-contents.php");
+    
 } else {
 
     $id = $_GET['id'];
@@ -21,7 +21,7 @@ if(!isset($_GET['id'])) {
       <meta name="description" content="">
       <meta name="author" content="">
 
-      <title>Adminsivusto - Palvelun otsikon muokkaus</title>
+      <title>Adminsivusto - Referenssi otsikon muokkaus</title>
 
       <!-- Custom fonts for this template-->
       <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -51,30 +51,22 @@ if(!isset($_GET['id'])) {
             <div class="container-fluid">
 
               <!-- Page Heading -->
-              <h1 class="h3 mb-4 text-gray-800">Palvelun muokkaus</h1>
+              <h1 class="h3 mb-4 text-gray-800">Referenssin muokkaus</h1>
 
-              <form class="" action="includes/edit-service.inc.php" method="post" enctype="multipart/form-data">
-              
-                <h1 class="h4 mb-4 text-gray-800">Uusi otsikko</h1>
-                <input type="text" name="text">
-              
-                <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Uusi kuvaus</h1>
-                <textarea name="desc"></textarea>
-              
-                <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Uusi taustakuva</h1>
-                <a class="h5" href="https://unsplash.com/">Ilmainen kuvapalvelu 1</a><br>
-                <a class="h5" href="https://pixabay.com/">Ilmainen kuvapalvelu 2</a><br>
-                <input type="file" name="file"><br><br>
+              <form class="" action="includes/edit-reference.inc.php" method="post" enctype="multipart/form-data">
+
+              <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Muokkaa referenssi</h1>
+                  <input type="text" name="text"><br><br>
 
                 <input type="hidden" name="id" value="<?=$id?>">
-              
-                <button class="btn btn-success btn-icon-split" type="submit">
+
+                <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">
                   <span class="icon text-white-50">
                     <i class="fas fa-check"></i>
                   </span>
                   <span class="text">Tallenna</span>
                 </button>
-              
+
               </form>
 
             </div>
@@ -136,10 +128,7 @@ if(!isset($_GET['id'])) {
     </body>
 
     </html>
-  
+
 <?php
-   
 }
-
-
 
