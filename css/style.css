@@ -1,16 +1,4 @@
 /* Yleinen */
-
-#hideAll {
-  position: fixed;
-  left: 0px; 
-  right: 0px; 
-  top: 0px; 
-  bottom: 0px; 
-  background-color: white;
-  z-index: 99; /* Higher than anything else in the document */
-
-}
-
 body {
   background: #fff;
   color: #666666;
@@ -24,7 +12,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-  color: #2D5387;
+  color: #c;
   outline: none;
   text-decoration: none;
 }
@@ -105,7 +93,7 @@ p {
     transform: translateY(-25%);
   }
   #header {
-    height: 92px;
+    height: 110px;
   }
   #header.header-fixed #logo img {
   -webkit-transform: scale(0.8) translateY(-30%) !important;
@@ -116,7 +104,7 @@ p {
 #header.header-fixed {
   background: #F4F4F4;
   padding: 20px 0;
-  height: 67px;
+  height: 90px;
   transition: all 0.5s;
 }
 
@@ -239,7 +227,7 @@ p {
 }
 
 #mobile-nav-toggle i {
-  color: #fff;
+  color: #000;
   -ms-transform: translateY(-15%);
   transform: translateY(-15%);
 }
@@ -257,7 +245,7 @@ p {
   padding-top: 18px;
   bottom: 0;
   z-index: 998;
-  background: rgb(0, 0, 0);
+  background: rgb(244, 244, 244);
   left: -260px;
   width: 260px;
   overflow-y: auto;
@@ -275,7 +263,7 @@ p {
 }
 
 #mobile-nav ul li a {
-  color: #fff;
+  color: #000;
   font-size: 16px;
   overflow: hidden;
   padding: 10px 22px 10px 15px;
@@ -287,7 +275,7 @@ p {
 }
 
 #mobile-nav ul li a:hover {
-  color: #fff;
+  color: #2d5387;
 }
 
 #mobile-nav ul li li {
@@ -343,11 +331,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-}
-
-.carousel-item h1{
-  font-size: 4.5rem;
 }
 /* Slidereiden css loppuu */
 
@@ -612,7 +595,17 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 3.5em;
     margin-top: 25px;
   }
+<<<<<<< HEAD
+  img.reference-img {
+    border-style: solid;
+    float: right;
+    margin-right: 15px;
+    width: 100px;
+    height: 80px;
+    display: none;
+=======
 }
+>>>>>>> c6c9f3d1d40aec68d97dac5247f3f6baf78dd8c0
 
  /* tableteille */
 @media only screen and (min-width: 770px) {
@@ -750,26 +743,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
     background: rgba(0, 0, 0, 0.7);
     min-height: 600px;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 3.5%;
-    padding-right: 3.5%;
+    padding: 17.5px;
   }
 
-  h1.about-heading {
-    font-size: 1.85em;
+  div.about-text {
     color: #f4f4f4;
-    font-weight: 750;
-    text-align: center;
-  }
-
-  p.about-text {
-    font-size: 1.35em;
-    color: #f4f4f4;
+    font-size: 1em;
     font-weight: 600;
-    margin: 20px;
   }
-  
 }
 
  /* tableteille */
@@ -791,23 +772,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
     background: rgba(0, 0, 0, 0.7);
     min-height: 550px;
-    padding: 10%;
+    padding: 20px;
   }
 
-  h1.about-heading {
-    font-size: 2.5em;
+  div.about-text {
     color: #f4f4f4;
-    font-weight: 750;
-    text-align: center;
-  }
-
-  p.about-text {
-    font-size: 1.75em;
-    color: #f4f4f4;
+    font-size: 1.25em;
     font-weight: 600;
-    margin: 30px;
   }
-  
 }
 
  /* tietokoneille */
@@ -829,23 +801,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
     background: rgba(0, 0, 0, 0.7);
     min-height: 450px;
-    padding: 5%;
+    padding: 25px;
   }
 
-  h1.about-heading {
-    font-size: 3.25em;
+  div.about-text {
     color: #f4f4f4;
-    font-weight: 750;
-    text-align: center;
-  }
-
-  p.about-text {
-    font-size: 1.85em;
-    color: #f4f4f4;
+    font-size: 1.6em;
     font-weight: 600;
-    margin: 40px;
   }
-  
 }
 
 /* leveille näytöille */
@@ -859,6 +822,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: fixed;
     width: 100%;
     padding-top: 150px;
+
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 150px;
@@ -867,23 +831,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   div.about-section { /* Taustan kuvalle musta väri jotta teksti näkyy*/
     background: rgba(0, 0, 0, 0.7);
     min-height: 450px;
-    padding: 5%;
+    padding: 25px;
   }
 
-  h1.about-heading {
-    font-size: 3.35em;
+  div.about-text {
     color: #f4f4f4;
-    font-weight: 750;
-    text-align: center;
-  }
-
-  p.about-text {
-    font-size: 1.85em;
-    color: #f4f4f4;
+    font-size: 1.75em;
     font-weight: 600;
-    margin: 45px;
   }
-  
 }
 
 /* Meistä loppuu ja yhteystiedot alkaa #2d5387 */
