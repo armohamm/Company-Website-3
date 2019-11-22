@@ -479,12 +479,17 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    text-align: center;
     color: black;
   }
   div.service-text {
-    padding: 15px;
-    margin: 45px;
+    margin-top:45px;
+    font-size: 1.25em;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+  h1.service-heading {
+    margin-top: 15px;
+    font-size: 2.25em;
   }
 }
 
@@ -497,12 +502,17 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    text-align: center;
     color: black;
   }
   div.service-text {
-    padding: 15px;
-    margin: 45px;
+    margin-top:50px;
+    font-size: 1.5em;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+  h1.service-heading {
+    margin-top: 20px;
+    font-size: 3.5em;
   }
 }
 
@@ -515,12 +525,17 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: center;
     background-size: cover;
     background-attachment: fixed;
-    text-align: center;
     color: black;
   }
   div.service-text {
-    padding: 15px;
-    margin: 45px;
+    margin-top:60px;
+    font-size: 2em;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  h1.service-heading {
+    margin-top: 35px;
+    font-size: 4.5em;
   }
 }
 
@@ -533,12 +548,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: center;
     background-size: cover;
     background-attachment: fixed;
-    text-align: center;
     color: black;
   }
   div.service-text {
-    padding: 15px;
-    margin: 45px;
+    margin-top:65px;
+    font-size: 2em;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -551,129 +567,165 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  h1.reference-heading {
-    text-align: center;
+  img.reference-img-0 {
+    display: none;
   }
-  img.reference-img {
-    border-style: solid;
-    float: right;
-    margin-right: 15px;
-    width: 90px;
-    height: 60px;
-    visibility: hidden;
+  img.reference-img-1 {
+    display: none;
   }
-  img.reference-img-bottom {
-    width: 90px;
-    height: 60px;
-    margin-top: 200px;
-    float: right;
-    border-style: solid;
-    margin-right: 23px;
-    visibility: hidden;
+  img.reference-img-2 {
+    display: none;
   }
   ul.reference-ul {
-    margin-left: 40px;
+    margin-left: 15px;
     margin-top: 25px;
-    font-size: 0.75em;
+    font-size: 1.2em;
+  }
+  h1.reference-heading {
+    font-size: 3em;
+    margin-top: 25px;
   }
 }
 
- /* tableteille */
+ /* puhelimelle */
 @media only screen and (min-width: 450px) {
   section.references-section {
     min-height: 750px;
     background: #ea5e1d;
     color: black;
   }
-  h1.reference-heading {
-    text-align: center;
+  img.reference-img-0 {
+    display: none;
   }
-  img.reference-img {
-    border-style: solid;
-    float: right;
-    margin-right: 15px;
-    width: 100px;
-    height: 80px;
-    visibility: hidden;
-
+  img.reference-img-1 {
+    display: none;
   }
-  img.reference-img-bottom {
-    width: 240px;
-    height: 210px;
-    margin-top: 200px;
-    float: right;
-    border-style: solid;
-    margin-right: 20px;
+  img.reference-img-2 {
+    display: none;
   }
   ul.reference-ul {
-    margin-left: 80px;
     margin-top: 25px;
-    font-size: 1em;
+    font-size: 1.25em;
+    margin-left: 10%;
+  }
+  h1.reference-heading {
+    font-size: 3.5em;
+    margin-top: 25px;
+  }
+}
+
+ /* tableteille */
+@media only screen and (min-width: 770px) {
+  section.references-section {
+    min-height: 750px;
+    background: #ea5e1d;
+    color: black;
+  }
+  img.reference-img-0 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 235px;
+    margin-top: 35px;
+    margin-left: 35px;
+    display: block;
+  }
+  img.reference-img-1 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 235px;
+    margin-top: 35px;
+    margin-left: 35px;
+    display: block;
+  }
+  img.reference-img-2 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 235px;
+    margin-top: 35px;
+    margin-left: 35px;
+    display: block;
+  }
+  ul.reference-ul {
+    margin-left: 15px;
+    margin-top: 25px;
+    font-size: 1.25em;
+  }
+  h1.reference-heading {
+    font-size: 3.5em;
+    margin-top: 30px;
   }
 }
 
  /* tietokoneille */
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1490px) {
   section.references-section {
     min-height: 750px;
     background: #ea5e1d;
     color: black;
   }
-  h1.reference-heading {
-    text-align: center;
+  img.reference-img-0 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 250px;
+    margin-top: 75px;
+    display: inline-block;
   }
-  img.reference-img {
-    border-style: solid;
-    float: right;
-    margin-right: 15px;
-    width: 220px;
-    height: 160px;
+  img.reference-img-1 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 250px;
+    margin-left: 50px;
+    margin-top: 75px;
+    display: inline-block;
   }
-  img.reference-img-bottom {
-    width: 220px;
-    height: 160px;
-    margin-top: 200px;
-    float: right;
-    border-style: solid;
-    margin-right: 23px;
+  img.reference-img-2 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 250px;
+    margin-left: 185px;
+    margin-top: 35px;
+    display: inline-block;
   }
   ul.reference-ul {
-    margin-left: 80px;
     margin-top: 25px;
-    font-size: 1.15em;
+    font-size: 1.4em;
+  }
+  h1.reference-heading {
+    font-size: 4.5em;
+    margin-top: 30px;
   }
 }
 
 /* leveille näytöille */
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1990px) {
   section.references-section {
     min-height: 750px;
     background: #ea5e1d;
     color: black;
   }
-  h1.reference-heading {
-    text-align: center;
+  img.reference-img-0 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 325px;
+    margin-top: 75px;
   }
-  img.reference-img {
-    border-style: solid;
-    float: right;
-    margin-right: 50px;
-    width: 220px;
-    height: 160px;
-    margin-top: 25px;
+  img.reference-img-1 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 325px;
+    margin-left: 115px;
+    margin-top: 75px;
   }
-  img.reference-img-bottom {
-    width: 220px;
-    height: 160px;
-    margin-top: 200px;
-    float: right;
-    border-style: solid;
-    margin-right: 45px;
+  img.reference-img-2 {
+    border-radius: 10px;
+    border: 5px solid #000;
+    width: 325px;
+    margin-left: 245px;
+    margin-top: 75px;
   }
   ul.reference-ul {
-    margin-left: 260px;
     margin-top: 25px;
-    font-size: 1.15em;
+    font-size: 1.65em;
   }
 }
 
@@ -834,7 +886,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   
 }
 
-/* Referenssit loppuu ja yhteystiedot alkaa #2d5387 */
+/* Meistä loppuu ja yhteystiedot alkaa #2d5387 */
 
  /* puhelimelle */
 @media only screen and (max-width: 450px) {
@@ -843,7 +895,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #2d5387;
     text-align: center;
     color: #f4f4f4;
-    font-size: 1.15em;
+    font-size: 1em;
     padding: 50px;
   }
 }
@@ -855,7 +907,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #2d5387;
     text-align: center;
     color: #f4f4f4;
-    font-size: 1.15em;
+    font-size: 1em;
     padding: 50px;
   }
 }
@@ -893,11 +945,6 @@ div.copyright {
   line-height: 4;
   font-size: 0.8rem;
   color: black;
-}
-
-a.admin-link:link, a.admin-link:visited, a.admin-link:hover, a.admin-link:active {
-    color: black;
-    text-decoration: none;
 }
 
 /* Footer loppuu */
