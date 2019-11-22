@@ -47,19 +47,15 @@ require_once "includes/session.inc.php";
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Tekstien muokkaus</h1>
 
-          <form class="" action="text_edit.html" method="post">
+          <form class="" action="includes/edit-frontpage.inc.php" method="post">
 
           <!-- Otsikon muokkaus -->
           <h1 class="h4 mb-4 text-gray-800;">Otsikko</h1>
-          <textarea style="width: 350px;"></textarea><br><br>
+          <textarea style="width: 350px;" name="text1"><?php require_once 'includes/get-start-title.inc.php'; ?></textarea><br><br>
 
-          <!-- Keitä olemme -->
-          <h1 class="h4 mb-4 text-gray-800;">Keitä olemme</h1>
-          <textarea style="width: 350px;"></textarea><br><br>
-
-          <!-- Otsikon muokkaus -->
-          <h1 class="h4 mb-4 text-gray-800;">Teksti</h1>
-          <textarea style="width: 350px;"></textarea><br><br>
+          <!-- Keitä Olemme -->
+          <h1 class="h4 mb-4 text-gray-800;">Keitä Olemme</h1>
+          <textarea style="width: 350px;" name="text2"><?php require_once 'includes/get-about-text.inc.php'; ?></textarea><br><br>
 
           <button class="btn btn-success btn-icon-split" type="submit">
             <span class="icon text-white-50">

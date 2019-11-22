@@ -36,7 +36,7 @@ class Job extends Conn {
         return "Vaihdettu";
     }
 
-    public function changeLink(string $link) {
+    public function changeLink(string $link) { // Vaihda linkki työhaku osoitteeseen
         $sql = 'UPDATE '.$this->table.' SET jobLink = :link WHERE jobID = :jobID';
         $sql = $this->connect()->prepare($sql);
         $sql->execute(['link'=>$link, 'jobID'=>1]);

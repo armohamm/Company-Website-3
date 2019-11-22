@@ -12,8 +12,8 @@ function makeList() {
     for ($i=0; $i <= $amount-1; $i++) { 
         printf(
         '<li service-id="'.$array[$i][0].'" class="bg-gray-100 border-bottom-info ui-state-default">'.$array[$i][1].'<br>
-            <a href="edit-service.php?type=edit&id='.$array[$i][0].'" style="color: rgb(230, 149, 0);">Muokkaa</a>
-            <a href="edit-service.php?type=delete&id='.$array[$i][0].'" style="color: red;"> Poista</a>
+            <a href="edit-service.php?id='.$array[$i][0].'" style="color: rgb(230, 149, 0);">Muokkaa</a>
+            <a href="includes/delete-service.inc.php?id='.$array[$i][0].'" style="color: red;"> Poista</a>
         </li>');
     }
 }
@@ -44,7 +44,8 @@ function makeJS() {
 
             $.post("saveorder.php", { order: serviceorder })
                 .done(function (result) {
-                    alert("Palveluiden järjestys on tallennettu \nTallennetut tiedot: " + result + "\nKoodissa laskeminen alkaa nollasta, eli 0 = ensimmäinen");
+                    if(alert("Palveluiden järjestys on tallennettu \nTallennetut tiedot: " + result)){}
+                    else window.location.reload(true);
                 })
                 .fail(function (data) {
                     alert("Error: " + data);

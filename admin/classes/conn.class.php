@@ -2,10 +2,10 @@
 
 class Conn {
 
-    private $server = 'localhost';
-    private $user = 'root';
-    private $pass = '';
-    private $db = 'hss';
+    private $server = 'localhost'; // Palvelimen osoite
+    private $user = 'root'; // Käyttäjänimi
+    private $pass = ''; // Salasana
+    private $db = 'hss'; // Tietokanta
 
     protected function connect() {
         $dsn = 'mysql:host='.$this->server.';dbname='.$this->db;

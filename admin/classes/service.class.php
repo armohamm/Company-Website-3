@@ -110,6 +110,15 @@ class Service extends Conn {
         return $this->service;
 
     }
+
+    public function deleteService($id) {
+
+        $sql = 'DELETE FROM '.$this->serviceTable.' WHERE serviceID = :serviceID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['serviceID'=>$id]);
+
+        $return = 1;
+    }
     
 }
 // Käytetään getServices();

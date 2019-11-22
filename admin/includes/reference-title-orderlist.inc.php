@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-include 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php';
 
 function makeList() {
 
@@ -12,8 +12,8 @@ function makeList() {
     for ($i=0; $i <= $headingsAmount-1; $i++) { 
         printf(
         '<li referencetitle-id="'.$headingsArray[$i][0].'" class="bg-gray-100 border-bottom-info ui-state-default">'.$headingsArray[$i][1].'<br> 
-            <a href="edit-reference-title.php?type=edit&id='.$headingsArray[$i][0].'" style="color: rgb(230, 149, 0);">Muokkaa</a>
-            <a href="edit-reference-title.php?type=delete&id='.$headingsArray[$i][0].'" style="color: red;"> Poista</a>
+            <a href="edit-reference-title.php?id='.$headingsArray[$i][0].'" style="color: rgb(230, 149, 0);">Muokkaa</a>
+            <a href="includes/delete-reference-title.inc.php?id='.$headingsArray[$i][0].'" style="color: red;"> Poista</a>
         </li>');
     }
 }
@@ -45,7 +45,7 @@ function makeJS() {
 
             $.post("includes/reference-heading-order.inc.php", { order: referencetitleorder })
                 .done(function (result) {
-                    if(alert("Referenssien järjestys on tallennettu \nTallennetut tiedot: " + result)){}
+                    if(alert("Referenssi otsikoiden järjestys on tallennettu \nTallennetut tiedot: " + result)){}
                     else window.location.reload(true); 
                 })
                 .fail(function (data) {
