@@ -55,7 +55,7 @@ class Reference extends Conn {
         }
 
         return $this->refs;
-        
+        unset($this->refs);
     }
 
     public function getRefHeadingString($arrayPos) {
@@ -137,6 +137,7 @@ class Reference extends Conn {
             unset($foo);
         }
         return $this->refHeadings;
+        unset($this->refHeadings);
     }
 
     public function getRefHeadingsById() {
@@ -157,6 +158,7 @@ class Reference extends Conn {
             unset($foo);
         }
         return $this->refHeadings;
+        unset($this->refHeadings);
     }
 
     public function getLastHeadingID() {
@@ -213,10 +215,10 @@ class Reference extends Conn {
         $return = 1;
     }
 
-    public function getRefsById() {
+    public function getRefById($id) {
         $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
-        FROM `references` 
-        ORDER BY `references`.`refID`');   
+        FROM `references`
+        WHERE `references`.`refID` = ' . $id);   
         while ($row = $sql->fetch()) {
             $foo = array();
 
@@ -231,6 +233,7 @@ class Reference extends Conn {
             unset($foo);
         }
         return $this->refHeadings;
+        unset($this->refHeadings);
     }
 }
 
