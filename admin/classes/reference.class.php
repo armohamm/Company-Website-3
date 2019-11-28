@@ -140,10 +140,10 @@ class Reference extends Conn {
         unset($this->refHeadings);
     }
 
-    public function getRefHeadingsById() {
+    public function getRefHeadingsById($id) {
         $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
         FROM `reference_heading` 
-        ORDER BY `reference_heading`.`headingID`');   
+        WHERE `reference_heading`.`headingID` = ' . $id);   
         while ($row = $sql->fetch()) {
             $foo = array();
 
