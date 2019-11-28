@@ -196,8 +196,20 @@ function editImg3($id) {
     }
     
 }
+if(!empty($_FILES['file0']['name'])) {
+    editImgBg($id);
+}
 
-editImgBg($id);
-editImg1($id);
-editImg2($id);
-editImg3($id);
+if(!empty($_FILES['file1']['name'])) {
+    editImg1($id);
+}
+
+if(!empty($_FILES['file2']['name'])) {
+    editImg2($id);
+}
+
+if(!empty($_FILES['file3']['name'])) {
+    editImg3($id);
+}
+
+

@@ -27,6 +27,29 @@ class Service extends Conn {
 
     }
 
+    public function getServicesById() {
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
+        FROM `service` 
+        ORDER BY `service`.`serviceID`');
+        
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $serviceHeading=$row['heading'];
+            $serviceText=$row['text'];
+
+            array_push($foo, $serviceHeading);
+            array_push($foo, utf8_encode($serviceText));
+
+            array_push($this->service, $foo);
+
+            unset($foo);
+        }
+
+        return $this->service;
+
+    }
+
     public function addServices(string $heading, string $text) {
 
         $sql = $this->connect()->query('SELECT count(*) AS services FROM ' . $this->serviceTable);

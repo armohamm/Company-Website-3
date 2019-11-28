@@ -55,4 +55,6 @@ function editServiceImg($id) {
 
 }
 
-editServiceImg($id);
+if(!empty($_FILES['file']['name'])) {
+    editServiceImg($id);
+}

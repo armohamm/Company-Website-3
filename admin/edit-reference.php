@@ -56,7 +56,7 @@ if(!isset($_GET['id'])) {
               <form class="" action="includes/edit-reference.inc.php" method="post" enctype="multipart/form-data">
 
               <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Muokkaa referenssi</h1>
-                  <input type="text" name="text"><br><br>
+                  <input type="text" name="text" value="<?php require_once 'includes/get-reference.inc.php'; print_r($array[$id-1][1]);?>"><br><br>
 
                 <input type="hidden" name="id" value="<?=$id?>">
 
