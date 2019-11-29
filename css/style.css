@@ -104,13 +104,13 @@ p {
 #header.header-fixed {
   background: #F4F4F4;
   padding: 20px 0;
-  height: 90px;
+  height: 72px;
   transition: all 0.5s;
 }
 
 #header.header-fixed #logo img {
-  -webkit-transform: scale(0.75) translateY(-53%);
-  transform: scale(0.75) translateY(-53%);
+  -webkit-transform: scale(0.75) translateY(-50%);
+  transform: scale(0.75) translateY(-50%);
 }
 
 /* Navigaatio */

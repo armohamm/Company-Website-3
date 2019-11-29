@@ -27,10 +27,10 @@ class Service extends Conn {
 
     }
 
-    public function getServicesById() {
+    public function getServicesById($id) {
         $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
         FROM `service` 
-        ORDER BY `service`.`serviceID`');
+        WHERE `service`.`serviceID` = ' . $id);
         
         while ($row = $sql->fetch()) {
             $foo = array();
