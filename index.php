@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fi">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Meta tägejä -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+
+    <!-- Google fontit -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Ubuntu:400,500,700&display=swap&subset=latin-ext"
+      rel="stylesheet">
+
+    <!-- CSS tiedosto -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Kirjastot -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <title>Hämeen Siivous & Saneeraus Oy</title>
+</head>
+
+<body>
+
+  <div style="display: none" id="hideAll">&nbsp;</div>
+
+  <!-- Navi alkaa -->
+  <header id="header" style="display: none;">
+      <div class="container">
+          <div id="logo" class="pull-left">
+              <a href="#start"><img src="img/logo1.png" alt="" title="" /></img></a>
+          </div>
+          <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                  <li><a href="#start">Aloitus</a></li>
+                  <li><a href="#services">Palvelut</a></li>
+                  <li><a href="#about">Keitä olemme</a></li>
+                  <li><a href="#references">Referenssit</a></li>
+                  <li><a href="#contact">Yhteystiedot</a></li>
+              </ul>
+          </nav><!-- #nav-menu-container -->
+      </div>
+  </header><!-- #header -->
+  <!-- Navi loppuu -->
+
+  <!-- Alkuosio alkaa-->
+  <section id="start" class="start-section">
+      <div class="start-section">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                      <div class="start-text">
+                          <h1><span id="start-text" class="start"></span></h1>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Alkuosio loppuu-->
+
+  <!-- Palvelut osio alkaa -->
+  <section id="services" class="services-section">
+    <div id="slideshow1" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#slideshow1" data-slide-to="0" class="active"></li>
+        <li data-target="#slideshow1" data-slide-to="1"></li>
+        <li data-target="#slideshow1" data-slide-to="2"></li>
+        <li data-target="#slideshow1" data-slide-to="3"></li>
+        <li data-target="#slideshow1" data-slide-to="4"></li>
+
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Ensimmäinen slide -->
+        <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/pJadQetzTkI/1920x1080')">
+          <h1 class="text-center service-heading">Rakennussiivous</h1>
+          <div class="row">
+            <div class="service-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+              </div>
+          </div>
+        </div>
+        <!-- Toinen slide -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/27HiryxnHJk/1920x1080')">
+          <h1 class="text-center service-heading">Loppusiivous</h1>
+          <div class="row">
+            <div class="service-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+            </div>
+          </div>
+        </div>
+        <!--  Kolmas slide -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/hNZ6WOOnQpk/1920x1080')">
+          <h1 class="text-center service-heading">P1-siivous</h1>
+          <div class="row">
+            <div class="service-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+            </div>
+          </div>
+        </div>
+      <!-- Neljäs slide -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/B_oL3jEt5L4/1920x1080')">
+        <h1 class="text-center service-heading">Rakennusaputyöt</h1>
+        <div class="row">
+          <div class="service-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+          </div>
+        </div>
+      </div>
+      <!--  Viides slide -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/qjCHPZbeXCQ/1920x1080')">
+        <h1 class="text-center service-heading">Maalaus</h1>
+        <div class="row">
+          <div class="service-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+      <a class="carousel-control-prev" href="#slideshow2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#slideshow2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      -->
+    </div>
+  </section>
+  <!-- Palvelut osio loppuu -->
+
+
+  <!-- Meistä osio alkaa -->
+  <section id="about" class="about-section">
+    <div class="about-section">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="about-text">
+             <h1 class="about-heading text-center">Keitä olemme</h1>
+             <p class="about-text" id="about-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Meistä osio loppuu -->
+
+  <!-- Referenssit alkaa -->
+  <section id="references" class="references-section">
+      <?php include_once 'admin/includes/get-frontpage-refs.inc.php' ?>
+  </section>
+  <!-- Referenssit loppuu -->
+
+  <!-- Yhteystiedot alkaa -->
+  <section id="contact" class="contact-section">
+
+          <h2> Yhteystiedot </h2> <br>
+
+            <h4>  Hämeen Siivous & Saneeraus Oy </h4>
+              Yhteyshenkilö: Liisa Isomäki <br>
+              Puhelin: 050-557 8784 <br>
+              Sähköposti: liisa@hamss.fi
+
+            <a id="job-open" style="color: white; display: none;">Haemme työntekijöitä</a>
+            <p id="job-closed" style="color: white; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
+
+  </section>
+  <!-- Yhteystiedot loppuu -->
+
+  <!-- Footer alkaa -->
+  <section class="footer-section">
+      <div class="copyright text-center">
+          <span>Copyright &copy; Hämeen Siivous & Saneeraus Oy 2019</span>
+      </div>
+  </section>
+  <!-- Footer loppuu -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a> <!-- Nappi ylös -->
+
+  <!-- Javascript kirjastot -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+
+  <script type="text/javascript" src="/js/lib/dummy.js"></script> <!-- Sliderit :) -->
+
+  <!-- Pää Javascript tiedosto -->
+  <script src="js/main.js"></script>
+
+  <!-- In file script jostai syystä? (Sliderille) -->
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent) {
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "yezxdwv3"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+  <script type="text/javascript">
+    document.getElementById("hideAll").style.display = "block";
+  </script>
+
+  <script type="text/javascript">
+    $(window).load(function () {
+      $.get("admin/includes/get-start-title.inc.php", function (data) {
+        $("#start-text").html(data);
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(window).load(function () {
+      $.get("admin/includes/get-about-text.inc.php", function (data) {
+        $("#about-text").html(data);
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(window).load(function () {
+      $.get("admin/includes/get-job-open.inc.php", function (data) {
+        if (data[0] != 0) {
+          $("#job-open").attr("href", data);
+          document.getElementById("job-closed").style.display = "none";
+          document.getElementById("job-open").style.display = "block";
+        }
+        else {
+          document.getElementById("job-closed").style.display = "block";
+          document.getElementById("job-open").style.display = "none";
+        }
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(window).load(function () { document.getElementById("hideAll").style.display = "none"; });
+    $(window).load(function () { document.getElementById("header").style.display = "block"; });
+  </script>
+
+
+</body>
+
+</html>
