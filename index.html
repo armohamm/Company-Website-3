@@ -364,13 +364,29 @@
   <section id="contact" class="contact-section">
 
           <h2> Yhteystiedot </h2> <br>
+            <div class="contact-middle">
 
             <h4>  Hämeen Siivous & Saneeraus Oy </h4>
               Yhteyshenkilö: Liisa Isomäki <br>
               Puhelin: 050-557 8784 <br>
               Sähköposti: liisa@hamss.fi
 
-            <a id="job-open" style="color: white;">Haemme työntekijöitä</a>
+            <a id="job-open" style="color: white; display: none;">Haemme työntekijöitä</a>
+            <p id="job-closed" style="color: white; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
+          </div>
+
+          <div class="contact-right">
+            <h4> Työmaa </h4>
+                Sähköposti: liisa@hamss.fi <br>
+                Puhelin: 050-557 8784 <br>
+          </div>
+
+          <div class="contact-left">
+            <h4> Toimisto </h4>
+                Sähköposti: toimisto@hamss.fi <br>
+                Puhelin: 050-557 8782 <br>
+                Tarjouspyynnöt: toimisto@hamss.fi <br>
+          </div>
 
   </section>
   <!-- Yhteystiedot loppuu -->
@@ -448,12 +464,14 @@
   <script type="text/javascript">
     $(window).load(function () {
       $.get("admin/includes/get-job-open.inc.php", function (data) {
-        if (data != 0) {
+        if (data[0] != 0) {
           $("#job-open").attr("href", data);
+          document.getElementById("job-closed").style.display = "none";
           document.getElementById("job-open").style.display = "block";
         }
         else {
-
+          document.getElementById("job-closed").style.display = "block";
+          document.getElementById("job-open").style.display = "none";
         }
       });
     });
