@@ -55,7 +55,7 @@ class Reference extends Conn {
         }
 
         return $this->refs;
-        
+        unset($this->refs);
     }
 
     public function getRefHeadingString($arrayPos) {
@@ -137,6 +137,28 @@ class Reference extends Conn {
             unset($foo);
         }
         return $this->refHeadings;
+        unset($this->refHeadings);
+    }
+
+    public function getRefHeadingsById($id) {
+        $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
+        FROM `reference_heading` 
+        WHERE `reference_heading`.`headingID` = ' . $id);   
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $headingID=$row['headingID'];
+            $heading=$row['heading'];
+
+            array_push($foo, (int)$headingID);
+            array_push($foo, utf8_encode($heading));
+
+            array_push($this->refHeadings, $foo);
+
+            unset($foo);
+        }
+        return $this->refHeadings;
+        unset($this->refHeadings);
     }
 
     public function getLastHeadingID() {
@@ -192,7 +214,27 @@ class Reference extends Conn {
 
         $return = 1;
     }
-    
+
+    public function getRefById($id) {
+        $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
+        FROM `references`
+        WHERE `references`.`refID` = ' . $id);   
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $refID=$row['refID'];
+            $text=$row['text'];
+
+            array_push($foo, (int)$refID);
+            array_push($foo, $text);
+
+            array_push($this->refHeadings, $foo);
+
+            unset($foo);
+        }
+        return $this->refHeadings;
+        unset($this->refHeadings);
+    }
 }
 
 // $objekti = new Reference();

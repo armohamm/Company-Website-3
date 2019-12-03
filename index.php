@@ -363,26 +363,25 @@
   <!-- Yhteystiedot alkaa -->
   <section id="contact" class="contact-section">
 
-          <h2> Yhteystiedot </h2> <br>
+          <h1 class="contact-heading headline"> Yhteystiedot </h1> <br>
             <div class="contact-middle">
+              <h3 class="heading">  Hämeen Siivous & Saneeraus Oy </h3>
+                Yhteyshenkilö: Liisa Isomäki <br>
+                Puhelin: 050-557 8784 <br>
+                Sähköposti: liisa@hamss.fi
 
-            <h4>  Hämeen Siivous & Saneeraus Oy </h4>
-              Yhteyshenkilö: Liisa Isomäki <br>
-              Puhelin: 050-557 8784 <br>
-              Sähköposti: liisa@hamss.fi
-
-            <a id="job-open" style="color: white; display: none;">Haemme työntekijöitä</a>
-            <p id="job-closed" style="color: white; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
+              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b>
+              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
           </div>
 
           <div class="contact-right">
-            <h4> Työmaa </h4>
+            <h3 class="contact-heading heading"> Työmaa </h3>
                 Sähköposti: liisa@hamss.fi <br>
                 Puhelin: 050-557 8784 <br>
           </div>
 
           <div class="contact-left">
-            <h4> Toimisto </h4>
+            <h3 class="contact-heading heading"> Toimisto </h3>
                 Sähköposti: toimisto@hamss.fi <br>
                 Puhelin: 050-557 8782 <br>
                 Tarjouspyynnöt: toimisto@hamss.fi <br>
