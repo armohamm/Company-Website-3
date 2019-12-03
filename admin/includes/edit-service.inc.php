@@ -3,58 +3,66 @@
 declare(strict_types=1);
 include_once 'class-autoloader.inc.php';
 
-$id = $_POST['id'];
-$title = $_POST['text'];
-$desc = $_POST['desc'];
+if(!isset($_GET['id'])) {
 
-$objekti = new Service();
-echo $objekti->editService($id, $title, $desc);
+    header("Location: http://localhost/top/hamss/admin/services.php");
+    
+} else {
 
-function editServiceImg($id) {
+    $id = $_POST['id'];
+    $title = $_POST['text'];
+    $desc = $_POST['desc'];
 
-    $dir = "../../img/";
-    $file = $_FILES['file']['name'];
-    $temp_name = $_FILES['file']['tmp_name'];
-    $info = pathinfo($file);
-    $fileExt = $info['extension'];
-    $newFilename = "ser" . $id . "_1" . "." . "jpg";
-    $path = $dir . $newFilename;
-    $exts = array("jpg", "jpeg", "png");
+    $objekti = new Service();
+    echo $objekti->editService($id, $title, $desc);
 
-    if (in_array($fileExt, $exts)) {
+    function editServiceImg($id) {
 
-        if (file_exists($path)) {
+        $dir = "../../img/";
+        $file = $_FILES['file']['name'];
+        $temp_name = $_FILES['file']['tmp_name'];
+        $info = pathinfo($file);
+        $fileExt = $info['extension'];
+        $newFilename = "ser" . $id . "_1" . "." . "jpg";
+        $path = $dir . $newFilename;
+        $exts = array("jpg", "jpeg", "png");
 
-            unlink($path);
+        if (in_array($fileExt, $exts)) {
 
-            if (move_uploaded_file($temp_name, $path)) {
+            if (file_exists($path)) {
 
+                unlink($path);
+
+                if (move_uploaded_file($temp_name, $path)) {
+
+
+                } else {
+
+                    echo "Kuvan siirtämisessä tapahtui virhe!<br>";
+
+                }
 
             } else {
 
-                echo "Kuvan siirtämisessä tapahtui virhe!<br>";
+                if (move_uploaded_file($temp_name, $path)) {
+
+
+                } else {
+
+                    echo "Kuvan siirtämisessä tapahtui virhe!<br>";
+
+                }
 
             }
 
         } else {
-
-            if (move_uploaded_file($temp_name, $path)) {
-
-
-            } else {
-
-                echo "Kuvan siirtämisessä tapahtui virhe!<br>";
-
-            }
-
+            echo "Väärä tiedosto tyyppi!";
         }
 
-    } else {
-        echo "Väärä tiedosto tyyppi!";
     }
 
-}
+    if(!empty($_FILES['file']['name'])) {
+        editServiceImg($id);
+    }
 
-if(!empty($_FILES['file']['name'])) {
-    editServiceImg($id);
 }

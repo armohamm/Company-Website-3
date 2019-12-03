@@ -18,7 +18,7 @@ class Reference extends Conn {
             $heading=$row['heading'];
 
             array_push($foo, (int)$headingID);
-            array_push($foo, $heading);
+            array_push($foo, utf8_encode($heading));
 
             array_push($this->refHeadings, $foo);
 
@@ -55,11 +55,10 @@ class Reference extends Conn {
         }
 
         return $this->refs;
-        unset($this->refs);
     }
 
-    public function getRefHeadingString($arrayPos) {
-        return utf8_encode($this->refHeadings[$arrayPos][1]);
+    public function getRefHeadingString(int $arrayPos) {
+        return $this->refHeadings[$arrayPos][1];
     }
 
     public function addReferenceTitle(string $heading) {
@@ -137,7 +136,6 @@ class Reference extends Conn {
             unset($foo);
         }
         return $this->refHeadings;
-        unset($this->refHeadings);
     }
 
     public function getRefHeadingsById($id) {
@@ -158,7 +156,6 @@ class Reference extends Conn {
             unset($foo);
         }
         return $this->refHeadings;
-        unset($this->refHeadings);
     }
 
     public function getLastHeadingID() {
@@ -233,7 +230,6 @@ class Reference extends Conn {
             unset($foo);
         }
         return $this->refHeadings;
-        unset($this->refHeadings);
     }
 }
 
