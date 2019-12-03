@@ -15,7 +15,7 @@ class Service extends Conn {
             $serviceHeading=$row['heading'];
             $serviceText=$row['text'];
 
-            array_push($foo, $serviceHeading);
+            array_push($foo, utf8_encode($serviceHeading));
             array_push($foo, utf8_encode($serviceText));
 
             array_push($this->service, $foo);
