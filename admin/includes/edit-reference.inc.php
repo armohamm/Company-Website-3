@@ -3,8 +3,16 @@
 declare(strict_types=1);
 include_once 'class-autoloader.inc.php';
 
-$id = $_POST['id'];
-$text = $_POST['text'];
+if(!isset($_GET['id'])) {
 
-$objekti = new Reference();
-echo $objekti->editReference($id, $text);
+    header("Location: http://localhost/top/hamss/admin/reference-contents.php");
+
+} else {
+
+    $id = $_POST['id'];
+    $text = $_POST['text'];
+
+    $objekti = new Reference();
+    echo $objekti->editReference($id, $text);
+
+}

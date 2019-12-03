@@ -52,7 +52,7 @@ if(!isset($_GET['id'])) {
               <!-- Page Heading -->
               <h1 class="h3 mb-4 text-gray-800">Referenssi otsikon muokkaus</h1>
     
-              <form class="" action="includes/edit-reference-title.inc.php" method="post" enctype="multipart/form-data">
+              <form class="" action="includes/edit-reference-title.inc.php?id=<?= $id ?>" method="post" enctype="multipart/form-data">
     
                 <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi otsikko</h1>
                 <input type="text" name="text" value="<?php require_once 'includes/get-reference-title.inc.php'; print_r($array[0][1]);?>">
