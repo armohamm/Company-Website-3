@@ -74,73 +74,7 @@
 
   <!-- Palvelut osio alkaa -->
   <section id="services" class="services-section">
-    <div id="slideshow1" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#slideshow1" data-slide-to="0" class="active"></li>
-        <li data-target="#slideshow1" data-slide-to="1"></li>
-        <li data-target="#slideshow1" data-slide-to="2"></li>
-        <li data-target="#slideshow1" data-slide-to="3"></li>
-        <li data-target="#slideshow1" data-slide-to="4"></li>
-
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <!-- Ensimmäinen slide -->
-        <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/pJadQetzTkI/1920x1080')">
-          <h1 class="text-center service-heading">Rakennussiivous</h1>
-          <div class="row">
-            <div class="service-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
-              </div>
-          </div>
-        </div>
-        <!-- Toinen slide -->
-        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/27HiryxnHJk/1920x1080')">
-          <h1 class="text-center service-heading">Loppusiivous</h1>
-          <div class="row">
-            <div class="service-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
-            </div>
-          </div>
-        </div>
-        <!--  Kolmas slide -->
-        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/hNZ6WOOnQpk/1920x1080')">
-          <h1 class="text-center service-heading">P1-siivous</h1>
-          <div class="row">
-            <div class="service-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
-            </div>
-          </div>
-        </div>
-      <!-- Neljäs slide -->
-      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/B_oL3jEt5L4/1920x1080')">
-        <h1 class="text-center service-heading">Rakennusaputyöt</h1>
-        <div class="row">
-          <div class="service-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
-          </div>
-        </div>
-      </div>
-      <!--  Viides slide -->
-      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/qjCHPZbeXCQ/1920x1080')">
-        <h1 class="text-center service-heading">Maalaus</h1>
-        <div class="row">
-          <div class="service-text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--
-      <a class="carousel-control-prev" href="#slideshow2" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#slideshow2" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      -->
-    </div>
+    <?php include_once 'admin/includes/get-frontpage-services.inc.php' ?>
   </section>
   <!-- Palvelut osio loppuu -->
 
