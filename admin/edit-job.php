@@ -1,15 +1,4 @@
-<?php
-
-if(!isset($_GET['id'])) {
-
-    header("Location: http://localhost/top/hamss/admin/reference-titles.php");
-
-} else {
-
-    $id = $_GET['id'];
-
-    ?>
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     
     <head>
@@ -20,7 +9,7 @@ if(!isset($_GET['id'])) {
       <meta name="description" content="">
       <meta name="author" content="">
     
-      <title>Adminsivusto - Referenssi otsikon muokkaus</title>
+      <title>Adminsivusto - Työnhaun muokkaus</title>
     
       <!-- Custom fonts for this template-->
       <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -50,34 +39,21 @@ if(!isset($_GET['id'])) {
             <div class="container-fluid">
     
               <!-- Page Heading -->
-              <h1 class="h3 mb-4 text-gray-800">Referenssi otsikon muokkaus</h1>
+              <h1 class="h3 mb-4 text-gray-800">Työnhaun muokkaus</h1>
     
-              <form class="" action="includes/edit-reference-title.inc.php?id=<?= $id ?>" method="post" enctype="multipart/form-data">
+              <form class="" action="includes/edit-job.inc.php" method="post" enctype="multipart/form-data">
     
-                <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi otsikko</h1>
-                <input type="text" name="text" value="<?php require_once 'includes/get-reference-title.inc.php'; print_r($array[0][1]);?>">
-    
-                <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi taustakuva</h1>
-                <a class="h5" href="https://unsplash.com/">Ilmainen kuvapalvelu 1</a><br>
-                <a class="h5" href="https://pixabay.com/">Ilmainen kuvapalvelu 2</a><br>
-                <input type="file" name="file0">
-    
-                <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi kuva 1</h1>
-                <input type="file" name="file1">
-    
-                <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi kuva 2</h1>
-                <input type="file" name="file2">
-    
-                <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi kuva 3</h1>
-                <input type="file" name="file3"><br>
-    
-                <input type="hidden" name="id" value="<?=$id?>">
+                <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Haemme työntekijöitä</h1>
+                <input type="checkbox" name="check" value="1"><br>
+
+                <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi linkki</h1>
+                <input type="text" name="link"><br><br>
     
                 <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">
                   <span class="icon text-white-50">
                     <i class="fas fa-check"></i>
                   </span>
-                  <span class="text">Muokkaa otsikkoa</span>
+                  <span class="text">Tallenna</span>
                 </button>
     
               </form>
@@ -141,10 +117,3 @@ if(!isset($_GET['id'])) {
     </body>
     
     </html>
-  
-<?php
-
-}
-
-
-

@@ -15,6 +15,29 @@ class Service extends Conn {
             $serviceHeading=$row['heading'];
             $serviceText=$row['text'];
 
+            array_push($foo, utf8_encode($serviceHeading));
+            array_push($foo, utf8_encode($serviceText));
+
+            array_push($this->service, $foo);
+
+            unset($foo);
+        }
+
+        return $this->service;
+
+    }
+
+    public function getServicesById($id) {
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
+        FROM `service` 
+        WHERE `service`.`serviceID` = ' . $id);
+        
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $serviceHeading=$row['heading'];
+            $serviceText=$row['text'];
+
             array_push($foo, $serviceHeading);
             array_push($foo, utf8_encode($serviceText));
 

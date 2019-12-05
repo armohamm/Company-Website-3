@@ -50,7 +50,7 @@ require_once "includes/session.inc.php";
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="txt_pwd" placeholder="Password">
                     </div>
-                    <a id="but_submit" class="btn btn-primary btn-user btn-block">
+                    <a id="but_submit" class="btn btn-primary btn-user btn-block" style="color: white;">
                       Kirjaudu sisään
                     </a>
                     <a href="../index.html" class="btn btn-secondary btn-user btn-block">

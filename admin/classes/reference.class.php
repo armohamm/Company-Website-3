@@ -18,7 +18,7 @@ class Reference extends Conn {
             $heading=$row['heading'];
 
             array_push($foo, (int)$headingID);
-            array_push($foo, $heading);
+            array_push($foo, utf8_encode($heading));
 
             array_push($this->refHeadings, $foo);
 
@@ -55,11 +55,10 @@ class Reference extends Conn {
         }
 
         return $this->refs;
-        
     }
 
-    public function getRefHeadingString($arrayPos) {
-        return utf8_encode($this->refHeadings[$arrayPos][1]);
+    public function getRefHeadingString(int $arrayPos) {
+        return $this->refHeadings[$arrayPos][1];
     }
 
     public function addReferenceTitle(string $heading) {
@@ -139,6 +138,26 @@ class Reference extends Conn {
         return $this->refHeadings;
     }
 
+    public function getRefHeadingsById($id) {
+        $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
+        FROM `reference_heading` 
+        WHERE `reference_heading`.`headingID` = ' . $id);   
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $headingID=$row['headingID'];
+            $heading=$row['heading'];
+
+            array_push($foo, (int)$headingID);
+            array_push($foo, utf8_encode($heading));
+
+            array_push($this->refHeadings, $foo);
+
+            unset($foo);
+        }
+        return $this->refHeadings;
+    }
+
     public function getLastHeadingID() {
         $sql = $this->connect()->query('SELECT * FROM `reference_heading` ORDER BY `position` DESC LIMIT 1');   
         while ($row = $sql->fetch()) {
@@ -192,7 +211,26 @@ class Reference extends Conn {
 
         $return = 1;
     }
-    
+
+    public function getRefById($id) {
+        $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
+        FROM `references`
+        WHERE `references`.`refID` = ' . $id);   
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $refID=$row['refID'];
+            $text=$row['text'];
+
+            array_push($foo, (int)$refID);
+            array_push($foo, $text);
+
+            array_push($this->refHeadings, $foo);
+
+            unset($foo);
+        }
+        return $this->refHeadings;
+    }
 }
 
 // $objekti = new Reference();

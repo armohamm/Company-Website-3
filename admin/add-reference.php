@@ -56,13 +56,7 @@ require_once "includes/reference-orderlist.inc.php";
               sen jälkeen kirjoita alle referenssi kohteen esim. "Esimerkkilän lukio"</h1>
     
               <h1 class="h4 mb-4 text-gray-800;">Referenssi otsikko</h1>
-              <select name="title">
-                  <option value="0"></option>
-                  <option value="1">Otsikko 1</option>
-                  <option value="2">Otsikko 2</option>
-                  <option value="3">Otsikko 3</option>
-                  <option value="4">Otsikko 4</option>
-              </select>
+              <?php makeSelector($array);?>
     
               <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Lisättävä referenssi</h1>
               <input type="text" name="text"><br><br>

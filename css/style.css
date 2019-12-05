@@ -1,4 +1,16 @@
 /* Yleinen */
+
+#hideAll {
+  position: fixed;
+  left: 0px; 
+  right: 0px; 
+  top: 0px; 
+  bottom: 0px; 
+  background-color: white;
+  z-index: 99; /* Higher than anything else in the document */
+
+}
+
 body {
   background: #fff;
   color: #666666;
@@ -12,7 +24,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-  color: #c;
+  color: #ccc;
   outline: none;
   text-decoration: none;
 }
@@ -96,21 +108,21 @@ p {
     height: 110px;
   }
   #header.header-fixed #logo img {
-  -webkit-transform: scale(0.8) translateY(-30%) !important;
-  transform: scale(0.8) translateY(-30%) !important;
+  -webkit-transform: scale(0.8) translateY(-48%) !important;
+  transform: scale(0.8) translateY(-48%) !important;
   }
 }
 
 #header.header-fixed {
   background: #F4F4F4;
   padding: 20px 0;
-  height: 90px;
+  height: 72px;
   transition: all 0.5s;
 }
 
 #header.header-fixed #logo img {
-  -webkit-transform: scale(0.75) translateY(-53%);
-  transform: scale(0.75) translateY(-53%);
+  -webkit-transform: scale(0.75) translateY(-50%);
+  transform: scale(0.75) translateY(-50%);
 }
 
 /* Navigaatio */
@@ -595,7 +607,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 3.5em;
     margin-top: 25px;
   }
-<<<<<<< HEAD
   img.reference-img {
     border-style: solid;
     float: right;
@@ -603,9 +614,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     width: 100px;
     height: 80px;
     display: none;
-=======
+  }
 }
->>>>>>> c6c9f3d1d40aec68d97dac5247f3f6baf78dd8c0
 
  /* tableteille */
 @media only screen and (min-width: 770px) {
@@ -846,50 +856,54 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* puhelimelle */
 @media only screen and (max-width: 450px) {
   section.contact-section {
-    min-height: 450px;
-    background: #2d5387;
+    min-height: 200px;
+    background-image: url("../img/contact.jpg");
     text-align: center;
     color: #f4f4f4;
-    font-size: 1em;
-    padding: 50px;
+    font-size: 0.8em;
+    padding: 30px;
   }
+  
 }
 
  /* tableteille */
 @media only screen and (min-width: 450px) {
   section.contact-section {
     min-height: 200px;
-    background: #2d5387;
+    background-image: url("../img/contact.jpg");
     text-align: center;
     color: #f4f4f4;
-    font-size: 1em;
-    padding: 50px;
+    font-size: 0.8em;
+    padding: 30px;
   }
+  
 }
 
  /* tietokoneille */
 @media only screen and (min-width: 900px) {
   section.contact-section {
     min-height: 200px;
-    background: #2d5387;
-    text-align: center;
+    background-image: url("../img/contact.jpg");
     color: #f4f4f4;
     font-size: 1.15em;
     padding: 50px;
   }
+  
 }
 
 /* leveille näytöille */
 @media only screen and (min-width: 1350px) {
   section.contact-section {
     min-height: 200px;
-    background: #2d5387;
-    text-align: center;
+    background-image: url("../img/contact.jpg");
     color: #f4f4f4;
     font-size: 1.15em;
     padding: 50px;
   }
+  
 }
+
+/* Yhteystiedot loppuu ja footer alkaa */
 
 section.footer-section {
     min-height: 50px;

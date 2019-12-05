@@ -2,7 +2,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
   
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -73,7 +73,7 @@
             <h6 class="collapse-header">Muokkaukset</h6>
             <a class="collapse-item" href="text-edit.php">Etusivun tekstien <br> muokkaus</a>
             <a class="collapse-item" href="change-photos.php">Etusivun kuvien <br> muokkaus</a>
-            <a class="collapse-item" href="#">Työnhaun muokkaus</a>
+            <a class="collapse-item" href="edit-job.php">Työnhaun muokkaus</a>
             <a class="collapse-item" href="change-password.php">Salasanan vaihto</a>
           </div>
         </div>
