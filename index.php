@@ -105,7 +105,7 @@
 
           <h1 class="contact-heading headline"> Yhteystiedot </h1> <br>
             <div class="contact-middle">
-              <h3 class="heading">  Hämeen Siivous & Saneeraus Oy </h3>
+              <h3 class="heading contact-heading">  Hämeen Siivous & Saneeraus Oy </h3>
                 Yhteyshenkilö: Liisa Isomäki <br>
                 Puhelin: 050-557 8784 <br>
                 Sähköposti: liisa@hamss.fi

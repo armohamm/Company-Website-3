@@ -2,10 +2,10 @@
 
 #hideAll {
   position: fixed;
-  left: 0px; 
-  right: 0px; 
-  top: 0px; 
-  bottom: 0px; 
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
   background-color: white;
   z-index: 99; /* Higher than anything else in the document */
 
@@ -617,6 +617,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: none;
 =======
 }
+}
 >>>>>>> c6c9f3d1d40aec68d97dac5247f3f6baf78dd8c0
 
  /* tableteille */
@@ -859,7 +860,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (max-width: 450px) {
   section.contact-section {
     min-height: 450px;
-    background: #2d5387;
+    background-image: url("../img/contact.jpg");
     text-align: center;
     color: #f4f4f4;
     font-size: 1em;
@@ -887,7 +888,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (min-width: 450px) {
   section.contact-section {
     min-height: 200px;
-    background-image: url("../img/contac.jpg");
+    background-image: url("../img/contact.jpg");
     text-align: center;
     color: #f4f4f4;
     font-size: 0.8em;
@@ -921,7 +922,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (min-width: 900px) {
   section.contact-section {
     min-height: 200px;
-    background-image: url("../img/contac.jpg");
+    background-image: url("../img/contact.jpg");
     color: #f4f4f4;
     font-size: 1.15em;
     padding: 50px;
