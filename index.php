@@ -74,7 +74,73 @@
 
   <!-- Palvelut osio alkaa -->
   <section id="services" class="services-section">
-    <?php include_once 'admin/includes/get-frontpage-services.inc.php' ?>
+    <div id="slideshow1" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#slideshow1" data-slide-to="0" class="active"></li>
+        <li data-target="#slideshow1" data-slide-to="1"></li>
+        <li data-target="#slideshow1" data-slide-to="2"></li>
+        <li data-target="#slideshow1" data-slide-to="3"></li>
+        <li data-target="#slideshow1" data-slide-to="4"></li>
+
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Ensimmäinen slide -->
+        <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/pJadQetzTkI/1920x1080')">
+          <h1 class="text-center service-heading">Rakennussiivous</h1>
+          <div class="row">
+            <div class="service-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+              </div>
+          </div>
+        </div>
+        <!-- Toinen slide -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/27HiryxnHJk/1920x1080')">
+          <h1 class="text-center service-heading">Loppusiivous</h1>
+          <div class="row">
+            <div class="service-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+            </div>
+          </div>
+        </div>
+        <!--  Kolmas slide -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/hNZ6WOOnQpk/1920x1080')">
+          <h1 class="text-center service-heading">P1-siivous</h1>
+          <div class="row">
+            <div class="service-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+            </div>
+          </div>
+        </div>
+      <!-- Neljäs slide -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/B_oL3jEt5L4/1920x1080')">
+        <h1 class="text-center service-heading">Rakennusaputyöt</h1>
+        <div class="row">
+          <div class="service-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+          </div>
+        </div>
+      </div>
+      <!--  Viides slide -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/qjCHPZbeXCQ/1920x1080')">
+        <h1 class="text-center service-heading">Maalaus</h1>
+        <div class="row">
+          <div class="service-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit euismod commodo. Proin egestas non enim a aliquet. Morbi sed malesuada nunc. Mauris lobortis odio ac nulla pellentesque, non accumsan turpis volutpat. In dignissim fermentum est, vel ultrices turpis interdum sit amet. Sed nec imperdiet neque. Maecenas eget venenatis eros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+      <a class="carousel-control-prev" href="#slideshow2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#slideshow2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      -->
+    </div>
   </section>
   <!-- Palvelut osio loppuu -->
 
@@ -96,22 +162,230 @@
 
   <!-- Referenssit alkaa -->
   <section id="references" class="references-section">
-      <?php include_once 'admin/includes/get-frontpage-refs.inc.php' ?>
+    <div id="slideshow2" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#slideshow2" data-slide-to="0" class="active"></li>
+        <li data-target="#slideshow2" data-slide-to="1"></li>
+        <li data-target="#slideshow2" data-slide-to="2"></li>
+        <li data-target="#slideshow2" data-slide-to="3"></li>
+        <li data-target="#slideshow2" data-slide-to="4"></li>
+        <li data-target="#slideshow2" data-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Ensimmäinen slide -->
+        <div class="carousel-item active" style="background-image: url('https://cdn.pixabay.com/photo/2016/02/09/05/32/gold-1188347_1280.jpg')">
+          <h1 class="reference-heading text-center"> Koulut </h1>
+          <div class="row">
+            <div class="col-lg-2 hidden-md hidden-sm">
+              <!-- Tyhjä divi sisennystä varten -->
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <ul class="reference-ul" style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+                <li> Harjun koulu </li>
+                <li> Hervannan ammattikoulu </li>
+                <li> Kangasalan ammattikoulu </li>
+                <li> Karosen koulu </li>
+                <li> Koiviston koulu </li>
+                <li> Liisanpuisto </li>
+                <li> Nekalan koulu </li>
+                <li> Pirkanmaan ammattikoulu </li>
+                <li> Pyynikin ammattikoulu </li>
+                <li> Rollikkahallit </li>
+                <li> Sammon koulu </li>
+                <li> Sampola </li>
+                <li> Saukonpuiston koulu </li>
+                <li> Tampereen ammattikoulu </li>
+                <li> Tampereen teknillinen yliopisto </li>
+                <li> Tampereen yliopisto </li>
+                <li> Takahuhdin ala-aste </li>
+              </ul>
+            </div>
+            <div class="col-lg-5 col-md-6 hidden-sm">
+              <img src="img/img5.jpg" class="reference-img-0">
+              <img src="img/img4.jpg" class="reference-img-1">
+              <img src="img/img1.jpg" class="reference-img-2">
+            </div>
+          </div>
+        </div>
+        <!-- Toinen slide -->
+        <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2018/03/21/10/01/desktop-3246124_1280.jpg')">
+          <h1 class="reference-heading text-center">Sairaalat, terveyskeskukset, vanhainkodit ja päiväkodit</h1>
+          <div class="row">
+            <div class="col-lg-2 hidden-md hidden-sm">
+              <!-- Tyhjä divi sisennystä varten -->
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <ul class="reference-ul">
+                <li> Hatanpään sairaala </li>
+                <li> Kaupin sairaala </li>
+                <li> Pirkkalan terveyskeskus </li>
+                <li> TAYS </li>
+                <li> Rauhanniemen sairaala </li>
+                <li> Koukkuniemi </li>
+                <li> Ainan päiväkoti </li>
+                <li> Jankan päiväkoti </li>
+                <li> Multisillan päiväkoti </li>
+                <li> Tesoman päiväkoti </li>
+              </ul>
+            </div>
+            <div class="col-lg-5 col-md-6 hidden-sm">
+                <img src="img/img5.jpg" class="reference-img-0">
+                <img src="img/img4.jpg" class="reference-img-1">
+                <img src="img/img1.jpg" class="reference-img-2">
+            </div>
+          </div>
+        </div> -->
+        <!-- Kolmas slide -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/27HiryxnHJk/1920x1080')">
+          <h1 class="reference-heading text-center">Kaupungin kiinteistöt</h1>
+          <div class="row">
+            <div class="col-lg-2 hidden-md hidden-sm">
+              <!-- Tyhjä divi sisennystä varten -->
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <ul class="reference-ul" style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+                <li> Frenckell </li>
+                <li> Haiharan nukkemuseo </li>
+                <li> Hermia </li>
+                <li> Mobilia </li>
+                <li> Nekalankulma </li>
+                <li> Oikeustalo </li>
+                <li> Pakkahuone </li>
+                <li> Kahvila Valo </li>
+                <li> Pirkkahalli </li>
+                <li> Pispalan paloasema </li>
+                <li> Punakylä </li>
+                <li> Raatihuone </li>
+                <li> Sara Hildenin taidemuseo </li>
+                <li> Siperia </li>
+                <li> Sähkölaitos </li>
+                <li> Särkänniemi </li>
+                <li> Tallipiha </li>
+                <li> Tampereen virastotalo </li>
+                <li> Tampere-talo </li>
+                <li> Tampereen vastaanottokeskus </li>
+                <li> Vapriikki </li>
+                <li> Villa Mac </li>
+              </ul>
+            </div>
+            <div class="col-lg-5 col-md-6 hidden-sm">
+              <img src="img/img5.jpg" class="reference-img-0">
+              <img src="img/img4.jpg" class="reference-img-1">
+              <img src="img/img1.jpg" class="reference-img-2">
+            </div>
+          </div>
+        </div>
+      <!-- Neljäs slide -->
+        <div class="carousel-item" style="background-image: url('https://source.unsplash.com/XgeZu2jBaVI/1920x1080')">
+          <h1 class="reference-heading text-center">Yksityiset yritykset, kauppakeskukset</h1>
+          <div class="row">
+            <div class="col-lg-2 hidden-md hidden-sm">
+              <!-- Tyhjä divi sisennystä varten -->
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <ul class="reference-ul">
+                <li> Anttila Turtola </li>
+                <li> Anttila keskusta </li>
+                <li> Citymarket Lielahti </li>
+                <li> Rauta-otra Nekala </li>
+                <li> Pikkupalatsi </li>
+              </ul>
+            </div>
+            <div class="col-lg-5 col-md-6 hidden-sm">
+              <img src="img/img5.jpg" class="reference-img-0">
+              <img src="img/img4.jpg" class="reference-img-1">
+              <img src="img/img1.jpg" class="reference-img-2">
+            </div>
+          </div>
+        </div>
+      <!-- Viides slide -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/fyHkeWGOpHM/1920x1080')">
+        <h1 class="reference-heading text-center">Jää- ja uimahallit</h1>
+        <div class="row">
+          <div class="col-lg-2 hidden-md hidden-sm">
+            <!-- Tyhjä divi sisennystä varten -->
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-12">
+            <ul class="reference-ul">
+              <li> Hakametsän jäähalli </li>
+              <li> Hervannan jäähalli </li>
+              <li> Tappara Center </li>
+              <li> Tesoman jäähalli </li>
+              <li> Kalevan uimahalli </li>
+              <li> Tesoman uimahalli </li>
+              <li> Pyynikin uimahalli </li>
+            </ul>
+          </div>
+          <div class="col-lg-5 col-md-6 hidden-sm">
+            <img src="img/img5.jpg" class="reference-img-0">
+            <img src="img/img4.jpg" class="reference-img-1">
+            <img src="img/img1.jpg" class="reference-img-2">
+          </div>
+        </div>
+      </div>
+    <!-- Kuudes slide -->
+    <div class="carousel-item" style="background-image: url('https://source.unsplash.com/n7a2OJDSZns/1920x1080')">
+      <h1 class="reference-heading text-center">Kirkot</h1>
+      <div class="row">
+        <div class="col-lg-2 hidden-md hidden-sm">
+          <!-- Tyhjä divi sisennystä varten -->
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-12">
+          <ul class="reference-ul">
+            <li> Mouhijärven kirkko </li>
+            <li> Teiskon kirkko </li>
+            <li> Viinikan kirkko </li>
+          </ul>
+        </div>
+        <div class="col-lg-5 col-md-6 hidden-sm">
+          <img src="img/img5.jpg" class="reference-img-0">
+          <img src="img/img4.jpg" class="reference-img-1">
+          <img src="img/img1.jpg" class="reference-img-2">
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!--
+      <a class="carousel-control-prev" href="#slideshow2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#slideshow2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      -->
+    </div>
   </section>
   <!-- Referenssit loppuu -->
 
   <!-- Yhteystiedot alkaa -->
   <section id="contact" class="contact-section">
 
-          <h2> Yhteystiedot </h2> <br>
+          <h1 class="contact-heading headline"> Yhteystiedot </h1> <br>
+            <div class="contact-middle">
+              <h3 class="heading">  Hämeen Siivous & Saneeraus Oy </h3>
+                Yhteyshenkilö: Liisa Isomäki <br>
+                Puhelin: 050-557 8784 <br>
+                Sähköposti: liisa@hamss.fi
 
-            <h4>  Hämeen Siivous & Saneeraus Oy </h4>
-              Yhteyshenkilö: Liisa Isomäki <br>
-              Puhelin: 050-557 8784 <br>
-              Sähköposti: liisa@hamss.fi
+              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b>
+              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
+          </div>
 
-            <a id="job-open" style="color: white; display: none;">Haemme työntekijöitä</a>
-            <p id="job-closed" style="color: white; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
+          <div class="contact-right">
+            <h3 class="contact-heading heading"> Työmaa </h3>
+                Sähköposti: liisa@hamss.fi <br>
+                Puhelin: 050-557 8784 <br>
+          </div>
+
+          <div class="contact-left">
+            <h3 class="contact-heading heading"> Toimisto </h3>
+                Sähköposti: toimisto@hamss.fi <br>
+                Puhelin: 050-557 8782 <br>
+                Tarjouspyynnöt: toimisto@hamss.fi <br>
+          </div>
 
   </section>
   <!-- Yhteystiedot loppuu -->
@@ -203,6 +477,7 @@
   </script>
 
   <script type="text/javascript">
+
     $(window).load(function () { document.getElementById("hideAll").style.display = "none"; });
     $(window).load(function () { document.getElementById("header").style.display = "block"; });
   </script>

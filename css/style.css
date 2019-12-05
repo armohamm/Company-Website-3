@@ -607,7 +607,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 3.5em;
     margin-top: 25px;
   }
-<<<<<<< HEAD
   img.reference-img {
     border-style: solid;
     float: right;
@@ -615,9 +614,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     width: 100px;
     height: 80px;
     display: none;
-=======
-}
->>>>>>> c6c9f3d1d40aec68d97dac5247f3f6baf78dd8c0
 
  /* tableteille */
 @media only screen and (min-width: 770px) {
@@ -865,17 +861,55 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 1em;
     padding: 50px;
   }
+  .contact-heading {
+    color: #d44a0f;
+  }
+  div.contact-right {
+    float: right;
+    text-align: center;
+  }
+  div.contact-left {
+    float: left;
+    text-align: center;
+  }
+  div.contact-middle {
+    text-align: center;
+    margin-right: auto;
+    display: inline-block;
+  }
 }
 
  /* tableteille */
 @media only screen and (min-width: 450px) {
   section.contact-section {
     min-height: 200px;
-    background: #2d5387;
+    background-image: url("../img/contac.jpg");
     text-align: center;
     color: #f4f4f4;
-    font-size: 1em;
-    padding: 50px;
+    font-size: 0.8em;
+    padding: 30px;
+  }
+  .contact-heading {
+    color: #d44a0f;
+  }
+  .heading {
+    font-size: 1.3em;
+  }
+  .headline {
+    font-size: 1.9em;
+  }
+  div.contact-right {
+    float: right;
+    text-align: center;
+  }
+  div.contact-left {
+    float: left;
+    text-align: center;
+  }
+  div.contact-middle {
+    text-align: center;
+    margin-right: 40px;
+    display: inline-block;
   }
 }
 
@@ -883,11 +917,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (min-width: 900px) {
   section.contact-section {
     min-height: 200px;
-    background: #2d5387;
-    text-align: center;
+    background-image: url("../img/contac.jpg");
     color: #f4f4f4;
     font-size: 1.15em;
     padding: 50px;
+  }
+  .contact-heading {
+    color: #d44a0f;
+  }
+  div.contact-right {
+    float: right;
+    text-align: center;
+  }
+  div.contact-left {
+    float: left;
+    text-align: center;
+  }
+  div.contact-middle {
+    text-align: center;
+    margin-right: 0 auto;
+    display: inline-block;
   }
 }
 
@@ -895,13 +944,32 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (min-width: 1350px) {
   section.contact-section {
     min-height: 200px;
-    background: #2d5387;
-    text-align: center;
+    background-image: url("../img/contact.jpg");
     color: #f4f4f4;
     font-size: 1.15em;
     padding: 50px;
   }
+  .contact-heading {
+    color: #d44a0f;
+  }
+  div.contact-right {
+    float: right;
+    margin-right: 40px;
+    text-align: center;
+  }
+  div.contact-left {
+    float: left;
+    margin-left: 40px;
+    text-align: center;
+  }
+  div.contact-middle {
+    text-align: center;
+    margin-right: 60px;
+    display: inline-block;
+  }
 }
+
+/* Yhteystiedot loppuu ja footer alkaa */
 
 section.footer-section {
     min-height: 50px;
