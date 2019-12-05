@@ -108,8 +108,8 @@ p {
     height: 110px;
   }
   #header.header-fixed #logo img {
-  -webkit-transform: scale(0.8) translateY(-30%) !important;
-  transform: scale(0.8) translateY(-30%) !important;
+  -webkit-transform: scale(0.8) translateY(-48%) !important;
+  transform: scale(0.8) translateY(-48%) !important;
   }
 }
 
