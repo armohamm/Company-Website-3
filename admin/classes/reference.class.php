@@ -77,7 +77,27 @@ class Reference extends Conn {
 
         $return = 'Otsikko ' . $heading . ' on lisätty tietokantaan sijaintiin ' . $pos;
 
-        return utf8_encode($return);
+        return $return;
+
+    }
+
+    public function addReference(int $id, string $text) {
+
+        $sql = $this->connect()->query('SELECT count(*) AS refs FROM `' . $this->refsTable . '` WHERE headingID = ' . $id);
+        while ($row = $sql->fetch()) {
+            $refsAmount = $row['refs'];
+        }
+
+        $pos = (int)$refsAmount + 1;
+
+        $sql = "INSERT INTO `" . $this->refsTable . "` (`refID`, `headingID`, `position`, `text`) 
+        VALUES (NULL, :id, :position, :text)";
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['id'=>$id, 'position'=>$pos, 'text'=>$text]);
+
+        $return = 'Referenssi ' . $text . ' on lisätty tietokantaan sijaintiin ' . $pos . ' otsikon ' . $id . ' alle.';
+
+        return $return;
 
     }
 

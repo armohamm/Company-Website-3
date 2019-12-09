@@ -15,7 +15,7 @@ $array1 = $object->getReferences();
 
 function makeSelector(array $array) {
     echo '
-    <select id="titleselector">
+    <select id="titleselector" name="titleselector">
         <option value="0">Valitse</option>';
 
     for ($i=0; $i <= count($array)-1 ; $i++) { 

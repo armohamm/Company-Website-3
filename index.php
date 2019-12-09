@@ -103,28 +103,34 @@
   <!-- Yhteystiedot alkaa -->
   <section id="contact" class="contact-section">
 
-          <h1 class=""> Yhteystiedot </h1> <br>
-            <div class="">
-              <h3 class="">  Hämeen Siivous & Saneeraus Oy </h3>
-                Yhteyshenkilö: Liisa Isomäki <br>
-                Puhelin: 050-557 8784 <br>
-                Sähköposti: liisa@hamss.fi
+          <h1 class=""> Yhteystiedot </h1><br>
+          <div class="row">
+
+            <div class="col-xl-1 col-lg-1 hidden-lg-down">
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-4 hidden-sm-down">
+              <h4 class="contact-heading"> Työmaa </h4>
+              <p>Sähköposti: liisa@hamss.fi<br>
+              Puhelin: 050-557 8784</p>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+              <h4 class="contact-heading">  Hämeen Siivous & Saneeraus Oy </h4>
+              <p>Yhteyshenkilö: Liisa Isomäki<br>
+              Puhelin: 050-557 8784<br>
+              Sähköposti: liisa@hamss.fi</p>
 
               <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b>
               <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
-          </div>
+            </div>
 
-          <div class="">
-            <h3 class=""> Työmaa </h3>
-                Sähköposti: liisa@hamss.fi <br>
-                Puhelin: 050-557 8784 <br>
-          </div>
-
-          <div class="">
-            <h3 class=""> Toimisto </h3>
-                Sähköposti: toimisto@hamss.fi <br>
-                Puhelin: 050-557 8782 <br>
-                Tarjouspyynnöt: toimisto@hamss.fi <br>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+              <h4 class="contact-heading"> Toimisto </h4>
+              <p>Sähköposti: toimisto@hamss.fi<br>
+              Puhelin: 050-557 8782<br>
+              Tarjouspyynnöt: toimisto@hamss.fi</p>
+            </div>
           </div>
 
   </section>
