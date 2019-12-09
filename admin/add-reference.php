@@ -50,8 +50,6 @@ require_once "includes/reference-orderlist.inc.php";
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Referenssien lisäys</h1>
 
-          <form class="" action="add-reference.html" method="post">
-
               <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Valitse ensin minkä referenssi otsikon alle haluat referenssin lisätä <br>
               sen jälkeen kirjoita alle referenssi kohteen esim. "Esimerkkilän lukio"</h1>
     
@@ -59,17 +57,15 @@ require_once "includes/reference-orderlist.inc.php";
               <?php makeSelector($array);?>
     
               <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Lisättävä referenssi</h1>
-              <input type="text" name="text"><br><br>
+              <input id="text" type="text" name="text"><br><br>
     
-              <button class="btn btn-success btn-icon-split" type="submit">
+              <button class="btn btn-success btn-icon-split" onclick="sendValues();">
                 <span class="icon text-white-50">
                   <i class="fas fa-check"></i>
                 </span>
                 <span class="text">Lisää</span>
               </button>
     
-            </form>
-          
         </div>
         <!-- /.container-fluid -->
 
@@ -129,38 +125,20 @@ require_once "includes/reference-orderlist.inc.php";
   <!-- Custom scripts for all pages-->
   <script src="js/javascript.js"></script>
 
-  <!-- Custom infile javascript -->
-  <script>
-    $( function() {
-        $( "#sortable" ).sortable();
-        $( "#sortable" ).disableSelection();
-        } );
-    </script>
-
-    <script type="text/javascript">
-    function saveOrder() {
-
-        var serviceorder = "";
-
-        $("#sortable li").each(function(i) {
-        if (serviceorder == '')
-            serviceorder = $(this).attr('service-id');
-        else
-            serviceorder += "," + $(this).attr('service-id');
+  <script type="text/javascript">
+    function sendValues() {
+      var selectedHeading = $("select#titleselector option:checked").val();
+      var text = $("input#text").val();
+      $.post("includes/add-reference.inc.php", { id: selectedHeading, text: text})
+        .done(function (result) {
+          if(alert(result)){}
+          else window.location.reload(true);
+        })
+        .fail(function (data) {
+          alert("Error: " + data);
         });
-
-        // $.post('/saveorder.php', { order: articleorder })
-        // .success(function(data) {
-        //     alert('saved');
-        // })
-        // .error(function(data) { 
-        //     alert('Error: ' + data); 
-        // }); 
-
-        console.log(serviceorder);
-        
     }
-    </script>
+  </script>
 
 </body>
 

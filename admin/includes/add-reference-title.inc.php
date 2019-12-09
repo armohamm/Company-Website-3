@@ -6,7 +6,7 @@ include_once 'class-autoloader.inc.php';
 $title = $_POST['text'];
 
 $objekti = new Reference();
-$objekti->addReferenceTitle($title);
+echo $objekti->addReferenceTitle($title);
 $id = $objekti->getLastHeadingID();
 
 function addImgBg($id) {
@@ -202,5 +202,4 @@ addImg1($id);
 addImg2($id);
 addImg3($id);
 
-
-
+echo "<a href='../add-reference-title.php'>Takaisin</a>";

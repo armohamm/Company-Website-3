@@ -24,7 +24,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-  color: #c;
+  color: #ccc;
   outline: none;
   text-decoration: none;
 }
@@ -100,16 +100,16 @@ p {
     font-size: 26px;
   }
   #header #logo img {
-    max-width: 150px;
-    -ms-transform: translateY(-25%);
-    transform: translateY(-25%);
+    max-width: 125px;
+    -ms-transform: translateY(-35%);
+    transform: translateY(-35%);
   }
   #header {
-    height: 110px;
+    height: 90px;
   }
   #header.header-fixed #logo img {
-  -webkit-transform: scale(0.8) translateY(-30%) !important;
-  transform: scale(0.8) translateY(-30%) !important;
+  -webkit-transform: scale(0.8) translateY(-42%) !important;
+  transform: scale(0.8) translateY(-42%) !important;
   }
 }
 
@@ -607,7 +607,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 3.5em;
     margin-top: 25px;
   }
-<<<<<<< HEAD
   img.reference-img {
     border-style: solid;
     float: right;
@@ -615,10 +614,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     width: 100px;
     height: 80px;
     display: none;
-=======
+  }
 }
+<<<<<<< HEAD
 }
 >>>>>>> c6c9f3d1d40aec68d97dac5247f3f6baf78dd8c0
+=======
+>>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
 
  /* tableteille */
 @media only screen and (min-width: 770px) {
@@ -859,29 +861,26 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* puhelimelle */
 @media only screen and (max-width: 450px) {
   section.contact-section {
+<<<<<<< HEAD
     min-height: 450px;
     background-image: url("../img/contact.jpg");
+=======
+    min-height: 200px;
+    background-image: url("../img/contact.jpg");
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-size: cover;
+>>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
     text-align: center;
     color: #f4f4f4;
-    font-size: 1em;
-    padding: 50px;
+    padding: 25px;
   }
-  .contact-heading {
-    color: #d44a0f;
+
+  h4.contact-heading {
+    color: #ea5e1d;
+    font-weight: 700;
   }
-  div.contact-right {
-    float: right;
-    text-align: center;
-  }
-  div.contact-left {
-    float: left;
-    text-align: center;
-  }
-  div.contact-middle {
-    text-align: center;
-    margin-right: auto;
-    display: inline-block;
-  }
+  
 }
 
  /* tableteille */
@@ -889,33 +888,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
+<<<<<<< HEAD
+=======
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-size: cover;
+>>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
     text-align: center;
     color: #f4f4f4;
-    font-size: 0.8em;
     padding: 30px;
+
   }
-  .contact-heading {
-    color: #d44a0f;
+
+  h4.contact-heading {
+    color: #ea5e1d;
+    font-weight: 700;
   }
-  .heading {
-    font-size: 1.3em;
-  }
-  .headline {
-    font-size: 1.9em;
-  }
-  div.contact-right {
-    float: right;
-    text-align: center;
-  }
-  div.contact-left {
-    float: left;
-    text-align: center;
-  }
-  div.contact-middle {
-    text-align: center;
-    margin-right: 40px;
-    display: inline-block;
-  }
+  
 }
 
  /* tietokoneille */
@@ -923,26 +912,22 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
+<<<<<<< HEAD
+=======
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-size: cover;
+>>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
     color: #f4f4f4;
-    font-size: 1.15em;
-    padding: 50px;
+    padding: 40px;
+
   }
-  .contact-heading {
-    color: #d44a0f;
+
+  h4.contact-heading {
+    color: #ea5e1d;
+    font-weight: 700;
   }
-  div.contact-right {
-    float: right;
-    text-align: center;
-  }
-  div.contact-left {
-    float: left;
-    text-align: center;
-  }
-  div.contact-middle {
-    text-align: center;
-    margin-right: 0 auto;
-    display: inline-block;
-  }
+  
 }
 
 /* leveille näytöille */
@@ -950,28 +935,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-size: cover;
     color: #f4f4f4;
-    font-size: 1.15em;
-    padding: 50px;
+    padding: 45px;
+
   }
-  .contact-heading {
-    color: #d44a0f;
+
+  h4.contact-heading {
+    color: #ea5e1d;
+    font-weight: 700;
   }
-  div.contact-right {
-    float: right;
-    margin-right: 40px;
-    text-align: center;
-  }
-  div.contact-left {
-    float: left;
-    margin-left: 40px;
-    text-align: center;
-  }
-  div.contact-middle {
-    text-align: center;
-    margin-right: 60px;
-    display: inline-block;
-  }
+  
 }
 
 /* Yhteystiedot loppuu ja footer alkaa */
