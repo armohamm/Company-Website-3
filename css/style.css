@@ -863,7 +863,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-size: cover;
     text-align: center;
     color: #f4f4f4;
-    padding: 30px;
+    padding: 25px;
   }
 
   h4.contact-heading {
@@ -884,6 +884,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align: center;
     color: #f4f4f4;
     padding: 30px;
+
   }
 
   h4.contact-heading {
@@ -902,7 +903,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: center;
     background-size: cover;
     color: #f4f4f4;
-    padding: 50px;
+    padding: 40px;
+
   }
 
   h4.contact-heading {
@@ -921,7 +923,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-attachment: center;
     background-size: cover;
     color: #f4f4f4;
-    padding: 50px;
+    padding: 45px;
+
   }
 
   h4.contact-heading {
