@@ -94,6 +94,10 @@ function editImgAbout() {
     
 }
 
+if(!empty($_FILES['file0']['name'])) {
+    editImgStart();
+}
+if(!empty($_FILES['file1']['name'])) {
+    editImgAbout();
+}
 
-editImgStart();
-editImgAbout();

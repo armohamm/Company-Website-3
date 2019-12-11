@@ -3,7 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="utf-8">  <!-- ä,ö,å -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -14,10 +14,9 @@
 
     <!-- Google fontit -->
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Ubuntu:400,500,700&display=swap&subset=latin-ext"
-      rel="stylesheet">
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Ubuntu:400,500,700&display=swap&subset=latin-ext" rel="stylesheet">
 
-    <!-- CSS tiedosto -->
+    <!-- CSS tiedostot -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/result-light.css">
 
@@ -40,8 +39,8 @@
   <!-- Navi alkaa -->
   <header id="header" style="display: none;">
       <div class="container">
-          <div id="logo" class="pull-left">
-              <a href="#start"><img src="img/logo1.png" alt="" title="" /></img></a>
+          <div id="logo" class="pull-left">  <!-- logon paikka -->
+              <a href="#start"><img src="img/logo1.png" alt="logo" title="" /></img></a> <!-- logo -->
           </div>
           <nav id="nav-menu-container">
               <ul class="nav-menu">
@@ -63,7 +62,7 @@
               <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12 text-center">
                       <div class="start-text">
-                          <h1><span id="start-text" class="start"></span></h1>
+                          <h1><span id="start-text" class="start"></span></h1> <!-- Teksti -->
                       </div>
                   </div>
               </div>
@@ -74,7 +73,7 @@
 
   <!-- Palvelut osio alkaa -->
   <section id="services" class="services-section">
-    <?php include_once 'admin/includes/get-frontpage-services.inc.php' ?>
+    <?php include_once 'admin/includes/get-frontpage-services.inc.php' ?> <!-- Hakee tietokannasta -->
   </section>
   <!-- Palvelut osio loppuu -->
 
@@ -96,7 +95,7 @@
 
   <!-- Referenssit alkaa -->
   <section id="references" class="references-section">
-    <?php include_once 'admin/includes/get-frontpage-refs.inc.php' ?>
+    <?php include_once 'admin/includes/get-frontpage-refs.inc.php' ?> <!-- Hakee tietokannasta -->
   </section>
   <!-- Referenssit loppuu -->
 
@@ -121,8 +120,8 @@
               Puhelin: 050-557 8784<br>
               Sähköposti: liisa@hamss.fi</p>
 
-              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b>
-              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
+              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b> <!-- Kun työntekijöitä haetaan -->
+              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p> <!-- Kun työntekijöitä ei haeta -->
             </div>
 
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
@@ -223,7 +222,6 @@
   </script>
 
   <script type="text/javascript">
-
     $(window).load(function () { document.getElementById("hideAll").style.display = "none"; });
     $(window).load(function () { document.getElementById("header").style.display = "block"; });
   </script>

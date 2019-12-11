@@ -5,7 +5,7 @@ class Job extends Conn {
     private $jobID = 1;
     private $table = "job"; 
     
-    public function getJob() {
+    public function getJob() { // Hakee työpaikan
         $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE jobID='.$this->jobID);
         while ($row = $sql->fetch()) {
             $link = $row['jobLink'];
@@ -19,7 +19,7 @@ class Job extends Conn {
         }
     }
 
-    public function getStatus() {
+    public function getStatus() { // Hakee tietokannasta onko työpaikkahaku auki
         $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE jobID='.$this->jobID);
         while ($row = $sql->fetch()) {
             $bool = $row['showOnFrontPage'];
@@ -28,7 +28,7 @@ class Job extends Conn {
         return $bool;
     }
 
-    public function changeStatus(int $bool) {
+    public function changeStatus(int $bool) { // Vaihtaa työpaikkahaun näkyvyyden sivulla
         $sql = 'UPDATE '.$this->table.' SET showOnFrontPage = :bool WHERE jobID = :jobID';
         $sql = $this->connect()->prepare($sql);
         $sql->execute(['bool'=>$bool, 'jobID'=>1]);

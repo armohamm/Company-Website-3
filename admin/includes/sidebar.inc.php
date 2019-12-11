@@ -72,7 +72,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Muokkaukset</h6>
             <a class="collapse-item" href="text-edit.php">Etusivun tekstien <br> muokkaus</a>
-            <a class="collapse-item" href="change-photos.php">Etusivun kuvien <br> muokkaus</a>
+            <a class="collapse-item" href="edit-frontpage-img.php">Etusivun kuvien <br> muokkaus</a>
             <a class="collapse-item" href="edit-job.php">Työnhaun muokkaus</a>
             <a class="collapse-item" href="change-password.php">Salasanan vaihto</a>
           </div>
