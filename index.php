@@ -37,7 +37,7 @@
   <div style="display: none" id="hideAll">&nbsp;</div>
 
   <!-- Navi alkaa -->
-  <header id="header">
+  <header id="header" style="display: none;">
       <div class="container">
           <div id="logo" class="pull-left">  <!-- logon paikka -->
               <a href="#start"><img src="img/logo1.png" alt="logo" title="" /></img></a> <!-- logo -->
@@ -190,7 +190,7 @@
   </script>
 
   <script type="text/javascript">
-    document.getElementById("header").style.display = "none";
+    document.getElementById("header").style.display = "block";
     document.getElementById("hideAll").style.display = "block";
   </script>
 

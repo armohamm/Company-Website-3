@@ -178,6 +178,10 @@ class Reference extends Conn {
         return $this->refHeadings;
     }
 
+    public function getRefHeadingID(int $arrayPos) {
+        return $this->refHeadings[$arrayPos][0];
+    }
+
     public function getLastHeadingID() { // Hakee tietokannasta viimeisenä positionin mukaan olevan referenssi otsikon id:n
         $sql = $this->connect()->query('SELECT * FROM `reference_heading` ORDER BY `position` DESC LIMIT 1');   
         while ($row = $sql->fetch()) {
