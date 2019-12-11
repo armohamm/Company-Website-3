@@ -5,7 +5,7 @@ class Password extends Conn {
     private $table = 'admin';
     private $adminID = 1;
     
-    function checkPassword(string $pass) {
+    function checkPassword(string $pass) { // Tarkistaa salasanan tietokannasta
 
         $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE adminID='.$this->adminID);
         while ($row = $sql->fetch()) {
@@ -35,7 +35,7 @@ class Password extends Conn {
         }
     }
 
-    function getPassword() {
+    function getPassword() { // Hakee salasanan tietokannasta
 
         $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE adminID='.$this->adminID);
         while ($row = $sql->fetch()) {
@@ -45,7 +45,7 @@ class Password extends Conn {
         return $password;
     }
 
-    function changePassword(string $pass0, string $pass1, string $pass2) {
+    function changePassword(string $pass0, string $pass1, string $pass2) { // Vaihtaa salasanan
 
         $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE adminID='.$this->adminID);
         while ($row = $sql->fetch()) {

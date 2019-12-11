@@ -5,7 +5,7 @@ class TextFrontpage extends Conn {
     private $textID;
     private $table = "text_frontpage"; 
     
-    public function getTextFrontpage(string $type) {
+    public function getTextFrontpage(string $type) { // Hakee etusivun tekstit tietokannasta
 
         if ($type == "title") {
             
@@ -33,7 +33,7 @@ class TextFrontpage extends Conn {
 
     }
 
-    public function editTextFrontpage(string $type, string $text) {
+    public function editTextFrontpage(string $type, string $text) { // Muokkaa etusivun tekstejä
 
         $text = utf8_decode($text);
 
