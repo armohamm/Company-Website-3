@@ -9,7 +9,7 @@ $objekti = new Reference();
 echo $objekti->addReferenceTitle($title);
 $id = $objekti->getLastHeadingID();
 
-function addImgBg($id) {
+function addImgBg($id) { // lisää kuvan kansioon
 
     $dir = "../../img/";
     $file = $_FILES['file0']['name'];
@@ -56,7 +56,7 @@ function addImgBg($id) {
 
 }
 
-function addImg1($id) {
+function addImg1($id) { // lisää ekan kuvan tietokantaan
 
     $dir = "../../img/";
     $file = $_FILES['file1']['name'];
@@ -100,7 +100,7 @@ function addImg1($id) {
     } else {
         echo "Väärä tiedosto tyyppi!";
     }
-    
+
 }
 
 function addImg2($id) {
@@ -147,7 +147,7 @@ function addImg2($id) {
     } else {
         echo "Väärä tiedosto tyyppi!";
     }
-    
+
 }
 
 function addImg3($id) {
@@ -194,7 +194,7 @@ function addImg3($id) {
     } else {
         echo "Väärä tiedosto tyyppi!";
     }
-    
+
 }
 
 addImgBg($id);

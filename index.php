@@ -95,41 +95,13 @@
 
   <!-- Referenssit alkaa -->
   <section id="references" class="references-section">
-<<<<<<< HEAD
-      <?php include_once 'admin/includes/get-frontpage-refs.inc.php' ?> <!-- Hakee tietokannasta -->
-=======
     <?php include_once 'admin/includes/get-frontpage-refs.inc.php' ?> <!-- Hakee tietokannasta -->
->>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
   </section>
   <!-- Referenssit loppuu -->
 
   <!-- Yhteystiedot alkaa -->
   <section id="contact" class="contact-section">
 
-<<<<<<< HEAD
-          <h1 class="contact-heading headline"> Yhteystiedot </h1> <br>
-            <div class="contact-middle">
-              <h3 class="heading contact-heading">  Hämeen Siivous & Saneeraus Oy </h3>
-                Yhteyshenkilö: Liisa Isomäki <br>
-                Puhelin: 050-557 8784 <br>
-                Sähköposti: liisa@hamss.fi
-
-              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b> <!-- Kun työntekijöitä haetaan -->
-              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p> <!-- Kun työntekijöitä ei haeta -->
-          </div>
-
-          <div class="contact-right">
-            <h3 class="contact-heading heading"> Työmaa </h3>
-                Sähköposti: liisa@hamss.fi <br>
-                Puhelin: 050-557 8784 <br>
-          </div>
-
-          <div class="contact-left">
-            <h3 class="contact-heading heading"> Toimisto </h3>
-                Sähköposti: toimisto@hamss.fi <br>
-                Puhelin: 050-557 8782 <br>
-                Tarjouspyynnöt: toimisto@hamss.fi <br>
-=======
           <h1 class=""> Yhteystiedot </h1><br>
           <div class="row">
 
@@ -158,7 +130,6 @@
               Puhelin: 050-557 8782<br>
               Tarjouspyynnöt: toimisto@hamss.fi</p>
             </div>
->>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
           </div>
 
   </section>
@@ -251,10 +222,6 @@
   </script>
 
   <script type="text/javascript">
-<<<<<<< HEAD
-=======
-
->>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
     $(window).load(function () { document.getElementById("hideAll").style.display = "none"; });
     $(window).load(function () { document.getElementById("header").style.display = "block"; });
   </script>

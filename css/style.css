@@ -1,13 +1,13 @@
 /* Yleinen */
 
-#hideAll {
+#hideAll { /* CSS kaiken piilottamiseksi kunnes sivu on latautunut */
   position: fixed;
   left: 0px;
   right: 0px;
   top: 0px;
   bottom: 0px;
   background-color: white;
-  z-index: 99; /* Higher than anything else in the document */
+  z-index: 99;
 
 }
 
@@ -250,7 +250,7 @@ p { /* Tekstin sijoitus */
   }
 }
 
-/* Mobile Nav Styling */
+/* Mobiili navigaation tyylitys */
 #mobile-nav {
   position: fixed;
   top: 0;
