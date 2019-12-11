@@ -586,13 +586,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  img.reference-img-0 {
+  img.reference-img-0 { /* Määrittelee referenssikuvien sijainnit ja koot */
     display: none;
   }
-  img.reference-img-1 {
+  img.reference-img-1 { /* Määrittelee referenssikuvien sijainnit ja koot */
     display: none;
   }
-  img.reference-img-2 {
+  img.reference-img-2 { /* Määrittelee referenssikuvien sijainnit ja koot */
     display: none;
   }
   ul.reference-ul { /* Listaus */
@@ -613,11 +613,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: none;
   }
 }
-<<<<<<< HEAD
-}
->>>>>>> c6c9f3d1d40aec68d97dac5247f3f6baf78dd8c0
-=======
->>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
 
  /* tableteille */
 @media only screen and (min-width: 770px) {
@@ -626,7 +621,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  img.reference-img-0 {
+  img.reference-img-0 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 235px;
@@ -634,7 +629,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-left: 35px;
     display: block;
   }
-  img.reference-img-1 {
+  img.reference-img-1 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 235px;
@@ -642,7 +637,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-left: 35px;
     display: block;
   }
-  img.reference-img-2 {
+  img.reference-img-2 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 235px;
@@ -668,14 +663,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  img.reference-img-0 {
+  img.reference-img-0 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 250px;
     margin-top: 75px;
     display: inline-block;
   }
-  img.reference-img-1 {
+  img.reference-img-1 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 250px;
@@ -683,7 +678,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 75px;
     display: inline-block;
   }
-  img.reference-img-2 {
+  img.reference-img-2 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 250px;
@@ -708,20 +703,20 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  img.reference-img-0 {
+  img.reference-img-0 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 325px;
     margin-top: 75px;
   }
-  img.reference-img-1 {
+  img.reference-img-1 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 325px;
     margin-left: 115px;
     margin-top: 75px;
   }
-  img.reference-img-2 {
+  img.reference-img-2 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 325px;
@@ -857,16 +852,11 @@ body.mobile-nav-active #mobile-nav-toggle {
  /* puhelimelle */
 @media only screen and (max-width: 450px) {
   section.contact-section {
-<<<<<<< HEAD
-    min-height: 450px;
-    background-image: url("../img/contact.jpg");
-=======
     min-height: 200px;
     background-image: url("../img/contact.jpg");
     background-repeat: no-repeat;
     background-attachment: center;
     background-size: cover;
->>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
     text-align: center;
     color: #f4f4f4;
     padding: 25px;
@@ -884,12 +874,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
-<<<<<<< HEAD
-=======
     background-repeat: no-repeat; /* Kuva ei toistu */
     background-attachment: center; /* Kuva on keskellä osiota */
     background-size: cover; /* Kuva on koko osiolla */
->>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
     text-align: center;
     color: #f4f4f4;
     padding: 30px;
@@ -906,15 +893,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
-<<<<<<< HEAD
-=======
     background-repeat: no-repeat; /* Kuva ei toistu */
     background-attachment: center; /* Kuva on keskellä osiota */
     background-size: cover; /* Kuva on koko osiolla */
->>>>>>> 44d3ce9da50441821083d178b41b6aec087d78e4
     color: #f4f4f4;
     padding: 40px;
-
   }
 
   h4.contact-heading { /* Fontin väri ja paksuus */
