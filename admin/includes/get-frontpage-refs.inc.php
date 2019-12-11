@@ -28,7 +28,8 @@ function makeSlides(int $count, array $refsArray, array $refHeadingsArray) { //T
     $object1 = new Reference();
     $object1->getReferences();
     for ($i=1; $i <= $count ; $i++) { 
-        $refImg = "'img/ref". $i ."_1.jpg'";
+        $id = $object1->getRefHeadingID($i-1);
+        $refImg = "'img/ref". $id ."_1.jpg'";
         if ($i==1) {
             echo '<div class="carousel-item active" style="background-image: url('.$refImg.')">';
         } else {

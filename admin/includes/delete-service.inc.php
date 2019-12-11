@@ -16,6 +16,6 @@ if(!isset($_GET['id'])) {
 
     echo "Poistettu.<br><br>";
 
-    echo '<a href="http://localhost/top/hamss/admin/services.php">Takaisin<a>';
+    echo '<a href="../services.php">Takaisin<a>';
 
 }

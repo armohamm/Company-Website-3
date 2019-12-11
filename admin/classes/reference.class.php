@@ -61,6 +61,10 @@ class Reference extends Conn {
         return $this->refHeadings[$arrayPos][1];
     }
 
+    public function getRefHeadingID(int $arrayPos) {
+        return $this->refHeadings[$arrayPos][0];
+    }
+
     public function addReferenceTitle(string $heading) {
 
         $sql = $this->connect()->query('SELECT count(*) AS headings FROM ' . $this->headingsTable);
@@ -243,7 +247,7 @@ class Reference extends Conn {
             $text=$row['text'];
 
             array_push($foo, (int)$refID);
-            array_push($foo, $text);
+            array_push($foo, utf8_encode($text));
 
             array_push($this->refHeadings, $foo);
 
