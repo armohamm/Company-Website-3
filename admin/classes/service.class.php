@@ -80,7 +80,7 @@ class Service extends Conn {
             $sql = $this->connect()->prepare($sql);
             $sql->execute(['pos' => $i, 'serviceID' => (int)$positions[$i-1]]);
 
-            $return = $return . ' Otsikon ' . $positions[$i - 1] . ' sijainti on nyt ' . $i . '<br>';
+            $return = $return . ' Otsikon ' . $positions[$i - 1] . ' sijainti on nyt ' . $i;
         }
 
         return utf8_encode($return);

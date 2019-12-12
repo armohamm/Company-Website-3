@@ -42,7 +42,7 @@ function makeJS() { // Funktio, joka tekee javascriptin
                     serviceorder += "," + $(this).attr("service-id");
             });
 
-            $.post("saveorder.php", { order: serviceorder })
+            $.post("includes/service-order.inc.php", { order: serviceorder })
                 .done(function (result) {
                     if(alert("Palveluiden järjestys on tallennettu \nTallennetut tiedot: " + result)){}
                     else window.location.reload(true);
