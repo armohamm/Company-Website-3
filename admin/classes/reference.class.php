@@ -179,7 +179,7 @@ class Reference extends Conn {
         return $this->refHeadings;
     }
 
-    public function getRefHeadingID(int $arrayPos) {
+    public function getRefHeadingID(int $arrayPos) { // Hakee yhden referenssiotsikon ID:n
         return $this->refHeadings[$arrayPos][0];
     }
 
