@@ -10,12 +10,12 @@ $password = $_POST['password'];
 $object = new Password(); // Kutsuu password classia
 $return = $object->checkPassword($password); // Methodi, joka tarkistaa salasanan tietokannasta
 
-if ($return == 1) {
+if ($return == 1) { // Jos salaasana on oikein
     $_SESSION['logged_in'] = true;
     $_SESSION['password'] = $object->getPassword();
     $_SESSION['admin'] = true;
     echo $return;
 }
-else {
+else { // jos ei
     echo $return;
 }

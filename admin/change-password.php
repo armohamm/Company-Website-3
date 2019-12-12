@@ -132,7 +132,7 @@ require_once "includes/session.inc.php";
             success: function (response) {
               if (response == 2) {
                 if (alert("Salasana on vaihdettu")) { }
-                else window.location = "index.html";
+                else window.location = "index.php";
               } else if (response == 1){
                 alert("Uudet salasanat eivät täsmää");
               }

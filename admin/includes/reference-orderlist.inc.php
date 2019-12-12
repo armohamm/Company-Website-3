@@ -48,13 +48,13 @@ function makeLists(array $array) { // Funktio, joka tekee listat
 
             echo '<ul id="sortable'. $i .'">';
                 
-            for ($a=1; $a <= count($array1[$i-1][$pos]); $a++) { 
+            for ($a=1; $a <= count($array1[$i-1][$object0->getRefHeadingString($i-1)]); $a++) { 
                 echo '
 
-                <li id="'.$array[$i-1][0].'" reference-id="'.$array1[$i-1][$pos][$a-1][0].'" class="bg-gray-100 border-bottom-info ui-state-default">
-                    '.$array1[$i-1][$pos][$a-1][1].' <br>
-                    <a href="edit-reference.php?id='.$array1[$i-1][$pos][$a-1][0].'" style="color: rgb(230, 149, 0);">Muokkaa</a>
-                    <a href="includes/delete-reference.inc.php?id='.$array1[$i-1][$pos][$a-1][0].'" style="color: red;"> Poista</a>
+                <li id="'.$array[$i-1][0].'" reference-id="'.$array1[$i-1][$object0->getRefHeadingString($i-1)][$a-1][0].'" class="bg-gray-100 border-bottom-info ui-state-default">
+                    '.$array1[$i-1][$object0->getRefHeadingString($i-1)][$a-1][1].' <br>
+                    <a href="edit-reference.php?id='.$array1[$i-1][$object0->getRefHeadingString($i-1)][$a-1][0].'" style="color: rgb(230, 149, 0);">Muokkaa</a>
+                    <a href="includes/delete-reference.inc.php?id='.$array1[$i-1][$object0->getRefHeadingString($i-1)][$a-1][0].'" style="color: red;"> Poista</a>
                 </li>
 
                 ';

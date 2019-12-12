@@ -100,7 +100,7 @@ function addImg1($id) { // Funktio, joka lisää ensimmäisen kuvan referenssien
     } else {
         echo "Väärä tiedosto tyyppi!";
     }
-    
+
 }
 
 function addImg2($id) { // Funktio, joka lisää toisen kuvan referenssien viereen
@@ -147,7 +147,7 @@ function addImg2($id) { // Funktio, joka lisää toisen kuvan referenssien viere
     } else {
         echo "Väärä tiedosto tyyppi!";
     }
-    
+
 }
 
 function addImg3($id) { // Funktio, joka lisää kolmannen kuvan referenssien viereen
@@ -194,7 +194,7 @@ function addImg3($id) { // Funktio, joka lisää kolmannen kuvan referenssien vi
     } else {
         echo "Väärä tiedosto tyyppi!";
     }
-    
+
 }
 
 // Funktioiden kutsuminen
