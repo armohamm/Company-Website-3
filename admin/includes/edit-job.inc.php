@@ -24,3 +24,5 @@ if(!empty($_POST['link'])) { // Tarkistaa onko muokkaus sivulla asetettu uusi li
     $object->changelink($link);
 
 }
+
+echo "<br><a href='../edit-job.php'>Takaisin</a>";

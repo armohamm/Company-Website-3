@@ -47,7 +47,7 @@
                 <input type="checkbox" name="check" value="1"><br>
 
                 <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi linkki</h1>
-                <input type="text" name="link"><br><br>
+                <input type="text" name="link" required><br><br>
     
                 <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">
                   <span class="icon text-white-50">

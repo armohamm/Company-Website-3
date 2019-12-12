@@ -204,4 +204,4 @@ addImg1($id);
 addImg2($id);
 addImg3($id);
 
-echo "<a href='../add-reference-title.php'>Takaisin</a>";
+echo "<br><a href='../add-reference-title.php'>Takaisin</a>";

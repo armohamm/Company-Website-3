@@ -101,3 +101,5 @@ if(!empty($_FILES['file1']['name'])) {
     editImgAbout();
 }
 
+echo "<br><a href='../edit-frontpage-img.php'>Takaisin</a>";
+

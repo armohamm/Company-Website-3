@@ -56,3 +56,5 @@ function addServiceImg($id) { // Funktio, joka lisää palvelulle taustakuvan
 }
 
 addServiceImg($id);
+
+echo "<br><a href='../add-service.php'>Takaisin</a>";

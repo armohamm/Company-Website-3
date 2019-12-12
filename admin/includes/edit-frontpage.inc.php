@@ -11,3 +11,4 @@ $object->editTextFrontpage("title", $text1); // Muokkaa etusivun aloitus teksti�
 $object->editTextFrontpage("about", $text2); // Muokkaa etusivun meistä -osion tekstiä 
 
 echo "muokattu";
+echo "<br><a href='../add-reference-title.php'>Takaisin</a>";

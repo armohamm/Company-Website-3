@@ -5,7 +5,7 @@ include_once 'class-autoloader.inc.php'; // Automaattisesti sis채llyt채채 t채ll�
 
 if(!isset($_GET['id'])) { // Jos id:t채 EI ole, palauttaa takaisin palvelu sivulle
 
-    header("Location: http://localhost/top/hamss/admin/services.php");
+    header("Location: ../services.php");
     
 } else {
 
@@ -13,6 +13,20 @@ if(!isset($_GET['id'])) { // Jos id:t채 EI ole, palauttaa takaisin palvelu sivul
 
     $objekti = new Service(); // Kutsuu service classia
     $objekti->deleteService($id); // Methodi, joka poistaa palvelun
+
+    // Funktiot
+
+    function deleteServiceImg($id) {
+
+        $dir = "../../img/";
+        $file = "ser" . $id . "_1" . "." . "jpg";
+        $path = $dir . $file;
+
+        unlink($path);
+
+    }
+
+    deleteServiceImg($id);
 
     echo "Poistettu.<br><br>";
 

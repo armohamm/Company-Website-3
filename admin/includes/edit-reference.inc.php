@@ -5,7 +5,7 @@ include_once 'class-autoloader.inc.php'; // Automaattisesti sis채llyt채채 t채ll�
 
 if(!isset($_GET['id'])) { // Jos id:t채 EI ole, palauttaa takaisin referenssi sivulle
 
-    header("Location: http://localhost/top/hamss/admin/reference-contents.php");
+    header("Location: ../reference-contents.php");
 
 } else {
 
@@ -15,4 +15,5 @@ if(!isset($_GET['id'])) { // Jos id:t채 EI ole, palauttaa takaisin referenssi si
     $objekti = new Reference(); // Kutsuu reference classia
     echo $objekti->editReference($id, $text); // Methodi, joka muokkaa referenssi채
 
+    echo "<br><a href='../edit-reference.php'>Takaisin</a>";
 }

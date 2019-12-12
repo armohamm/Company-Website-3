@@ -5,7 +5,7 @@ include_once 'class-autoloader.inc.php'; // Automaattisesti sis채llyt채채 t채ll�
 
 if(!isset($_GET['id'])) { // Jos id:t채 EI ole, palauttaa takaisin referenssi otsikko sivulle
 
-    header("Location: http://localhost/top/hamss/admin/reference-titles.php");
+    header("Location: ../reference-titles.php");
 
 } else {
 
@@ -218,6 +218,8 @@ if(!isset($_GET['id'])) { // Jos id:t채 EI ole, palauttaa takaisin referenssi ot
         editImg3($id);
     }
     
+
+    echo "<br><a href='../edit-reference-title.php'>Takaisin</a>";
 }
 
 

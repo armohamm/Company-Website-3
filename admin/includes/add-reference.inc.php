@@ -13,3 +13,5 @@ else {
     $objekti = new Reference(); // Kutsuu reference classia
     echo $objekti->addReference((int)$id, $text); // Methodi, joka lisää referenssin
 }
+
+echo "<br><a href='../add-reference.php'>Takaisin</a>";

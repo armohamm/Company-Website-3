@@ -5,7 +5,7 @@ include_once 'class-autoloader.inc.php'; // Automaattisesti sis채llyt채채 t채ll�
 
 if(!isset($_GET['id'])) { // Jos id:t채 EI ole, palauttaa takaisin palvelu sivulle
 
-    header("Location: http://localhost/top/hamss/admin/services.php");
+    header("Location: ../services.php");
     
 } else {
 
@@ -67,4 +67,6 @@ if(!isset($_GET['id'])) { // Jos id:t채 EI ole, palauttaa takaisin palvelu sivul
         editServiceImg($id);
     }
 
+
+    echo "<br><a href='../edit-service.php'>Takaisin</a>";
 }
