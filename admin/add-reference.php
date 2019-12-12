@@ -57,7 +57,7 @@ require_once "includes/reference-orderlist.inc.php";
               <?php makeSelector($array);?>
     
               <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Lisättävä referenssi</h1>
-              <input id="text" type="text" name="text"><br><br>
+              <input id="text" type="text" name="text" required><br><br>
     
               <button class="btn btn-success btn-icon-split" onclick="sendValues();">
                 <span class="icon text-white-50">
