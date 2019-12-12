@@ -1,15 +1,15 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
 $title = $_POST['text'];
 
-$objekti = new Reference();
-echo $objekti->addReferenceTitle($title);
-$id = $objekti->getLastHeadingID();
+$objekti = new Reference(); // Kutsuu reference classia
+echo $objekti->addReferenceTitle($title); // Methodi, joka isää referenssi otsikon
+$id = $objekti->getLastHeadingID(); // Hakee tietokannasta viimeisen referenssi otsikon id:n
 
-function addImgBg($id) {
+function addImgBg($id) { // Funktio, joka lisää uudelle referenssi otsikolle taustakuvan. Poistaa myös vanhan, jos tarve.
 
     $dir = "../../img/";
     $file = $_FILES['file0']['name'];
@@ -56,7 +56,7 @@ function addImgBg($id) {
 
 }
 
-function addImg1($id) {
+function addImg1($id) { // Funktio, joka lisää ensimmäisen kuvan referenssien viereen
 
     $dir = "../../img/";
     $file = $_FILES['file1']['name'];
@@ -103,7 +103,7 @@ function addImg1($id) {
     
 }
 
-function addImg2($id) {
+function addImg2($id) { // Funktio, joka lisää toisen kuvan referenssien viereen
 
     $dir = "../../img/";
     $file = $_FILES['file2']['name'];
@@ -150,7 +150,7 @@ function addImg2($id) {
     
 }
 
-function addImg3($id) {
+function addImg3($id) { // Funktio, joka lisää kolmannen kuvan referenssien viereen
 
     $dir = "../../img/";
     $file = $_FILES['file3']['name'];
@@ -196,6 +196,8 @@ function addImg3($id) {
     }
     
 }
+
+// Funktioiden kutsuminen
 
 addImgBg($id);
 addImg1($id);

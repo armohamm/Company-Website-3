@@ -1,19 +1,19 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
 ini_set('display_errors', 'on');
 ini_set('display_startup_errors', 'on');
 error_reporting(E_ALL);
 
-$object = new Reference();
-$array = $object->getRefHeadingsToArray();
-$array1 = $object->getReferences();
+$object = new Reference(); // Kutsuu reference classia
+$array = $object->getRefHeadingsToArray(); // Methodi, joka hakee referenssi otsikot tietokannasta ja laittaa ne tauluun
+$array1 = $object->getReferences(); // Methodi, joka hakee kaikki referenssit tietokannasta
 
 // Funktiot
 
-function makeSelector(array $array) {
+function makeSelector(array $array) { // Funktio, joka tekee valitsimen
     echo '
     <select id="titleselector" name="titleselector">
         <option value="0">Valitse</option>';
@@ -27,10 +27,10 @@ function makeSelector(array $array) {
     ';
 }
 
-function makeLists(array $array) {
+function makeLists(array $array) { // Funktio, joka tekee listat
 
-    $object0 = new Reference();
-    $array1 = $object0->getReferences();
+    $object0 = new Reference(); // Kutsuu reference classia
+    $array1 = $object0->getReferences(); // Methodi, joka hakee kaikki referenssit tietokannasta
 
     echo '
     <div class="list-container" id="0" style="margin-top: 25px; display:block;">
@@ -80,7 +80,7 @@ function makeLists(array $array) {
     }
 }
 
-function makeJS0(array $array)
+function makeJS0(array $array) // Funktio, joka tekee ensimmäisen osan javascriptistä
 {
     for ($i=1; $i <= count($array) ; $i++) { 
         echo '
@@ -94,7 +94,7 @@ function makeJS0(array $array)
     }
 }
 
-function makeJS1(array $array)
+function makeJS1(array $array) // Funktio, joka tekee toisen osan javascriptistä
 {
     for ($i=1; $i <= count($array) ; $i++) { 
         echo '
@@ -125,7 +125,7 @@ function makeJS1(array $array)
     }
 }
 
-function makeJS2()
+function makeJS2() // Funktio, joka tekee kolmannen osan javascriptistä
 {
     echo '
     <script type="text/javascript">

@@ -1,13 +1,13 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
-function makeList() {
+function makeList() { // Funktio, joka tekee listan
 
-    $object = new Service();
-    $array = $object->getServiceToArray();
-    $amount = count($array);
+    $object = new Service(); // Kutsuu service classia
+    $array = $object->getServiceToArray(); // Methodi, joka hakee palvelut tietokannasta ja laittaa ne tauluun
+    $amount = count($array); // Laskee palveluiden määrän
 
     for ($i=0; $i <= $amount-1; $i++) { 
         printf(
@@ -18,11 +18,11 @@ function makeList() {
     }
 }
 
-function makeJS() {
+function makeJS() { // Funktio, joka tekee javascriptin
 
-    $object = new Service();
-    $array = $object->getServiceToArray();
-    $amount = count($array);
+    $object = new Service(); // Kutsuu service classia
+    $array = $object->getServiceToArray(); // Methodi, joka hakee palvelut tietokannasta ja laittaa ne tauluun
+    $amount = count($array); // Laskee palveluiden määrän
 
     printf('<script>
         $(function () {

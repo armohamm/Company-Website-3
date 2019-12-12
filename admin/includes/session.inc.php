@@ -1,11 +1,11 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
-session_start();
+session_start(); // Aloittaa session
 
-$object = new Password();
+$object = new Password(); // Kutsuu password classia
 
 if (basename($_SERVER['PHP_SELF']) == 'login.php') {
     
