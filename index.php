@@ -34,7 +34,7 @@
 
 <body>
 
-  <div style="display: none" id="hideAll">&nbsp;</div>
+  <div style="display: none" id="hideAll">&nbsp;</div> <!-- Piilottaa sivulta kaiken kunnes latautunut -->
 
   <!-- Navi alkaa -->
   <header id="header" style="display: none;">
@@ -43,7 +43,7 @@
               <a href="#start"><img src="img/logo1.png" alt="logo" title="" /></img></a> <!-- logo -->
           </div>
           <nav id="nav-menu-container">
-              <ul class="nav-menu">
+              <ul class="nav-menu"> <!-- Navien listaus -->
                   <li><a href="#start">Aloitus</a></li>
                   <li><a href="#services">Palvelut</a></li>
                   <li><a href="#about">Keitä olemme</a></li>
@@ -104,12 +104,11 @@
 
           <h1 class=""> Yhteystiedot </h1><br>
           <div class="row">
-
             <div class="col-xl-1 col-lg-1 hidden-lg-down">
             </div>
 
             <div class="col-xl-3 col-lg-3 col-md-4 hidden-sm-down">
-              <h4 class="contact-heading"> Työmaa </h4>
+              <h4 class="contact-heading"> Työmaa </h4> <!-- Vasen puoli -->
               <p>Sähköposti: liisa@hamss.fi<br>
               Puhelin: 050-557 8784</p>
             </div>
@@ -124,7 +123,7 @@
               <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p> <!-- Kun työntekijöitä ei haeta -->
             </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12"> <!-- Oikea puoli -->
               <h4 class="contact-heading"> Toimisto </h4>
               <p>Sähköposti: toimisto@hamss.fi<br>
               Puhelin: 050-557 8782<br>
@@ -171,7 +170,7 @@
   <!-- Pää Javascript tiedosto -->
   <script src="js/main.js"></script>
 
-  <!-- In file script jostai syystä? (Sliderille) -->
+  <!-- In file script sliderille -->
   <script>
     // tell the embed parent frame the height of the content
     if (window.parent && window.parent.parent) {

@@ -95,7 +95,7 @@ p { /* Tekstin sijoitus */
   transition: transform 0.5s;
 }
 
-@media (max-width: 1000px) { /* Tableteille ja kännyköille logo */
+@media (max-width: 1000px) { /* logo tableteille ja kännyköille */
   #header #logo h1 {
     font-size: 26px;
   }
