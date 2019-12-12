@@ -103,17 +103,17 @@ function makeJS1(array $array) // Funktio, joka tekee toisen osan javascriptist�
                 var referenceorder'. $i .' = "";
                 var otsikko = "'.$array[$i-1][1].'"
 
-                $("#sortable'. $i .' li#'. $i .'").each(function (i) {
+                $("#sortable'. $i .' li").each(function (i) {
                     if (referenceorder'. $i .' == "")
                         referenceorder'. $i .' = $(this).attr("reference-id");
                     else
                         referenceorder'. $i .' += "," + $(this).attr("reference-id");
                 });
                 
-                $.post("includes/reference-orderlist.inc.php?reforder='. $i .'", { order: referenceorder'. $i .' })
+                $.post("includes/reference-order.inc.php?id='. $array[$i-1][0] .'", { order: referenceorder'. $i .' })
                 .done(function (result) {
                     if(alert("Referenssien järjestys on tallennettu \nTallennetut tiedot: " + result)){}
-                    else window.location.reload(true); 
+                    else window.location.reload(true);
                 })
                 .fail(function (data) {
                     alert("Error: " + data);
@@ -137,3 +137,6 @@ function makeJS2() // Funktio, joka tekee kolmannen osan javascriptistä
         });
     </script>';
 }
+
+// if(alert("Referenssien järjestys on tallennettu \nTallennetut tiedot: " + result)){}
+// else window.location.reload(true); 

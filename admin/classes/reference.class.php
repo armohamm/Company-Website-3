@@ -34,7 +34,8 @@ class Reference extends Conn {
             $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
             FROM `reference_heading` 
             INNER JOIN `references` ON `references`.`headingID` = `reference_heading`.`headingID` 
-            WHERE `reference_heading`.`headingID` ='. $this->refHeadings[$i-1][0]);
+            WHERE `reference_heading`.`headingID` = '. $this->refHeadings[$i-1][0].'
+            ORDER BY `references`.`position`');
             while ($row = $sql->fetch()) { // Tässä while-lauseessa lisätään referenssit ja niiden id:t tauluun
 
                 $id=$row['refID'];
@@ -127,7 +128,7 @@ class Reference extends Conn {
 
         for ($i = 1; $i <= $count; $i++) {
 
-            $sql = 'UPDATE `' . $this->refsTable . '` SET position = :pos WHERE refID = :refID';
+            $sql = 'UPDATE `' . $this->refsTable . '` SET `position` = :pos WHERE `refID` = :refID';
             $sql = $this->connect()->prepare($sql);
             $sql->execute(['pos' => $i, 'refID' => (int)$positions[$i-1]]);
 
