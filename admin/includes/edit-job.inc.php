@@ -1,9 +1,9 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
-if(!empty($_POST['check'])) {
+if(!empty($_POST['check'])) { // Tarkistaa onko checkboxi muokkaus sivulla valittu
 
     $object = new Job();
     $object->changeStatus(1);
@@ -16,7 +16,7 @@ if(!empty($_POST['check'])) {
     
 }
 
-if(!empty($_POST['link'])) {
+if(!empty($_POST['link'])) { // Tarkistaa onko muokkaus sivulla asetettu uusi linkki 
 
     $link = $_POST['link'];
 
