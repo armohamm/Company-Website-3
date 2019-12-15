@@ -28,6 +28,15 @@ class Job extends Conn {
         return $bool;
     }
 
+    public function getLink() { // Hakee tietokannasta työpaikkahaun linkin
+        $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE jobID='.$this->jobID);
+        while ($row = $sql->fetch()) {
+            $link = $row['jobLink'];
+        }
+        
+        return $link;
+    }
+
     public function changeStatus(int $bool) { // Vaihtaa työpaikkahaun näkyvyyden sivulla
         $sql = 'UPDATE '.$this->table.' SET showOnFrontPage = :bool WHERE jobID = :jobID';
         $sql = $this->connect()->prepare($sql);
