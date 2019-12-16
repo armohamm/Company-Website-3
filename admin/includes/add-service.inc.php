@@ -1,16 +1,16 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
 $title = $_POST['text'];
 $desc = $_POST['desc'];
 
-$objekti = new Service();
-$objekti->addServices($title, $desc);
-$id = $objekti->getLastServiceID();
+$objekti = new Service(); // Kutsuu service classia
+$objekti->addServices($title, $desc); // Methodi, joka lisää palvelun
+$id = $objekti->getLastServiceID(); // Methodi, joka hakee viimeisen palvelun id:n
 
-function addServiceImg($id) {
+function addServiceImg($id) { // Funktio, joka lisää palvelulle taustakuvan
 
     $dir = "../../img/";
     $file = $_FILES['file']['name'];
@@ -56,3 +56,5 @@ function addServiceImg($id) {
 }
 
 addServiceImg($id);
+
+echo "<br><a href='../add-service.php'>Takaisin</a>";

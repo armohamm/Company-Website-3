@@ -1,6 +1,6 @@
 <?php
 
-function editImgStart() {
+function editImgStart() { // Funktio, joka muuttaa etusivun aloitus kuvaa
 
     $dir = "../../img/";
     $file = $_FILES['file0']['name'];
@@ -47,7 +47,7 @@ function editImgStart() {
 
 }
 
-function editImgAbout() {
+function editImgAbout() { // Funktio, joka muuttaa etusivun meistä -osion kuvaa
 
     $dir = "../../img/";
     $file = $_FILES['file1']['name'];
@@ -93,11 +93,13 @@ function editImgAbout() {
     }
     
 }
-
+// Funktioiden kutsuminen
 if(!empty($_FILES['file0']['name'])) {
     editImgStart();
 }
 if(!empty($_FILES['file1']['name'])) {
     editImgAbout();
 }
+
+echo "<br><a href='../edit-frontpage-img.php'>Takaisin</a>";
 

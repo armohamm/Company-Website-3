@@ -44,10 +44,11 @@
               <form class="" action="includes/edit-job.inc.php" method="post" enctype="multipart/form-data">
     
                 <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Haemme työntekijöitä</h1>
-                <input type="checkbox" name="check" value="1"><br>
+                Valitse, jos työntekijä haku käynnissä
+                <?php include_once "includes/get-job-status.inc.php"; ?>
 
                 <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi linkki</h1>
-                <input type="text" name="link"><br><br>
+                <input type="text" name="link" value="<?php include_once "includes/get-job-link.inc.php"; ?>" required><br><br>
     
                 <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">
                   <span class="icon text-white-50">

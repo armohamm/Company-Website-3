@@ -1,21 +1,21 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
-if(!isset($_GET['id'])) {
+if(!isset($_GET['id'])) { // Jos id:tä EI ole, palauttaa takaisin referenssi otsikko sivulle
 
-    header("Location: http://localhost/top/hamss/admin/reference-titles.php");
+    header("Location: ../reference-titles.php");
 
 } else {
 
     $id = $_POST['id'];
     $title = $_POST['text'];
 
-    $objekti = new Reference();
-    echo $objekti->editReferenceHeading($id, $title);
+    $objekti = new Reference(); // Kutsuu reference classia
+    echo $objekti->editReferenceHeading($id, $title); // Methodi, joka muokkaa referenssi otsikkoa
 
-    function editImgBg($id) {
+    function editImgBg($id) { // Funktio, joka muokkaa referenssi otsikon taustakuvaa
 
         $dir = "../../img/";
         $file = $_FILES['file0']['name'];
@@ -62,7 +62,7 @@ if(!isset($_GET['id'])) {
 
     }
 
-    function editImg1($id) {
+    function editImg1($id) { // Funktio, joka muokkaa referenssi otsikon ensimmäistä kuvaa
 
         $dir = "../../img/";
         $file = $_FILES['file1']['name'];
@@ -109,7 +109,7 @@ if(!isset($_GET['id'])) {
         
     }
 
-    function editImg2($id) {
+    function editImg2($id) { // Funktio, joka muokkaa referenssi otsikon toista kuvaa
 
         $dir = "../../img/";
         $file = $_FILES['file2']['name'];
@@ -156,7 +156,7 @@ if(!isset($_GET['id'])) {
         
     }
 
-    function editImg3($id) {
+    function editImg3($id) { // Funktio, joka muokkaa referenssi otsikon kolmatta kuvaa
 
         $dir = "../../img/";
         $file = $_FILES['file3']['name'];
@@ -202,22 +202,24 @@ if(!isset($_GET['id'])) {
         }
         
     }
-    if(!empty($_FILES['file0']['name'])) {
+    if(!empty($_FILES['file0']['name'])) { // Tarkistaa onko uusi taustakuva asetettu
         editImgBg($id);
     }
 
-    if(!empty($_FILES['file1']['name'])) {
+    if(!empty($_FILES['file1']['name'])) { // Tarkistaa onko uusi referenssi otsikon kuva asetettu
         editImg1($id);
     }
 
-    if(!empty($_FILES['file2']['name'])) {
+    if(!empty($_FILES['file2']['name'])) { // Tarkistaa onko uusi referenssi otsikon kuva asetettu
         editImg2($id);
     }
 
-    if(!empty($_FILES['file3']['name'])) {
+    if(!empty($_FILES['file3']['name'])) { // Tarkistaa onko uusi referenssi otsikon kuva asetettu
         editImg3($id);
     }
     
+
+    echo "<br><a href='../edit-reference-title.php'>Takaisin</a>";
 }
 
 

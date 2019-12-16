@@ -5,5 +5,5 @@ include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää täll�
 
 $array = explode(',', $_POST['order']);
 
-$object = new Reference(); // Kutsuu reference classia
-echo $object->changeHeadingPositions($array); // Methodi, joka vaihtaa otsikoiden positioneja
+$object = new Service(); // Kutsuu reference classia
+echo $object->changeServicePositions($array); // Methodi, joka vaihtaa otsikoiden positioneja

@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sis채llyt채채 t채ll채 sivulla tarvittavien classien tiedostot
 
 $object = new Service(); // Luo palveluista objektin
 $array = $object->getServices(); // Hakee palvelut
@@ -27,7 +27,8 @@ function makeSlides1(int $count, array $array) { //Tekee slidit jotka n채ytt채v�
     $object1 = new Service();
     $object1->getServices();
     for ($i=1; $i <= $count ; $i++) { 
-        $serImg = "'img/ser". $i ."_1.jpg'";
+        $id = $object1->getServiceID($i-1);
+        $serImg = "'img/ser". $id ."_1.jpg'";
         if ($i==1) {
             echo '<div class="carousel-item active" style="background-image: url('.$serImg.')">';
         } else {

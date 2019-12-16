@@ -1,14 +1,14 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
-session_start();
+session_start(); // Aloittaa uuden session
 
-$password = $_POST['password'];
+$password = $_POST['password']; 
 
-$object = new Password();
-$return = $object->checkPassword($password);
+$object = new Password(); // Kutsuu password classia
+$return = $object->checkPassword($password); // Methodi, joka tarkistaa salasanan tietokannasta
 
 if ($return == 1) { // Jos salaasana on oikein
     $_SESSION['logged_in'] = true;

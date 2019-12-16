@@ -14,9 +14,11 @@ class Service extends Conn {
 
             $serviceHeading=$row['heading'];
             $serviceText=$row['text'];
+            $id=$row['serviceID'];
 
             array_push($foo, utf8_encode($serviceHeading));
             array_push($foo, utf8_encode($serviceText));
+            array_push($foo, (int)$id);
 
             array_push($this->service, $foo);
 
@@ -25,6 +27,10 @@ class Service extends Conn {
 
         return $this->service;
 
+    }
+
+    public function getServiceID(int $arrayPos) { // Hakee yhden palvelun ID:n
+        return $this->service[$arrayPos][2];
     }
 
     public function getServicesById($id) { // Hakee kaikki palvelut ja niiden selitykset id:n mukaan
@@ -80,7 +86,7 @@ class Service extends Conn {
             $sql = $this->connect()->prepare($sql);
             $sql->execute(['pos' => $i, 'serviceID' => (int)$positions[$i-1]]);
 
-            $return = $return . ' Otsikon ' . $positions[$i - 1] . ' sijainti on nyt ' . $i . '<br>';
+            $return = $return . ' Otsikon ' . $positions[$i - 1] . ' sijainti on nyt ' . $i;
         }
 
         return utf8_encode($return);
