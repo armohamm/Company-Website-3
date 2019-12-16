@@ -1,14 +1,14 @@
 <?php
 class Service extends Conn {
-    
+
     private $serviceTable = "service";
     public $service = array();
 
     public function getServices() { // Hakee kaikki palvelut ja niiden selitykset tietokannasta positionin mukaan
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
-        FROM `service` 
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
+        FROM `service`
         ORDER BY `service`.`position`');
-        
+
         while ($row = $sql->fetch()) {
             $foo = array();
 
@@ -34,17 +34,17 @@ class Service extends Conn {
     }
 
     public function getServicesById($id) { // Hakee kaikki palvelut ja niiden selitykset id:n mukaan
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
-        FROM `service` 
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
+        FROM `service`
         WHERE `service`.`serviceID` = ' . $id);
-        
+
         while ($row = $sql->fetch()) {
             $foo = array();
 
             $serviceHeading=$row['heading'];
             $serviceText=$row['text'];
 
-            array_push($foo, $serviceHeading);
+            array_push($foo, utf8_encode($serviceHeading));
             array_push($foo, utf8_encode($serviceText));
 
             array_push($this->service, $foo);
@@ -81,7 +81,7 @@ class Service extends Conn {
 
         $return = '';
 
-        for ($i=1; $i <= $count; $i++) { 
+        for ($i=1; $i <= $count; $i++) {
             $sql = 'UPDATE ' . $this->serviceTable . ' SET position = :pos WHERE serviceID = :serviceID';
             $sql = $this->connect()->prepare($sql);
             $sql->execute(['pos' => $i, 'serviceID' => (int)$positions[$i-1]]);
@@ -108,7 +108,7 @@ class Service extends Conn {
     }
 
     public function getLastServiceID() { // Hakee tietokannasta viimeisenä positionin mukaan olevan palvelun id:n
-        $sql = $this->connect()->query('SELECT * FROM `service` ORDER BY `position` DESC LIMIT 1');   
+        $sql = $this->connect()->query('SELECT * FROM `service` ORDER BY `position` DESC LIMIT 1');
         while ($row = $sql->fetch()) {
 
             $serviceID=$row['serviceID'];
@@ -118,10 +118,10 @@ class Service extends Conn {
     }
 
     public function getServiceToArray() { // Hakee palvelut tietokannasta ja laittaa ne tauluun
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
-        FROM `service` 
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
+        FROM `service`
         ORDER BY `service`.`position`');
-        
+
         while ($row = $sql->fetch()) {
             $foo = array();
 
@@ -148,7 +148,7 @@ class Service extends Conn {
 
         $return = 1;
     }
-    
+
 }
 // Käytetään kun halutaan hakea kaikki palvelut tietokannasta
 
