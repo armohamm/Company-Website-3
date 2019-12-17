@@ -1,17 +1,17 @@
 /* Yleinen */
 
-#hideAll {
+#hideAll { /* CSS kaiken piilottamiseksi kunnes sivu on latautunut */
   position: fixed;
-  left: 0px; 
-  right: 0px; 
-  top: 0px; 
-  bottom: 0px; 
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
   background-color: white;
-  z-index: 99; /* Higher than anything else in the document */
+  z-index: 99;
 
 }
 
-body {
+body { /* Sivuston pohja */
   background: #fff;
   color: #666666;
   font-family: 'Ubuntu', sans-serif;
@@ -19,17 +19,17 @@ body {
   height: 100%;
 }
 
-a {
+a { /* Linkin väri */
   color: #2D5387;
 }
 
-a:hover, a:active, a:focus {
+a:hover, a:active, a:focus { /*  */
   color: #ccc;
   outline: none;
   text-decoration: none;
 }
 
-p {
+p { /* Tekstin sijoitus */
   padding: 0;
   margin: 0 0 30px 0;
 }
@@ -48,7 +48,7 @@ p {
   transition: background 0.5s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* tableteille, kännyköille */
   .back-to-top {
     bottom: 15px;
     background: rgba(0, 0, 0, 0.5);
@@ -80,11 +80,11 @@ p {
   background-color: #F4F4F4;
 }
 
-#header #logo {
+#header #logo { /* logon sijainti */
   float: left;
 }
 
-#header #logo img {
+#header #logo img { /* logokuva */
   padding: 0;
   margin: 0;
   width: 150px;
@@ -95,21 +95,21 @@ p {
   transition: transform 0.5s;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) { /* logo tableteille ja kännyköille */
   #header #logo h1 {
     font-size: 26px;
   }
   #header #logo img {
-    max-width: 150px;
-    -ms-transform: translateY(-25%);
-    transform: translateY(-25%);
+    max-width: 125px;
+    -ms-transform: translateY(-35%);
+    transform: translateY(-35%);
   }
   #header {
-    height: 110px;
+    height: 90px;
   }
   #header.header-fixed #logo img {
-  -webkit-transform: scale(0.8) translateY(-48%) !important;
-  transform: scale(0.8) translateY(-48%) !important;
+  -webkit-transform: scale(0.8) translateY(-42%) !important;
+  transform: scale(0.8) translateY(-42%) !important;
   }
 }
 
@@ -164,7 +164,7 @@ p {
   min-width: 180px;
 }
 
-/* Nav Meu Container */
+/* Nav Menu Container */
 #nav-menu-container {
   float: right;
   margin: 0;
@@ -176,7 +176,7 @@ p {
   }
 }
 
-/* Nav Meu Styling */
+/* Nav Menu Styling */
 .nav-menu a {
   padding: 0 8px 10px 8px;
   text-decoration: none;
@@ -250,7 +250,7 @@ p {
   }
 }
 
-/* Mobile Nav Styling */
+/* Mobiili navigaation tyylitys */
 #mobile-nav {
   position: fixed;
   top: 0;
@@ -353,24 +353,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.start-section {
     min-height: 800px;
     background-image: url("../img/section-start.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-position: center; /* kuva keskellä osiota */
+    background-size: cover;  /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     }
 
-    div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
+    div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy */
     background: rgba(29, 186, 234, 0.185);
     min-height: 800px;
     }
 
-    div.start-text {
-    margin-top: 375px;
-    font-family: 'Roboto', sans-serif;
+    div.start-text { /* Aloitus teksti */
+    margin-top: 375px; /* Yläreunasta erillään */
+    font-family: 'Roboto', sans-serif; /* Fontti */
     }
 
-
-    span.start {
+    span.start { /* Fontti koot, paksuus ja väri */
     font-size: 1.3em;
     font-weight: 750;
     color: #ea5e1d;
@@ -382,10 +381,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.start-section {
     min-height: 800px;
     background-image: url("../img/section-start.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-position: center; /* kuva keskellä osiota */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     }
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
@@ -393,13 +392,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     min-height: 800px;
     }
 
-    div.start-text {
-    margin-top: 375px;
-    font-family: 'Roboto', sans-serif;
+    div.start-text { /* Aloitus teksti */
+    margin-top: 375px; /* Yläreunasta erillään */
+    font-family: 'Roboto', sans-serif; /* Fontti */
     }
 
-
-    span.start {
+    span.start { /* Fontti koko, paksuus ja väri */
     font-size: 2em;
     font-weight: 750;
     color: #ea5e1d;
@@ -411,10 +409,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.start-section {
     min-height: 800px;
     background-image: url("../img/section-start.jpg");
-    background-repeat: no-repeat;
-    background-attachment: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-attachment: center; /* kuva keskellä osiota */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     }
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
@@ -422,13 +420,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     min-height: 800px;
     }
 
-    div.start-text {
-    margin-top: 375px;
-    font-family: 'Roboto', sans-serif;
+    div.start-text { /* Aloitus teksti */
+    margin-top: 375px; /* Yläreunasta erillään */
+    font-family: 'Roboto', sans-serif; /* Fontti */
     }
 
-
-    span.start {
+    span.start { /* Fontti koko, paksuus, väri */
     font-size: 2em;
     font-weight: 750;
     color: #ea5e1d;
@@ -440,10 +437,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.start-section {
     min-height: 800px;
     background-image: url("../img/section-start.jpg");
-    background-repeat: no-repeat;
-    background-attachment: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-attachment: center; /* kuva keskellä osiota */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     }
 
     div.start-section { /* Taustan kuvalle sinertävä väri jotta teksti näkyy*/
@@ -451,12 +448,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     min-height: 800px;
     }
 
-    div.start-text {
-    margin-top: 375px;
-    font-family: 'Roboto', sans-serif;
+    div.start-text { /* Aloitus teksti */
+    margin-top: 375px; /* Yläreunasta erillään */
+    font-family: 'Roboto', sans-serif; /* Fontti */
     }
 
-    span.start {
+    span.start { /* Fontin koko, paksuus, väri */
     font-size: 2.25em;
     font-weight: 900;
     color: #ea5e1d;
@@ -469,20 +466,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (max-width: 450px) {
   section.services-section {
     min-height: 750px;
-    background: #ea5e1d;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    color: black;
+    background: #ea5e1d; /* taustaväri */
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-position: center; /* kuva keskellä osiota */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
+    color: black; /* Tekstin väri */
   }
-  div.service-text {
-    margin-top:45px;
+  div.service-text { /* Tekstin muokkaus */
+    margin-top: 45px;
     font-size: 1.25em;
     margin-left: 7.5%;
     margin-right: 7.5%;
   }
-  h1.service-heading {
+  h1.service-heading { /* Palvelukohdan otsikko */
     margin-top: 15px;
     font-size: 2.25em;
   }
@@ -493,19 +490,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.services-section {
     min-height: 750px;
     background: #ea5e1d;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-position: center; /* kuva keskellä osiota */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     color: black;
   }
-  div.service-text {
-    margin-top:50px;
+  div.service-text { /* Tekstin muokkaus */
+    margin-top: 50px;
     font-size: 1.5em;
     margin-left: 7.5%;
     margin-right: 7.5%;
   }
-  h1.service-heading {
+  h1.service-heading { /* Palvelukohdan otsikko */
     margin-top: 20px;
     font-size: 3.5em;
   }
@@ -516,19 +513,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.services-section {
     min-height: 750px;
     background: #ea5e1d;
-    background-repeat: no-repeat;
-    background-attachment: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-attachment: center; /* kuva keskellä osiota */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     color: black;
   }
-  div.service-text {
-    margin-top:60px;
+  div.service-text { /* Tekstin muokkaus */
+    margin-top: 60px;
     font-size: 2em;
     margin-left: 10%;
     margin-right: 10%;
   }
-  h1.service-heading {
+  h1.service-heading { /* Palvelukohdan otsikko */
     margin-top: 35px;
     font-size: 4.5em;
   }
@@ -539,14 +536,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.services-section {
     min-height: 750px;
     background: #ea5e1d;
-    background-repeat: no-repeat;
-    background-attachment: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-attachment: center; /* kuva keskellä osiota */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     color: black;
   }
-  div.service-text {
-    margin-top:65px;
+  div.service-text { /* Tekstin muokkaus */
+    margin-top: 65px;
     font-size: 2em;
     margin-left: 10%;
     margin-right: 10%;
@@ -571,12 +568,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   img.reference-img-2 {
     display: none;
   }
-  ul.reference-ul {
+  ul.reference-ul { /* Listaus */
     margin-left: 15px;
     margin-top: 25px;
     font-size: 1.2em;
   }
-  h1.reference-heading {
+  h1.reference-heading { /* Otsikko */
     font-size: 3em;
     margin-top: 25px;
   }
@@ -589,27 +586,27 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  img.reference-img-0 {
+  img.reference-img-0 { /* Määrittelee referenssikuvien sijainnit ja koot */
     display: none;
   }
-  img.reference-img-1 {
+  img.reference-img-1 { /* Määrittelee referenssikuvien sijainnit ja koot */
     display: none;
   }
-  img.reference-img-2 {
+  img.reference-img-2 { /* Määrittelee referenssikuvien sijainnit ja koot */
     display: none;
   }
-  ul.reference-ul {
+  ul.reference-ul { /* Listaus */
     margin-top: 25px;
     font-size: 1.25em;
     margin-left: 10%;
   }
-  h1.reference-heading {
+  h1.reference-heading { /* Otsikko */
     font-size: 3.5em;
     margin-top: 25px;
   }
-  img.reference-img {
-    border-style: solid;
-    float: right;
+  img.reference-img { /* Kuvien muokkaus */
+    border-style: solid; /* Kuvan mustat rajat */
+    float: right; /* Kuvan sijainti */
     margin-right: 15px;
     width: 100px;
     height: 80px;
@@ -624,7 +621,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  img.reference-img-0 {
+  img.reference-img-0 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 235px;
@@ -632,7 +629,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-left: 35px;
     display: block;
   }
-  img.reference-img-1 {
+  img.reference-img-1 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 235px;
@@ -640,7 +637,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-left: 35px;
     display: block;
   }
-  img.reference-img-2 {
+  img.reference-img-2 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 235px;
@@ -648,12 +645,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-left: 35px;
     display: block;
   }
-  ul.reference-ul {
+  ul.reference-ul { /* Listaus */
     margin-left: 15px;
     margin-top: 25px;
     font-size: 1.25em;
   }
-  h1.reference-heading {
+  h1.reference-heading { /* Otsikko */
     font-size: 3.5em;
     margin-top: 30px;
   }
@@ -666,14 +663,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  img.reference-img-0 {
+  img.reference-img-0 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 250px;
     margin-top: 75px;
     display: inline-block;
   }
-  img.reference-img-1 {
+  img.reference-img-1 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 250px;
@@ -681,7 +678,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 75px;
     display: inline-block;
   }
-  img.reference-img-2 {
+  img.reference-img-2 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 250px;
@@ -689,11 +686,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 35px;
     display: inline-block;
   }
-  ul.reference-ul {
+  ul.reference-ul { /* Listaus */
     margin-top: 25px;
     font-size: 1.4em;
   }
-  h1.reference-heading {
+  h1.reference-heading { /* Otsikko */
     font-size: 4.5em;
     margin-top: 30px;
   }
@@ -706,27 +703,27 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ea5e1d;
     color: black;
   }
-  img.reference-img-0 {
+  img.reference-img-0 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 325px;
     margin-top: 75px;
   }
-  img.reference-img-1 {
+  img.reference-img-1 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 325px;
     margin-left: 115px;
     margin-top: 75px;
   }
-  img.reference-img-2 {
+  img.reference-img-2 { /* Määrittelee referenssikuvien sijainnit ja koot */
     border-radius: 10px;
     border: 5px solid #000;
     width: 325px;
     margin-left: 245px;
     margin-top: 75px;
   }
-  ul.reference-ul {
+  ul.reference-ul { /* Listaus */
     margin-top: 25px;
     font-size: 1.65em;
   }
@@ -739,10 +736,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.about-section {
     min-height: 750px;
     background-image: url("../img/section-about.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat;   /* Kuva ei toistu */
+    background-position: center; /* kuva keskellä osiota */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     width: 100%;
     padding-top: 75px;
     padding-left: 7.5%;
@@ -768,10 +765,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.about-section {
     min-height: 750px;
     background-image: url("../img/section-about.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva koko osiolla */
+    background-position: center; /* Kuva koko osiolla */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     width: 100%;
     padding-top: 100px;
     padding-left: 7.5%;
@@ -785,7 +782,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 20px;
   }
 
-  div.about-text {
+  div.about-text { /* Tekstin väri, koko ja paksuus */
     color: #f4f4f4;
     font-size: 1.25em;
     font-weight: 600;
@@ -797,10 +794,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.about-section {
     min-height: 750px;
     background-image: url("../img/section-about.jpg");
-    background-repeat: no-repeat;
-    background-attachment: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva koko osiolla */
+    background-attachment: center; /* Kuva koko osiolla */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     width: 100%;
     padding-top: 150px;
     padding-left: 10%;
@@ -814,7 +811,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 25px;
   }
 
-  div.about-text {
+  div.about-text { /* Tekstin väri, koko ja paksuus */
     color: #f4f4f4;
     font-size: 1.6em;
     font-weight: 600;
@@ -826,13 +823,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.about-section {
     min-height: 750px;
     background-image: url("../img/section-about.jpg");
-    background-repeat: no-repeat;
-    background-attachment: center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /* Kuva koko osiolla */
+    background-attachment: center; /* Kuva koko osiolla */
+    background-size: cover; /* Kuva koko osiolla */
+    background-attachment: fixed; /* Teksti rullaa kuvan päällä */
     width: 100%;
     padding-top: 150px;
-
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 150px;
@@ -844,7 +840,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 25px;
   }
 
-  div.about-text {
+  div.about-text { /* Tekstin väri, koko ja paksuus */
     color: #f4f4f4;
     font-size: 1.75em;
     font-weight: 600;
@@ -858,12 +854,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-size: cover;
     text-align: center;
     color: #f4f4f4;
-    font-size: 0.8em;
-    padding: 30px;
+    padding: 25px;
   }
-  
+
+  h4.contact-heading {
+    color: #ea5e1d;
+    font-weight: 700;
+  }
+
 }
 
  /* tableteille */
@@ -871,12 +874,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-attachment: center; /* Kuva on keskellä osiota */
+    background-size: cover; /* Kuva on koko osiolla */
     text-align: center;
     color: #f4f4f4;
-    font-size: 0.8em;
     padding: 30px;
   }
-  
+
+  h4.contact-heading { /* Fontin koko ja väri */
+    color: #ea5e1d;
+    font-weight: 700;
+  }
 }
 
  /* tietokoneille */
@@ -884,11 +893,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-attachment: center; /* Kuva on keskellä osiota */
+    background-size: cover; /* Kuva on koko osiolla */
     color: #f4f4f4;
-    font-size: 1.15em;
-    padding: 50px;
+    padding: 40px;
   }
-  
+
+  h4.contact-heading { /* Fontin väri ja paksuus */
+    color: #ea5e1d;
+    font-weight: 700;
+  }
 }
 
 /* leveille näytöille */
@@ -896,24 +911,31 @@ body.mobile-nav-active #mobile-nav-toggle {
   section.contact-section {
     min-height: 200px;
     background-image: url("../img/contact.jpg");
+    background-repeat: no-repeat; /* Kuva ei toistu */
+    background-attachment: center; /* Kuva on keskellä osiota */
+    background-size: cover; /* Kuva on koko osiolla */
     color: #f4f4f4;
-    font-size: 1.15em;
-    padding: 50px;
+    padding: 45px;
+
   }
-  
+
+  h4.contact-heading { /* Fontin väri ja koko */
+    color: #ea5e1d;
+    font-weight: 700;
+  }
 }
 
 /* Yhteystiedot loppuu ja footer alkaa */
 
-section.footer-section {
+section.footer-section { /* Yhteystietojen minimi korkeus ja taustaväri */
     min-height: 50px;
     background-color: #F4F4F4;
 }
 
 div.copyright {
-  line-height: 4;
-  font-size: 0.8rem;
-  color: black;
+  line-height: 4; /* Viivan korkeus */
+  font-size: 0.8rem; /* Fontti koko */
+  color: black; /* Fontin väri */
 }
 
 /* Footer loppuu */

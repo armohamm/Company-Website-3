@@ -1,14 +1,43 @@
 <?php
 class Service extends Conn {
-    
+
     private $serviceTable = "service";
     public $service = array();
 
-    public function getServices() {
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
-        FROM `service` 
+    public function getServices() { // Hakee kaikki palvelut ja niiden selitykset tietokannasta positionin mukaan
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
+        FROM `service`
         ORDER BY `service`.`position`');
-        
+
+        while ($row = $sql->fetch()) {
+            $foo = array();
+
+            $serviceHeading=$row['heading'];
+            $serviceText=$row['text'];
+            $id=$row['serviceID'];
+
+            array_push($foo, utf8_encode($serviceHeading));
+            array_push($foo, utf8_encode($serviceText));
+            array_push($foo, (int)$id);
+
+            array_push($this->service, $foo);
+
+            unset($foo);
+        }
+
+        return $this->service;
+
+    }
+
+    public function getServiceID(int $arrayPos) { // Hakee yhden palvelun ID:n
+        return $this->service[$arrayPos][2];
+    }
+
+    public function getServicesById($id) { // Hakee kaikki palvelut ja niiden selitykset id:n mukaan
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
+        FROM `service`
+        WHERE `service`.`serviceID` = ' . $id);
+
         while ($row = $sql->fetch()) {
             $foo = array();
 
@@ -27,30 +56,7 @@ class Service extends Conn {
 
     }
 
-    public function getServicesById($id) {
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
-        FROM `service` 
-        WHERE `service`.`serviceID` = ' . $id);
-        
-        while ($row = $sql->fetch()) {
-            $foo = array();
-
-            $serviceHeading=$row['heading'];
-            $serviceText=$row['text'];
-
-            array_push($foo, $serviceHeading);
-            array_push($foo, utf8_encode($serviceText));
-
-            array_push($this->service, $foo);
-
-            unset($foo);
-        }
-
-        return $this->service;
-
-    }
-
-    public function addServices(string $heading, string $text) {
+    public function addServices(string $heading, string $text) { // Lisää palvelun tietokantaan
 
         $sql = $this->connect()->query('SELECT count(*) AS services FROM ' . $this->serviceTable);
         while ($row = $sql->fetch()) {
@@ -69,25 +75,25 @@ class Service extends Conn {
 
     }
 
-    public function changeServicePositions(array $positions) {
+    public function changeServicePositions(array $positions) { // Vaihtaa palveluiden järjestystä tietokannassa
 
         $count = count($positions);
 
         $return = '';
 
-        for ($i=1; $i <= $count; $i++) { 
+        for ($i=1; $i <= $count; $i++) {
             $sql = 'UPDATE ' . $this->serviceTable . ' SET position = :pos WHERE serviceID = :serviceID';
             $sql = $this->connect()->prepare($sql);
             $sql->execute(['pos' => $i, 'serviceID' => (int)$positions[$i-1]]);
 
-            $return = $return . ' Otsikon ' . $positions[$i - 1] . ' sijainti on nyt ' . $i . '<br>';
+            $return = $return . ' Otsikon ' . $positions[$i - 1] . ' sijainti on nyt ' . $i;
         }
 
         return utf8_encode($return);
 
     }
 
-    public function editService(string $id, string $heading, string $text) {
+    public function editService(string $id, string $heading, string $text) { // Muokkaa palvelua ja sen tekstiä
 
         $text = utf8_decode($text);
         $heading = utf8_decode($heading);
@@ -101,8 +107,8 @@ class Service extends Conn {
 
     }
 
-    public function getLastServiceID() {
-        $sql = $this->connect()->query('SELECT * FROM `service` ORDER BY `position` DESC LIMIT 1');   
+    public function getLastServiceID() { // Hakee tietokannasta viimeisenä positionin mukaan olevan palvelun id:n
+        $sql = $this->connect()->query('SELECT * FROM `service` ORDER BY `position` DESC LIMIT 1');
         while ($row = $sql->fetch()) {
 
             $serviceID=$row['serviceID'];
@@ -111,11 +117,11 @@ class Service extends Conn {
         return $serviceID;
     }
 
-    public function getServiceToArray() {
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text` 
-        FROM `service` 
+    public function getServiceToArray() { // Hakee palvelut tietokannasta ja laittaa ne tauluun
+        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
+        FROM `service`
         ORDER BY `service`.`position`');
-        
+
         while ($row = $sql->fetch()) {
             $foo = array();
 
@@ -134,7 +140,7 @@ class Service extends Conn {
 
     }
 
-    public function deleteService($id) {
+    public function deleteService($id) { // Poistaa palvelun tietokannasta
 
         $sql = 'DELETE FROM '.$this->serviceTable.' WHERE serviceID = :serviceID';
         $sql = $this->connect()->prepare($sql);
@@ -142,20 +148,23 @@ class Service extends Conn {
 
         $return = 1;
     }
-    
+
 }
-// Käytetään getServices();
+// Käytetään kun halutaan hakea kaikki palvelut tietokannasta
+
 // $objekti = new Service();
 // $array = $objekti->getServices();
 // print_r($array[0][0]);
 
 
-// Käytetään addServices();
+// Käytetään kun halutaan lisätä palvelu
+
 // $objekti = new Service();
 // echo $objekti->addServices("Testi","Testin selitys");
 
 
-// Käytetään changeServicePositions();
+// Käytetään kun halutaan muokata palveluiden järjestystä
+
 // $array = array(1, 2, 3, 4, 5);
 // $objekti = new Service;
 // echo $objekti->changeServicePositions($array);

@@ -7,11 +7,11 @@ class Reference extends Conn {
     public $refHeadings = array();
     private $refs = array();
 
-    public function getReferences() {
+    public function getReferences() { // Hakee referenssit, refrenssi otsikoot ja refrenssi id:t tietokannasta ja laittaa ne tauluun
         $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
         FROM `reference_heading` 
         ORDER BY `reference_heading`.`position`');   
-        while ($row = $sql->fetch()) {
+        while ($row = $sql->fetch()) { // Tässä while-lauseessa lisätään referenssi otsikot ja niiden id:t tauluun
             $foo = array();
 
             $headingID=$row['headingID'];
@@ -25,7 +25,7 @@ class Reference extends Conn {
             unset($foo);
         }
 
-        $headingsAmount = count($this->refHeadings);
+        $headingsAmount = count($this->refHeadings); // Laskee referenssi otsikoiden määrän
 
         for ($i=1; $i <= $headingsAmount; $i++) { 
 
@@ -34,8 +34,9 @@ class Reference extends Conn {
             $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
             FROM `reference_heading` 
             INNER JOIN `references` ON `references`.`headingID` = `reference_heading`.`headingID` 
-            WHERE `reference_heading`.`headingID` ='. $this->refHeadings[$i-1][0]);
-            while ($row = $sql->fetch()) {
+            WHERE `reference_heading`.`headingID` = '. $this->refHeadings[$i-1][0].'
+            ORDER BY `references`.`position`');
+            while ($row = $sql->fetch()) { // Tässä while-lauseessa lisätään referenssit ja niiden id:t tauluun
 
                 $id=$row['refID'];
                 $text=$row['text'];
@@ -48,7 +49,7 @@ class Reference extends Conn {
                 unset($foo0);
             }
 
-            array_push($this->refs, [$this->refHeadings[$i-1][1] => $foo1]);
+            array_push($this->refs, [$this->refHeadings[$i-1][1] => $foo1]); // Tässä pusketaan referenssit ja niiden otsikot yhteen tauluun
 
             
             unset($foo1);
@@ -61,7 +62,7 @@ class Reference extends Conn {
         return $this->refHeadings[$arrayPos][1];
     }
 
-    public function addReferenceTitle(string $heading) {
+    public function addReferenceTitle(string $heading) { // Lisää referenssi otsikon tietokantaan
 
         $sql = $this->connect()->query('SELECT count(*) AS headings FROM ' . $this->headingsTable);
         while ($row = $sql->fetch()) {
@@ -77,11 +78,31 @@ class Reference extends Conn {
 
         $return = 'Otsikko ' . $heading . ' on lisätty tietokantaan sijaintiin ' . $pos;
 
-        return utf8_encode($return);
+        return $return;
 
     }
 
-    public function changeHeadingPositions(array $positions) {
+    public function addReference(int $id, string $text) { // Lisää referenssin tietokantaan
+
+        $sql = $this->connect()->query('SELECT count(*) AS refs FROM `' . $this->refsTable . '` WHERE headingID = ' . $id);
+        while ($row = $sql->fetch()) {
+            $refsAmount = $row['refs'];
+        }
+
+        $pos = (int)$refsAmount + 1;
+
+        $sql = "INSERT INTO `" . $this->refsTable . "` (`refID`, `headingID`, `position`, `text`) 
+        VALUES (NULL, :id, :position, :text)";
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['id'=>$id, 'position'=>$pos, 'text'=>$text]);
+
+        $return = 'Referenssi ' . $text . ' on lisätty tietokantaan sijaintiin ' . $pos . ' otsikon ' . $id . ' alle.';
+
+        return $return;
+
+    }
+
+    public function changeHeadingPositions(array $positions) { // Vaihtaa referenssi otsikoiden järjestystä
 
         $count = count($positions);
 
@@ -99,7 +120,7 @@ class Reference extends Conn {
 
     }
 
-    public function changeReferencePositions(array $positions) {
+    public function changeReferencePositions(array $positions) { // Vaihtaa referenssien järjestystä
 
         $count = count($positions);
 
@@ -107,7 +128,7 @@ class Reference extends Conn {
 
         for ($i = 1; $i <= $count; $i++) {
 
-            $sql = 'UPDATE `' . $this->refsTable . '` SET position = :pos WHERE refID = :refID';
+            $sql = 'UPDATE `' . $this->refsTable . '` SET `position` = :pos WHERE `refID` = :refID';
             $sql = $this->connect()->prepare($sql);
             $sql->execute(['pos' => $i, 'refID' => (int)$positions[$i-1]]);
 
@@ -118,7 +139,7 @@ class Reference extends Conn {
         return utf8_encode($return);
     }
 
-    public function getRefHeadingsToArray() {
+    public function getRefHeadingsToArray() { // Hakee pelkät referenssi otsikot tietokannasta ja laittaa ne tauluun järjestyksen (position) mukaan
         $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
         FROM `reference_heading` 
         ORDER BY `reference_heading`.`position`');   
@@ -138,7 +159,7 @@ class Reference extends Conn {
         return $this->refHeadings;
     }
 
-    public function getRefHeadingsById($id) {
+    public function getRefHeadingsById($id) { // Hakee pelkät referenssi otsikot tietokannasta ja laittaa ne id:n mukaan tauluun
         $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
         FROM `reference_heading` 
         WHERE `reference_heading`.`headingID` = ' . $id);   
@@ -158,7 +179,11 @@ class Reference extends Conn {
         return $this->refHeadings;
     }
 
-    public function getLastHeadingID() {
+    public function getRefHeadingID(int $arrayPos) { // Hakee yhden referenssiotsikon ID:n
+        return $this->refHeadings[$arrayPos][0];
+    }
+
+    public function getLastHeadingID() { // Hakee tietokannasta viimeisenä positionin mukaan olevan referenssi otsikon id:n
         $sql = $this->connect()->query('SELECT * FROM `reference_heading` ORDER BY `position` DESC LIMIT 1');   
         while ($row = $sql->fetch()) {
 
@@ -168,7 +193,7 @@ class Reference extends Conn {
         return $headingID;
     }
 
-    public function editReferenceHeading(string $id, string $heading) {
+    public function editReferenceHeading(string $id, string $heading) { // Muokkaa referenssi otsikkoa tietokannassa
 
         $heading = utf8_decode($heading);
 
@@ -181,11 +206,11 @@ class Reference extends Conn {
 
     }
 
-    public function editReference(string $id, string $text) {
+    public function editReference(string $id, string $text) { // Muokkaa referenssiä tietokannassa
 
         $text = utf8_decode($text);
 
-        $sql = 'UPDATE '.$this->refsTable.' SET text = :text WHERE refID = :refID';
+        $sql = 'UPDATE `'.$this->refsTable.'` SET text = :text WHERE refID = :refID';
         $sql = $this->connect()->prepare($sql);
         $sql->execute(['text'=>$text, 'refID'=>$id]);
 
@@ -194,7 +219,7 @@ class Reference extends Conn {
 
     }
 
-    public function deleteReferenceHeading($id) {
+    public function deleteReferenceHeading($id) { // Poistaa referenssi otsikon tietokannasta
 
         $sql = 'DELETE FROM '.$this->headingsTable.' WHERE headingID = :headingID';
         $sql = $this->connect()->prepare($sql);
@@ -203,16 +228,16 @@ class Reference extends Conn {
         $return = 1;
     }
 
-    public function deleteReference($id) {
+    public function deleteReference($id) { // Poistaa referenssin tietokannasta
 
-        $sql = 'DELETE FROM '.$this->refsTable.' WHERE refID = :refID';
+        $sql = 'DELETE FROM `'.$this->refsTable.'` WHERE refID = :refID';
         $sql = $this->connect()->prepare($sql);
         $sql->execute(['refID'=>$id]);
 
         $return = 1;
     }
 
-    public function getRefById($id) {
+    public function getRefById($id) { // Hakee referenssit tietokannasta id:n mukaan
         $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
         FROM `references`
         WHERE `references`.`refID` = ' . $id);   
@@ -223,7 +248,7 @@ class Reference extends Conn {
             $text=$row['text'];
 
             array_push($foo, (int)$refID);
-            array_push($foo, $text);
+            array_push($foo, utf8_encode($text));
 
             array_push($this->refHeadings, $foo);
 
@@ -233,22 +258,34 @@ class Reference extends Conn {
     }
 }
 
+// Käytetään referenssien haussa
+
 // $objekti = new Reference();
 // $array = $objekti->getReferences();
 // $pos = $objekti->getRefHeadingString(3);
-// print_r($array[3][$pos]);
+// print_r($array[3][$pos]); tai print_r($array);
 
-// print_r($array);
+
+// Käytetään referenssi otsikon lisäämisessä
 
 // $objekti = new Reference();
 // echo $objekti->addReferenceTitle('Kadut');
+
+
+// Käytetään referenssi otsikoiden järjestysten muuttamisessa
 
 // $object = new Reference();
 // array0 = array(2,4,1,3);
 // echo $object->changeHeadingPositions($array0);
 
+
+// Käytetään referenssien järjestysten muuttamisessa
+
 // $array1 = array(4,2,5,1,3);
 // echo $object->changeReferencePositions($array1);
+
+
+// Käytetään kun halutaan pelkät referenssi otsikot tauluun
 
 // $object = new Reference();
 // print_r($object->getRefHeadingsToArray());

@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
 $object = new Reference(); // Luo referensseistä objektin
 $refsArray = $object->getReferences(); // Hakee referenssit
@@ -28,7 +28,8 @@ function makeSlides(int $count, array $refsArray, array $refHeadingsArray) { //T
     $object1 = new Reference();
     $object1->getReferences();
     for ($i=1; $i <= $count ; $i++) { 
-        $refImg = "'img/ref". $i ."_1.jpg'";
+        $id = $object1->getRefHeadingID($i-1);
+        $refImg = "'img/ref". $id ."_1.jpg'";
         if ($i==1) {
             echo '<div class="carousel-item active" style="background-image: url('.$refImg.')">';
         } else {

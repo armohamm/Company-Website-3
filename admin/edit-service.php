@@ -54,27 +54,27 @@ if(!isset($_GET['id'])) {
               <h1 class="h3 mb-4 text-gray-800">Palvelun muokkaus</h1>
 
               <form class="" action="includes/edit-service.inc.php?id=<?= $id ?>" method="post" enctype="multipart/form-data">
-              
+
                 <h1 class="h4 mb-4 text-gray-800">Uusi otsikko</h1>
-                <input type="text" name="text" value="<?php require_once 'includes/get-service.inc.php'; print_r($array[0][0]);?>">
-              
+                <input type="text" name="text" value="<?php require_once 'includes/get-service.inc.php'; print_r($array[0][0]);?>" required>
+
                 <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Uusi kuvaus</h1>
-                <textarea name="desc"><?php require_once 'includes/get-service.inc.php'; print_r($array[0][1]);?></textarea>
-              
+                <textarea name="desc" required><?php require_once 'includes/get-service.inc.php'; print_r($array[0][1]);?></textarea>
+
                 <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Uusi taustakuva</h1>
                 <a class="h5" href="https://unsplash.com/">Ilmainen kuvapalvelu 1</a><br>
                 <a class="h5" href="https://pixabay.com/">Ilmainen kuvapalvelu 2</a><br>
                 <input type="file" name="file"><br><br>
 
                 <input type="hidden" name="id" value="<?=$id?>">
-              
+
                 <button class="btn btn-success btn-icon-split" type="submit">
                   <span class="icon text-white-50">
                     <i class="fas fa-check"></i>
                   </span>
                   <span class="text">Tallenna</span>
                 </button>
-              
+
               </form>
 
             </div>
@@ -136,10 +136,7 @@ if(!isset($_GET['id'])) {
     </body>
 
     </html>
-  
+
 <?php
-   
+
 }
-
-
-

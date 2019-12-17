@@ -56,21 +56,21 @@ require_once "includes/session.inc.php";
             </h1>
 
             <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Otsikko</h1>
-            <input type="text" name="text">
+            <input type="text" name="text" required>
 
             <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Taustakuva</h1>
             <a class="h5" href="https://unsplash.com/">Ilmainen kuvapalvelu 1</a><br>
             <a class="h5" href="https://pixabay.com/">Ilmainen kuvapalvelu 2</a><br>
-            <input type="file" name="file0">
+            <input type="file" name="file0" required>
 
             <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Kuva 1</h1>
-            <input type="file" name="file1">
+            <input type="file" name="file1" required>
 
             <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Kuva 2</h1>
-            <input type="file" name="file2">
+            <input type="file" name="file2" required>
 
             <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Kuva 3</h1>
-            <input type="file" name="file3"><br>
+            <input type="file" name="file3" required><br>
 
             <input type="hidden" name="id" value="1">
 

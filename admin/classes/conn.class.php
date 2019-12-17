@@ -7,7 +7,7 @@ class Conn {
     private $pass = ''; // Salasana
     private $db = 'hss'; // Tietokanta
 
-    protected function connect() {
+    protected function connect() { // Luo tietokanta yhteyden
         $dsn = 'mysql:host='.$this->server.';dbname='.$this->db;
         $pdo = new PDO($dsn, $this->user, $this->pass);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

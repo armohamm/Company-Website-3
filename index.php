@@ -3,7 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="utf-8">  <!-- ä,ö,å -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -14,10 +14,9 @@
 
     <!-- Google fontit -->
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Ubuntu:400,500,700&display=swap&subset=latin-ext"
-      rel="stylesheet">
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Ubuntu:400,500,700&display=swap&subset=latin-ext" rel="stylesheet">
 
-    <!-- CSS tiedosto -->
+    <!-- CSS tiedostot -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/result-light.css">
 
@@ -35,16 +34,16 @@
 
 <body>
 
-  <div style="display: none" id="hideAll">&nbsp;</div>
+  <div style="display: none" id="hideAll">&nbsp;</div> <!-- Piilottaa sivulta kaiken kunnes latautunut -->
 
   <!-- Navi alkaa -->
   <header id="header" style="display: none;">
       <div class="container">
-          <div id="logo" class="pull-left">
-              <a href="#start"><img src="img/logo1.png" alt="" title="" /></img></a>
+          <div id="logo" class="pull-left">  <!-- logon paikka -->
+              <a href="#start"><img src="img/logo1.png" alt="logo" title="" /></img></a> <!-- logo -->
           </div>
           <nav id="nav-menu-container">
-              <ul class="nav-menu">
+              <ul class="nav-menu"> <!-- Navien listaus -->
                   <li><a href="#start">Aloitus</a></li>
                   <li><a href="#services">Palvelut</a></li>
                   <li><a href="#about">Keitä olemme</a></li>
@@ -63,7 +62,7 @@
               <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12 text-center">
                       <div class="start-text">
-                          <h1><span id="start-text" class="start"></span></h1>
+                          <h1><span id="start-text" class="start"></span></h1> <!-- Teksti -->
                       </div>
                   </div>
               </div>
@@ -74,7 +73,7 @@
 
   <!-- Palvelut osio alkaa -->
   <section id="services" class="services-section">
-    <?php include_once 'admin/includes/get-frontpage-services.inc.php' ?>
+    <?php include_once 'admin/includes/get-frontpage-services.inc.php' ?> <!-- Hakee tietokannasta -->
   </section>
   <!-- Palvelut osio loppuu -->
 
@@ -96,35 +95,40 @@
 
   <!-- Referenssit alkaa -->
   <section id="references" class="references-section">
-    <?php include_once 'admin/includes/get-frontpage-refs.inc.php' ?>
+    <?php include_once 'admin/includes/get-frontpage-refs.inc.php' ?> <!-- Hakee tietokannasta -->
   </section>
   <!-- Referenssit loppuu -->
 
   <!-- Yhteystiedot alkaa -->
   <section id="contact" class="contact-section">
 
-          <h1 class=""> Yhteystiedot </h1> <br>
-            <div class="">
-              <h3 class="">  Hämeen Siivous & Saneeraus Oy </h3>
-                Yhteyshenkilö: Liisa Isomäki <br>
-                Puhelin: 050-557 8784 <br>
-                Sähköposti: liisa@hamss.fi
+          <h1 class=""> Yhteystiedot </h1><br>
+          <div class="row">
+            <div class="col-xl-1 col-lg-1 hidden-lg-down">
+            </div>
 
-              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b>
-              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p>
-          </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 hidden-sm-down">
+              <h4 class="contact-heading"> Työmaa </h4> <!-- Vasen puoli -->
+              <p>Sähköposti: liisa@hamss.fi<br>
+              Puhelin: 050-557 8784</p>
+            </div>
 
-          <div class="">
-            <h3 class=""> Työmaa </h3>
-                Sähköposti: liisa@hamss.fi <br>
-                Puhelin: 050-557 8784 <br>
-          </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+              <h4 class="contact-heading">  Hämeen Siivous & Saneeraus Oy </h4>
+              <p>Yhteyshenkilö: Liisa Isomäki<br>
+              Puhelin: 050-557 8784<br>
+              Sähköposti: liisa@hamss.fi</p>
 
-          <div class="">
-            <h3 class=""> Toimisto </h3>
-                Sähköposti: toimisto@hamss.fi <br>
-                Puhelin: 050-557 8782 <br>
-                Tarjouspyynnöt: toimisto@hamss.fi <br>
+              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b> <!-- Kun työntekijöitä haetaan -->
+              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p> <!-- Kun työntekijöitä ei haeta -->
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12"> <!-- Oikea puoli -->
+              <h4 class="contact-heading"> Toimisto </h4>
+              <p>Sähköposti: toimisto@hamss.fi<br>
+              Puhelin: 050-557 8782<br>
+              Tarjouspyynnöt: toimisto@hamss.fi</p>
+            </div>
           </div>
 
   </section>
@@ -139,6 +143,10 @@
   <!-- Footer loppuu -->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a> <!-- Nappi ylös -->
+
+  </body>
+
+</html>
 
   <!-- Javascript kirjastot -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -166,7 +174,7 @@
   <!-- Pää Javascript tiedosto -->
   <script src="js/main.js"></script>
 
-  <!-- In file script jostai syystä? (Sliderille) -->
+  <!-- In file script sliderille -->
   <script>
     // tell the embed parent frame the height of the content
     if (window.parent && window.parent.parent) {
@@ -181,6 +189,7 @@
   </script>
 
   <script type="text/javascript">
+    document.getElementById("header").style.display = "block";
     document.getElementById("hideAll").style.display = "block";
   </script>
 
@@ -217,12 +226,6 @@
   </script>
 
   <script type="text/javascript">
-
     $(window).load(function () { document.getElementById("hideAll").style.display = "none"; });
     $(window).load(function () { document.getElementById("header").style.display = "block"; });
   </script>
-
-
-</body>
-
-</html>

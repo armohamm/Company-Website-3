@@ -1,11 +1,11 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
-if(!isset($_GET['id'])) {
+if(!isset($_GET['id'])) { // Jos id:tä EI ole, palauttaa takaisin palvelu sivulle
 
-    header("Location: http://localhost/top/hamss/admin/services.php");
+    header("Location: ../services.php");
     
 } else {
 
@@ -13,10 +13,10 @@ if(!isset($_GET['id'])) {
     $title = $_POST['text'];
     $desc = $_POST['desc'];
 
-    $objekti = new Service();
-    echo $objekti->editService($id, $title, $desc);
+    $objekti = new Service(); // Kutsuu palvelut classia
+    echo $objekti->editService($id, $title, $desc); // Methodi, joka muokkaa palvelua
 
-    function editServiceImg($id) {
+    function editServiceImg($id) { // Funktio, joka muokkaa palvelun taustakuvaa
 
         $dir = "../../img/";
         $file = $_FILES['file']['name'];
@@ -61,8 +61,12 @@ if(!isset($_GET['id'])) {
 
     }
 
+    // Funktioiden kutsuminen
+
     if(!empty($_FILES['file']['name'])) {
         editServiceImg($id);
     }
 
+
+    echo "<br><a href='../edit-service.php'>Takaisin</a>";
 }

@@ -1,13 +1,13 @@
 <?php
 
 declare(strict_types=1);
-include_once 'class-autoloader.inc.php';
+include_once 'class-autoloader.inc.php'; // Automaattisesti sisällytää tällä sivulla tarvittavien classien tiedostot
 
-function makeList() {
+function makeList() { // Funktio, joka tekee listat
 
-    $object = new Reference();
-    $headingsArray = $object->getRefHeadingsToArray();
-    $headingsAmount = count($headingsArray);
+    $object = new Reference(); // Kutsuu reference classia
+    $headingsArray = $object->getRefHeadingsToArray(); // Methodi, joka hakee kaikki referenssi otsikot tietokannasta ja laitta ne tauluun 
+    $headingsAmount = count($headingsArray); // Laskee referenssi otsikoiden määrän
 
     for ($i=0; $i <= $headingsAmount-1; $i++) { 
         printf(
@@ -18,11 +18,11 @@ function makeList() {
     }
 }
 
-function makeJS() {
+function makeJS() { // Funktio, joka tekee javascriptin
 
-    $object = new Reference();
-    $headingsArray = $object->getRefHeadingsToArray();
-    $headingsAmount = count($headingsArray);
+    $object = new Reference(); // Kutsuu reference classia
+    $headingsArray = $object->getRefHeadingsToArray(); // Methodi, joka hakee kaikki referenssi otsikot tietokannasta ja laitta ne tauluun 
+    $headingsAmount = count($headingsArray); // Laskee referenssi otsikoiden määrän
 
     printf('
     <script>
