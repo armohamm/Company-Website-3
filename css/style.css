@@ -475,7 +475,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   div.service-text { /* Tekstin muokkaus */
     margin-top: 45px;
-    font-size: 1.25em;
+    font-size: 1.45em;
     margin-left: 7.5%;
     margin-right: 7.5%;
   }
@@ -498,7 +498,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   div.service-text { /* Tekstin muokkaus */
     margin-top: 50px;
-    font-size: 1.5em;
+    font-size: 1.75em;
     margin-left: 7.5%;
     margin-right: 7.5%;
   }
@@ -569,17 +569,16 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: none;
   }
   ul.reference-ul { /* Listaus */
-    margin-left: 15px;
-    margin-top: 25px;
-    font-size: 1.2em;
+    margin-top: 20px;
+    font-size: 0.95em;
   }
   h1.reference-heading { /* Otsikko */
-    font-size: 3em;
+    font-size: 2.25em;
     margin-top: 25px;
   }
 }
 
- /* puhelimelle */
+ /* pienille tableteille */
 @media only screen and (min-width: 450px) {
   section.references-section {
     min-height: 750px;
@@ -751,11 +750,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: rgba(0, 0, 0, 0.7);
     min-height: 600px;
     padding: 17.5px;
+    margin-top: 45px;
   }
 
   div.about-text {
     color: #f4f4f4;
-    font-size: 1em;
+    font-size: 1.15em;
     font-weight: 600;
   }
 }
