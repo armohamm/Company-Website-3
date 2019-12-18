@@ -189,7 +189,7 @@
   </script>
 
   <script type="text/javascript">
-    document.getElementById("header").style.display = "block";
+    document.getElementById("header").style.display = "none";
     document.getElementById("hideAll").style.display = "block";
   </script>
 

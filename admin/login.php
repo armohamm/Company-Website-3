@@ -46,7 +46,7 @@ require_once "includes/session.inc.php";
                     <h1 class="h4 text-gray-900 mb-4">Tervetuloa takaisin!</h1>
                   </div>
                   <div id="message" class="h5 text-center" style="color: red;"></div>
-                  <form class="user">
+                  <div class="user">
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="txt_pwd" placeholder="Password">
                     </div>
@@ -56,7 +56,7 @@ require_once "includes/session.inc.php";
                     <a href="../index.html" class="btn btn-secondary btn-user btn-block">
                       Takaisin
                     </a>
-                  </form>
+                  </div>
                   <hr>
                 </div>
               </div>
