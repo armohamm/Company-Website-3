@@ -219,7 +219,13 @@ class Reference extends Conn {
 
     }
 
-    public function deleteReferenceHeading($id) { // Poistaa referenssi otsikon tietokannasta
+    public function deleteReferenceHeading($id) { // Poistaa referenssi otsikon ja sen alla olevat referenssit tietokannasta
+
+        $sql = 'DELETE FROM `'.$this->refsTable.'` WHERE headingID = :headingID';
+        $sql = $this->connect()->prepare($sql);
+        $sql->execute(['headingID'=>$id]);
+
+        $sql = '';
 
         $sql = 'DELETE FROM '.$this->headingsTable.' WHERE headingID = :headingID';
         $sql = $this->connect()->prepare($sql);
