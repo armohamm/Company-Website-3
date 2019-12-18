@@ -53,7 +53,7 @@
               <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Aloitus-osion kuva</h1>
               <input type="file" name="file0">
 
-              <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Meistä-osion kuva</h1>
+              <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Keitä olemme-osion kuva</h1>
               <input type="file" name="file1"><br><br>
 
               <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">

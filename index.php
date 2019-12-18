@@ -119,8 +119,8 @@
               Puhelin: 050-557 8784<br>
               Sähköposti: liisa@hamss.fi</p>
 
-              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä</a></b> <!-- Kun työntekijöitä haetaan -->
-              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä</p> <!-- Kun työntekijöitä ei haeta -->
+              <b><a id="job-open" style="color: #f4f4f4; display: none;">Haemme työntekijöitä!</a></b> <!-- Kun työntekijöitä haetaan -->
+              <p id="job-closed" style="color: #f4f4f4; display: none;">Emme tällä hetkellä hae työntekijöitä.</p> <!-- Kun työntekijöitä ei haeta -->
             </div>
 
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12"> <!-- Oikea puoli -->
