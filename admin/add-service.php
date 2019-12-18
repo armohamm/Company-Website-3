@@ -56,25 +56,25 @@ require_once "includes/session.inc.php";
               <br>Kuvan on oltava 1920x1080! <br> <span style="color: teal;"><b>Vinkki, hyviä kuvia löydät alta löytyvistä
                   linkeistä</b></span>
             </h1>
-          
+
             <h1 class="h4 mb-4 text-gray-800">Otsikko</h1>
             <input type="text" name="text" required>
-          
+
             <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Kuvaus</h1>
             <textarea name="desc" required></textarea>
-          
+
             <h1 class="h4 mb-4 text-gray-800" style="margin-top: 25px">Taustakuva</h1>
             <a class="h5" href="https://unsplash.com/">Ilmainen kuvapalvelu 1</a><br>
             <a class="h5" href="https://pixabay.com/">Ilmainen kuvapalvelu 2</a><br>
             <input type="file" name="file" required><br><br>
-          
+
             <button class="btn btn-success btn-icon-split" type="submit">
               <span class="icon text-white-50">
                 <i class="fas fa-check"></i>
               </span>
               <span class="text">Tallenna</span>
             </button>
-          
+
           </form>
 
         </div>
@@ -82,16 +82,6 @@ require_once "includes/session.inc.php";
 
       </div>
       <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->

@@ -30,15 +30,15 @@ require_once "includes/session.inc.php";
 
   <!-- Page Wrapper -->
   <div id="wrapper">
-  
+
     <?php require_once "includes/sidebar.inc.php"; ?>
-  
+
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-  
+
       <!-- Main Content -->
       <div id="content">
-  
+
         <?php require_once "includes/topbar.inc.php"; ?>
 
         <!-- Begin Page Content -->
@@ -52,16 +52,6 @@ require_once "includes/session.inc.php";
 
       </div>
       <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->
