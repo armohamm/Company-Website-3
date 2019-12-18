@@ -52,35 +52,25 @@ require_once "includes/reference-orderlist.inc.php";
 
               <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Valitse ensin minkä referenssi otsikon alle haluat referenssin lisätä <br>
               sen jälkeen kirjoita alle referenssi kohteen esim. "Esimerkkilän lukio"</h1>
-    
+
               <h1 class="h4 mb-4 text-gray-800;">Referenssi otsikko</h1>
               <?php makeSelector($array);?>
-    
+
               <h1 class="h4 mb-4 text-gray-800;" style="margin-top: 25px;">Lisättävä referenssi</h1>
               <input id="text" type="text" name="text" required><br><br>
-    
+
               <button class="btn btn-success btn-icon-split" onclick="sendValues();">
                 <span class="icon text-white-50">
                   <i class="fas fa-check"></i>
                 </span>
                 <span class="text">Lisää</span>
               </button>
-    
+
         </div>
         <!-- /.container-fluid -->
 
       </div>
       <!-- End of Main Content -->
-
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
-          </div>
-        </div>
-      </footer>
-      <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->

@@ -55,22 +55,22 @@
                     <h1 class="h3 mb-4 text-gray-800">Referenssiotsikot</h1>
 
                     <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Vaihda järjestystä vetämällä otsikoita!<br>Tehtyäsi muutokset paina "Tallenna järjestys" nappia!</h1>
-                    
+
                     <a href="add-reference-title.php" class="h5" target="">Lisää uusi referenssiotsikko</a>
-                
+
                     <div class="list-container" style="margin-top: 25px;">
                         <ul id="sortable1">
                             <?php makeList(); ?>
                         </ul>
                     </div>
-                    
+
                     <button class="btn btn-success btn-icon-split" onclick="saveOrder();">
                         <span class="icon text-white-50">
                             <i class="fas fa-check"></i>
                         </span>
                         <span class="text">Tallenna järjestys</span>
                     </button>
-                    
+
                     <button class="btn btn-danger btn-icon-split" onclick="location.reload();">
                         <span class="icon text-white-50">
                             <i class="fas fa-trash"></i>
@@ -83,16 +83,6 @@
 
             </div>
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2019</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
