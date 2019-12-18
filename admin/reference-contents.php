@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Adminsivusto - Tyhjä</title>
+    <title>Adminsivusto - Referenssien sisältö</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -50,7 +50,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Referenssit</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Referenssien sisältö</h1>
 
                     <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Vaihda järjestystä vetämällä otsikoita!<br>
                         Tehtyäsi muutokset paina "Tallenna järjestys" nappia!<br>

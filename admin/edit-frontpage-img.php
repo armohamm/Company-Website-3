@@ -60,7 +60,7 @@
                 <span class="icon text-white-50">
                   <i class="fas fa-check"></i>
                 </span>
-                <span class="text">Tallenna kuvat</span>
+                <span class="text">Tallenna kuva(t)</span>
               </button>
 
             </form>

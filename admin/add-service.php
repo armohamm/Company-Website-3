@@ -52,7 +52,7 @@ require_once "includes/session.inc.php";
             <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">
               Ensin kirjoitat palvelulle otsikon, esim. "Rakennussiivous" <br><br>
               Sitten kirjoitat kuvauksen palvelulle, eli toisin sanoen pienen myyntipuheen. <br><br>
-              Sen jälkeen lisäät palvelulle taustakuvan, <br>mieluusti jonkun kivan liukuvärin jonka päällä tekstit näkyvät hyvin.
+              Sen jälkeen lisäät palvelulle taustakuvan, <br> jonkun kivan liukuvärin jonka päällä tekstit näkyvät hyvin.
               <br>Kuvan on oltava 1920x1080! <br> <span style="color: teal;"><b>Vinkki, hyviä kuvia löydät alta löytyvistä
                   linkeistä</b></span>
             </h1>

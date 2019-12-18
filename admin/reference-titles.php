@@ -17,7 +17,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Adminsivusto - Tyhjä</title>
+    <title>Adminsivusto - Referenssi otsikot</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -52,11 +52,11 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Referenssiotsikot</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Referenssi otsikot</h1>
 
                     <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">Vaihda järjestystä vetämällä otsikoita!<br>Tehtyäsi muutokset paina "Tallenna järjestys" nappia!</h1>
 
-                    <a href="add-reference-title.php" class="h5" target="">Lisää uusi referenssiotsikko</a>
+                    <a href="add-reference-title.php" class="h5" target="">Lisää uusi referenssi otsikko</a>
 
                     <div class="list-container" style="margin-top: 25px;">
                         <ul id="sortable1">

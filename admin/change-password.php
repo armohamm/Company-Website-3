@@ -47,11 +47,11 @@ require_once "includes/session.inc.php";
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Salasanan vaihto</h1>
 
-          <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Nykyinen salasana</h1>
+          <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Nykyinen salasana:</h1>
           <input type="password" id="old_password">
-          <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi salasana</h1>
+          <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi salasana:</h1>
           <input type="password" id="new_password0">
-          <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi salasana uudelleen</h1>
+          <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Uusi salasana uudelleen:</h1>
           <input type="password" id="new_password1"><br><br>
 
           <button class="btn btn-success btn-icon-split" id="but_submit">
