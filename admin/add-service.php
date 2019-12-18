@@ -15,7 +15,7 @@ require_once "includes/session.inc.php";
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Adminsivusto - Palvelun otsikon lisäys</title>
+  <title>Adminsivusto - Palvelun lisäys</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
