@@ -2,7 +2,7 @@
 
 if(!isset($_GET['id'])) {
 
-    header("Location: http://localhost/top/hamss/admin/services.php");
+    header("Location: ./services.php");
 
 } else {
 
