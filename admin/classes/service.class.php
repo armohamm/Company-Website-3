@@ -103,7 +103,7 @@ class Service extends Conn {
         $sql->execute(['heading'=>$heading, 'text'=>$text, 'serviceID'=>$id]);
 
         $return = "Uusi palvelun otsikko on ".$heading." ja uusi selitys on ".$text;
-        return utf8_decode($return);
+        return $return;
 
     }
 

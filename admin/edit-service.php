@@ -2,7 +2,7 @@
 
 if(!isset($_GET['id'])) {
 
-    header("Location: http://localhost/top/hamss/admin/services.php");
+    header("Location: ./services.php");
 
 } else {
 
@@ -21,7 +21,7 @@ if(!isset($_GET['id'])) {
       <meta name="description" content="">
       <meta name="author" content="">
 
-      <title>Adminsivusto - Palvelun otsikon muokkaus</title>
+      <title>Adminsivusto - Palvelun muokkaus</title>
 
       <!-- Custom fonts for this template-->
       <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

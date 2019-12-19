@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Adminsivusto - Referenssi otsikon muokkaus</title>
+    <title>Adminsivusto - Etusivun kuvien muokkaus</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -53,14 +53,14 @@
               <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Aloitus-osion kuva</h1>
               <input type="file" name="file0">
 
-              <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Meistä-osion kuva</h1>
+              <h1 style="margin-top: 25px;" class="h4 mb-4 text-gray-800">Keitä olemme-osion kuva</h1>
               <input type="file" name="file1"><br><br>
 
               <button style="margin-top: 25px;" class="btn btn-success btn-icon-split" type="submit">
                 <span class="icon text-white-50">
                   <i class="fas fa-check"></i>
                 </span>
-                <span class="text">Tallenna kuvat</span>
+                <span class="text">Tallenna kuva(t)</span>
               </button>
 
             </form>

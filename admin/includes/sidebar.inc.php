@@ -1,6 +1,6 @@
 <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-  
+
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
@@ -8,25 +8,25 @@
         </div>
         <div class="sidebar-brand-text mx-3">HS<small>&</small>S</div>
       </a>
-  
+
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
-  
+
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Hallintapaneeli</span></a>
       </li>
-  
+
       <!-- Divider -->
       <hr class="sidebar-divider">
-  
+
       <!-- Heading -->
       <div class="sidebar-heading">
         Referenssit ja Palvelut
       </div>
-  
+
       <!-- Nav Item - Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
@@ -37,13 +37,13 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Lisäyslinkit</h6>
-            <a class="collapse-item" href="add-reference-title.php">Referenssiotsikon lisäys</a>
+            <a class="collapse-item" href="add-reference-title.php">Referenssi otsikon lisäys</a>
             <a class="collapse-item" href="add-reference.php">Referenssin lisäys</a>
             <a class="collapse-item" href="add-service.php">Palvelun lisäys</a>
           </div>
         </div>
       </li>
-  
+
       <!-- Nav Item - Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
@@ -54,7 +54,7 @@
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Järjestykset</h6>
-            <a class="collapse-item" href="reference-titles.php">Referenssiotsikoiden <br> järjestys</a>
+            <a class="collapse-item" href="reference-titles.php">Referenssi otsikoiden <br> järjestys</a>
             <a class="collapse-item" href="reference-contents.php">Referenssien järjestys</a>
             <a class="collapse-item" href="services.php">Palveluiden järjestys</a>
           </div>
@@ -78,15 +78,15 @@
           </div>
         </div>
       </li>
-  
+
       <!-- Divider -->
       <hr class="sidebar-divider">
-  
+
       <!-- Heading -->
       <div class="sidebar-heading">
         Sivut
       </div>
-  
+
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -96,11 +96,22 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Käyttöohjeet:</h6>
-            <a class="collapse-item" href="help.php?title=addService">Palveluiden lisäys</a>
-            <a class="collapse-item" href="help.php?title=addRefTitle">Referenssi otsikon lisäys</a>
-            <a class="collapse-item" href="help.php?title=addReference">Referenssin lisäys</a>
-            <a class="collapse-item" href="help.php?title=deleteInfo">Tietojen poisto</a>
-            <a class="collapse-item" href="help.php?title=editImg">Kuvien muokkaus</a>
+            <a class="collapse-item" href="./help/etusivun_kuvien_muokkaus.pdf">Etusivun kuvien <br> muokkaus</a>
+            <a class="collapse-item" href="./help/etusivun_tekstien_muokkaus.pdf">Etusivun tekstien <br> muokkaus</a>
+            <a class="collapse-item" href="./help/palvelun_muokkaus.pdf">Palvelun muokkaus</a>
+            <a class="collapse-item" href="./help/referenssi_otsikon_muokkaus.pdf">Referenssi otsikon <br> muokkaus</a>
+            <a class="collapse-item" href="./help/referenssin_muokkaus.pdf">Referenssin muokkaus</a>
+            <a class="collapse-item" href="./help/tyonhaun_muokkaus.pdf">Työnhaun muokkaus</a>
+            <a class="collapse-item" href="./help/palveluiden_jarjestys.pdf">Palveluiden järjestys</a>
+            <a class="collapse-item" href="./help/referenssi_otsikoiden_jarjestys.pdf">Referenssi otsikoiden <br> lisäys</a>
+            <a class="collapse-item" href="./help/referenssien_jarjestys.pdf">Referenssien järjestys</a>
+            <a class="collapse-item" href="./help/palvelun_lisays.pdf">Palveluiden lisäys</a>
+            <a class="collapse-item" href="./help/referenssi_otsikon_lisays.pdf">Referenssi otsikoiden <br> lisäys</a>
+            <a class="collapse-item" href="./help/referenssin_lisays.pdf">Referenssien lisäys</a>
+            <a class="collapse-item" href="./help/palvelun_poisto.pdf">Palveluiden poisto</a>
+            <a class="collapse-item" href="./help/referenssi_otsikon_poisto.pdf">Referenssi otsikoiden <br> poisto</a>
+            <a class="collapse-item" href="./help/referenssin_poisto.pdf">Referenssien poisto</a>
+            <a class="collapse-item" href="./help/salasanan_vaihto.pdf">Salasanan vaihto</a>            
             <!-- <div class="collapse-divider"></div> -->
             <!-- <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.php">404 Sivu</a>
@@ -108,14 +119,14 @@
           </div>
         </div>
       </li>
-  
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
-  
+
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
-  
+
     </ul>
 <!-- End of Sidebar -->
