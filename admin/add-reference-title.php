@@ -51,7 +51,7 @@ require_once "includes/session.inc.php";
 
             <h1 class="h4 mb-4" style="color: rgb(0, 174, 255);">
               Ensin kirjoitat referenssi otsikon, esim. "Koulut" <br><br>
-              Sen jälkeen lisäät otsikolle taustakuvan, <br> jonkun kivan liukuvärin jonka päällä tekstit näkyvät hyvin. <br>Kuvan on oltava 1920x1080! <br> <span style="color: teal;"><b>Vinkki, hyviä kuvia löydät alta löytyvistä linkeistä</b></span><br><br>
+              Sen jälkeen lisäät otsikolle taustakuvan, <br> mieluiten jonkun kivan liukuvärin jonka päällä tekstit näkyvät hyvin. <br>Kuvan on oltava 1920x1080! <br> <span style="color: teal;"><b>Vinkki, hyviä kuvia löydät alta löytyvistä linkeistä</b></span><br><br>
               Sitten valitset 3 kuvaa kohteelle, jotka kuvaavat kohdetta, <br>tässä tapauksessa kuvia kouluista. <br>Kuvien suhde on oltava 4:3 eikä mieluusti kauhean isoja!
             </h1>
 
