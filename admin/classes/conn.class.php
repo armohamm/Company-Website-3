@@ -5,7 +5,7 @@ class Conn {
     private $server = 'localhost'; // Palvelimen osoite
     private $user = 'root'; // Käyttäjänimi
     private $pass = ''; // Salasana
-    private $db = 'hss'; // Tietokanta
+    private $db = 'website'; // Tietokanta
 
     protected function connect() { // Luo tietokanta yhteyden
         $dsn = 'mysql:host='.$this->server.';dbname='.$this->db;

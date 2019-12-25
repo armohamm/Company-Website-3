@@ -3,7 +3,7 @@
 class TextFrontpage extends Conn {
 
     private $textID;
-    private $table = "text_frontpage"; 
+    private $table = "hss_text_frontpage"; 
     
     public function getTextFrontpage(string $type) { // Hakee etusivun tekstit tietokannasta
 

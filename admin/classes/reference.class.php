@@ -2,15 +2,15 @@
 
 class Reference extends Conn {
     
-    private $headingsTable = 'reference_heading';
-    private $refsTable = 'references';
+    private $headingsTable = 'hss_reference_heading';
+    private $refsTable = 'hss_references';
     public $refHeadings = array();
     private $refs = array();
 
     public function getReferences() { // Hakee referenssit, refrenssi otsikoot ja refrenssi id:t tietokannasta ja laittaa ne tauluun
-        $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
-        FROM `reference_heading` 
-        ORDER BY `reference_heading`.`position`');   
+        $sql = $this->connect()->query('SELECT `hss_reference_heading`.`headingID`, `hss_reference_heading`.`heading` 
+        FROM `hss_reference_heading` 
+        ORDER BY `hss_reference_heading`.`position`');   
         while ($row = $sql->fetch()) { // Tässä while-lauseessa lisätään referenssi otsikot ja niiden id:t tauluun
             $foo = array();
 
@@ -31,11 +31,11 @@ class Reference extends Conn {
 
             $foo1 = array();
 
-            $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
-            FROM `reference_heading` 
-            INNER JOIN `references` ON `references`.`headingID` = `reference_heading`.`headingID` 
-            WHERE `reference_heading`.`headingID` = '. $this->refHeadings[$i-1][0].'
-            ORDER BY `references`.`position`');
+            $sql = $this->connect()->query('SELECT `hss_references`.`refID`, `hss_references`.`text` 
+            FROM `hss_reference_heading` 
+            INNER JOIN `hss_references` ON `hss_references`.`headingID` = `hss_reference_heading`.`headingID` 
+            WHERE `hss_reference_heading`.`headingID` = '. $this->refHeadings[$i-1][0].'
+            ORDER BY `hss_references`.`position`');
             while ($row = $sql->fetch()) { // Tässä while-lauseessa lisätään referenssit ja niiden id:t tauluun
 
                 $id=$row['refID'];
@@ -140,9 +140,9 @@ class Reference extends Conn {
     }
 
     public function getRefHeadingsToArray() { // Hakee pelkät referenssi otsikot tietokannasta ja laittaa ne tauluun järjestyksen (position) mukaan
-        $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
-        FROM `reference_heading` 
-        ORDER BY `reference_heading`.`position`');   
+        $sql = $this->connect()->query('SELECT `hss_reference_heading`.`headingID`, `hss_reference_heading`.`heading` 
+        FROM `hss_reference_heading` 
+        ORDER BY `hss_reference_heading`.`position`');   
         while ($row = $sql->fetch()) {
             $foo = array();
 
@@ -160,9 +160,9 @@ class Reference extends Conn {
     }
 
     public function getRefHeadingsById($id) { // Hakee pelkät referenssi otsikot tietokannasta ja laittaa ne id:n mukaan tauluun
-        $sql = $this->connect()->query('SELECT `reference_heading`.`headingID`, `reference_heading`.`heading` 
-        FROM `reference_heading` 
-        WHERE `reference_heading`.`headingID` = ' . $id);   
+        $sql = $this->connect()->query('SELECT `hss_reference_heading`.`headingID`, `hss_reference_heading`.`heading` 
+        FROM `hss_reference_heading` 
+        WHERE `hss_reference_heading`.`headingID` = ' . $id);   
         while ($row = $sql->fetch()) {
             $foo = array();
 
@@ -184,7 +184,7 @@ class Reference extends Conn {
     }
 
     public function getLastHeadingID() { // Hakee tietokannasta viimeisenä positionin mukaan olevan referenssi otsikon id:n
-        $sql = $this->connect()->query('SELECT * FROM `reference_heading` ORDER BY `position` DESC LIMIT 1');   
+        $sql = $this->connect()->query('SELECT * FROM `hss_reference_heading` ORDER BY `position` DESC LIMIT 1');   
         while ($row = $sql->fetch()) {
 
             $headingID=$row['headingID'];
@@ -244,9 +244,9 @@ class Reference extends Conn {
     }
 
     public function getRefById($id) { // Hakee referenssit tietokannasta id:n mukaan
-        $sql = $this->connect()->query('SELECT `references`.`refID`, `references`.`text` 
-        FROM `references`
-        WHERE `references`.`refID` = ' . $id);   
+        $sql = $this->connect()->query('SELECT `hss_references`.`refID`, `hss_references`.`text` 
+        FROM `hss_references`
+        WHERE `hss_references`.`refID` = ' . $id);   
         while ($row = $sql->fetch()) {
             $foo = array();
 

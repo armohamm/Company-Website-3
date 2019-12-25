@@ -3,7 +3,7 @@
 class Job extends Conn {
 
     private $jobID = 1;
-    private $table = "job"; 
+    private $table = "hss_job"; 
     
     public function getJob() { // Hakee työpaikan
         $sql = $this->connect()->query('SELECT * FROM '.$this->table.' WHERE jobID='.$this->jobID);

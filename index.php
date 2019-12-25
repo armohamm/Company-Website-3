@@ -137,7 +137,7 @@
   <!-- Footer alkaa -->
   <section class="footer-section">
       <div class="copyright text-center">
-          <span>Copyright &copy; Hämeen Siivous & Saneeraus Oy 2019</span>
+          <span>Copyright &copy; Website 2019</span>
       </div>
   </section>
   <!-- Footer loppuu -->
