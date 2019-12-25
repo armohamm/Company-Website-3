@@ -29,7 +29,7 @@
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
 
-    <title>Hämeen Siivous & Saneeraus Oy</title>
+    <title>Esimerkki yritys</title>
 </head>
 
 <body>
