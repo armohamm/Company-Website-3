@@ -14,6 +14,7 @@ function classAutoloader($className) {
     else {
         $path = 'admin/classes/';
     }
+    $className = lcfirst($className);
     $extension = '.class.php';
     require_once $path . $className . $extension;
 }
