@@ -1,13 +1,13 @@
 <?php
 class Service extends Conn {
 
-    private $serviceTable = "service";
+    private $serviceTable = "hss_service";
     public $service = array();
 
     public function getServices() { // Hakee kaikki palvelut ja niiden selitykset tietokannasta positionin mukaan
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
-        FROM `service`
-        ORDER BY `service`.`position`');
+        $sql = $this->connect()->query('SELECT `hss_service`.`serviceID`, `hss_service`.`heading`, `hss_service`.`text`
+        FROM `hss_service`
+        ORDER BY `hss_service`.`position`');
 
         while ($row = $sql->fetch()) {
             $foo = array();
@@ -34,9 +34,9 @@ class Service extends Conn {
     }
 
     public function getServicesById($id) { // Hakee kaikki palvelut ja niiden selitykset id:n mukaan
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
-        FROM `service`
-        WHERE `service`.`serviceID` = ' . $id);
+        $sql = $this->connect()->query('SELECT `hss_service`.`serviceID`, `hss_service`.`heading`, `hss_service`.`text`
+        FROM `hss_service`
+        WHERE `hss_service`.`serviceID` = ' . $id);
 
         while ($row = $sql->fetch()) {
             $foo = array();
@@ -118,9 +118,9 @@ class Service extends Conn {
     }
 
     public function getServiceToArray() { // Hakee palvelut tietokannasta ja laittaa ne tauluun
-        $sql = $this->connect()->query('SELECT `service`.`serviceID`, `service`.`heading`, `service`.`text`
-        FROM `service`
-        ORDER BY `service`.`position`');
+        $sql = $this->connect()->query('SELECT `hss_service`.`serviceID`, `hss_service`.`heading`, `hss_service`.`text`
+        FROM `hss_service`
+        ORDER BY `hss_service`.`position`');
 
         while ($row = $sql->fetch()) {
             $foo = array();

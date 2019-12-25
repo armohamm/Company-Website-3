@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">HS<small>&</small>S</div>
+        <div class="sidebar-brand-text mx-3">Nettisivusto</div>
       </a>
 
       <!-- Divider -->
@@ -91,31 +91,11 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Apusivut</span>
+          <span>Apusivut (poistettu tekijänoikeussyistä)</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Käyttöohjeet:</h6>
-            <a class="collapse-item" href="./help/etusivun_kuvien_muokkaus.pdf">Etusivun kuvien <br> muokkaus</a>
-            <a class="collapse-item" href="./help/etusivun_tekstien_muokkaus.pdf">Etusivun tekstien <br> muokkaus</a>
-            <a class="collapse-item" href="./help/palvelun_muokkaus.pdf">Palvelun muokkaus</a>
-            <a class="collapse-item" href="./help/referenssi_otsikon_muokkaus.pdf">Referenssi otsikon <br> muokkaus</a>
-            <a class="collapse-item" href="./help/referenssin_muokkaus.pdf">Referenssin muokkaus</a>
-            <a class="collapse-item" href="./help/tyonhaun_muokkaus.pdf">Työnhaun muokkaus</a>
-            <a class="collapse-item" href="./help/palveluiden_jarjestys.pdf">Palveluiden järjestys</a>
-            <a class="collapse-item" href="./help/referenssi_otsikoiden_jarjestys.pdf">Referenssi otsikoiden <br> lisäys</a>
-            <a class="collapse-item" href="./help/referenssien_jarjestys.pdf">Referenssien järjestys</a>
-            <a class="collapse-item" href="./help/palvelun_lisays.pdf">Palveluiden lisäys</a>
-            <a class="collapse-item" href="./help/referenssi_otsikon_lisays.pdf">Referenssi otsikoiden <br> lisäys</a>
-            <a class="collapse-item" href="./help/referenssin_lisays.pdf">Referenssien lisäys</a>
-            <a class="collapse-item" href="./help/palvelun_poisto.pdf">Palveluiden poisto</a>
-            <a class="collapse-item" href="./help/referenssi_otsikon_poisto.pdf">Referenssi otsikoiden <br> poisto</a>
-            <a class="collapse-item" href="./help/referenssin_poisto.pdf">Referenssien poisto</a>
-            <a class="collapse-item" href="./help/salasanan_vaihto.pdf">Salasanan vaihto</a>            
-            <!-- <div class="collapse-divider"></div> -->
-            <!-- <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.php">404 Sivu</a>
-            <a class="collapse-item" href="blank.php">Tyhjä Page</a> -->
           </div>
         </div>
       </li>

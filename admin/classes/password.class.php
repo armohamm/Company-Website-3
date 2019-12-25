@@ -2,7 +2,7 @@
 
 class Password extends Conn {
 
-    private $table = 'admin';
+    private $table = 'hss_admin';
     private $adminID = 1;
     
     function checkPassword(string $pass) { // Tarkistaa salasanan tietokannasta
