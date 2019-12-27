@@ -54,9 +54,9 @@ function makeSlides(int $count, array $refsArray, array $refHeadingsArray) { //T
         echo '</ul>
             </div>
             <div class="col-lg-5 col-md-6 hidden-sm">
-                <img src="img/ref'.$i.'_2.jpg" class="reference-img-0">
-                <img src="img/ref'.$i.'_3.jpg" class="reference-img-1">
-                <img src="img/ref'.$i.'_4.jpg" class="reference-img-2">
+                <img src="img/ref'.$refHeadingsArray[$i-1][0].'_2.jpg" class="reference-img-0">
+                <img src="img/ref'.$refHeadingsArray[$i-1][0].'_3.jpg" class="reference-img-1">
+                <img src="img/ref'.$refHeadingsArray[$i-1][0].'_4.jpg" class="reference-img-2">
             </div>
           </div> </div>';
         
